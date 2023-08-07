@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB4C2C62A81603100E791B1 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4C2C52A81603100E791B1 /* GameEndViewController.swift */; };
 		0DE93BD62A8142B400648218 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE93BD52A8142B400648218 /* MainViewController.swift */; };
 		105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526E52A80503A009FFDE8 /* TeamBoomApp.swift */; };
 		105526E82A80503A009FFDE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526E72A80503A009FFDE8 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DB4C2C52A81603100E791B1 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
 		0DE93BD52A8142B400648218 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		105526E22A80503A009FFDE8 /* TeamBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105526E52A80503A009FFDE8 /* TeamBoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBoomApp.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				105526E72A80503A009FFDE8 /* ContentView.swift */,
 				A03DE5162A8107F800C5D279 /* CategoriesView.swift */,
 				0DE93BD52A8142B400648218 /* MainViewController.swift */,
+				0DB4C2C52A81603100E791B1 /* GameEndViewController.swift */,
 				AC8C71982A80E6CE0063F55F /* Views */,
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
 				105526E92A80503C009FFDE8 /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 				AC8C71B82A8131C60063F55F /* GameView.swift in Sources */,
 				105526E82A80503A009FFDE8 /* ContentView.swift in Sources */,
 				105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */,
+				0DB4C2C62A81603100E791B1 /* GameEndViewController.swift in Sources */,
 				10AE80102A812B5E0083A45E /* Bundle + ext.swift in Sources */,
 				105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */,
 				0DE93BD62A8142B400648218 /* MainViewController.swift in Sources */,
