@@ -24,6 +24,11 @@
 		AC8C71B62A8131BC0063F55F /* LottieBombView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71B52A8131BC0063F55F /* LottieBombView.swift */; };
 		AC8C71B82A8131C60063F55F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71B72A8131C60063F55F /* GameView.swift */; };
 		AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C71B92A8131EB0063F55F /* animation1.json */; };
+		AC8C72012A819F490063F55F /* PunishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71FE2A819F490063F55F /* PunishModel.swift */; };
+		AC8C72022A819F490063F55F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71FF2A819F490063F55F /* CategoryModel.swift */; };
+		AC8C72032A819F490063F55F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C72002A819F490063F55F /* GameViewModel.swift */; };
+		AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72042A81A25E0063F55F /* funnyActions.json */; };
+		AC8C72072A81A26D0063F55F /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72062A81A26D0063F55F /* categories.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +43,17 @@
 		105526F32A80507F009FFDE8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		105526F52A8057F8009FFDE8 /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
 		10AE800F2A812B5E0083A45E /* Bundle + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + ext.swift"; sourceTree = "<group>"; };
-		10AE80112A81330D0083A45E /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
-		10C047842A814A2D00597BDA /* funnyActions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = funnyActions.json; sourceTree = "<group>"; };
 		A03DE5162A8107F800C5D279 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradView.swift; sourceTree = "<group>"; };
 		AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifier.swift; sourceTree = "<group>"; };
 		AC8C71B52A8131BC0063F55F /* LottieBombView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieBombView.swift; sourceTree = "<group>"; };
 		AC8C71B72A8131C60063F55F /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AC8C71B92A8131EB0063F55F /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation1.json; sourceTree = "<group>"; };
+		AC8C71FE2A819F490063F55F /* PunishModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunishModel.swift; sourceTree = "<group>"; };
+		AC8C71FF2A819F490063F55F /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		AC8C72002A819F490063F55F /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		AC8C72042A81A25E0063F55F /* funnyActions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = funnyActions.json; sourceTree = "<group>"; };
+		AC8C72062A81A26D0063F55F /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +102,13 @@
 				A03DE5162A8107F800C5D279 /* CategoriesView.swift */,
 				0DE93BD52A8142B400648218 /* MainViewController.swift */,
 				0DB4C2C52A81603100E791B1 /* GameEndViewController.swift */,
+				AC8C72082A81A55A0063F55F /* Models */,
+				AC8C71FD2A819EEF0063F55F /* ViewModel */,
 				AC8C71982A80E6CE0063F55F /* Views */,
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
 				105526E92A80503C009FFDE8 /* Assets.xcassets */,
-				10AE80112A81330D0083A45E /* categories.json */,
-				10C047842A814A2D00597BDA /* funnyActions.json */,
+				AC8C72042A81A25E0063F55F /* funnyActions.json */,
+				AC8C72062A81A26D0063F55F /* categories.json */,
 				AC8C71B22A8131300063F55F /* LottieFiles */,
 				105526EB2A80503C009FFDE8 /* Preview Content */,
 			);
@@ -139,6 +149,23 @@
 				AC8C71B92A8131EB0063F55F /* animation1.json */,
 			);
 			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		AC8C71FD2A819EEF0063F55F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC8C72002A819F490063F55F /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC8C72082A81A55A0063F55F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC8C71FE2A819F490063F55F /* PunishModel.swift */,
+				AC8C71FF2A819F490063F55F /* CategoryModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */,
+				AC8C72072A81A26D0063F55F /* categories.json in Resources */,
 				105526ED2A80503C009FFDE8 /* Preview Assets.xcassets in Resources */,
+				AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */,
 				105526F42A80507F009FFDE8 /* .gitignore in Resources */,
 				105526EA2A80503C009FFDE8 /* Assets.xcassets in Resources */,
 			);
@@ -240,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8C72012A819F490063F55F /* PunishModel.swift in Sources */,
 				AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */,
 				AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */,
+				AC8C72032A819F490063F55F /* GameViewModel.swift in Sources */,
 				A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */,
 				0D7CC8E92A8187910076950C /* Model.swift in Sources */,
 				AC8C71B62A8131BC0063F55F /* LottieBombView.swift in Sources */,
@@ -250,6 +281,7 @@
 				105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */,
 				0DB4C2C62A81603100E791B1 /* GameEndViewController.swift in Sources */,
 				10AE80102A812B5E0083A45E /* Bundle + ext.swift in Sources */,
+				AC8C72022A819F490063F55F /* CategoryModel.swift in Sources */,
 				105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */,
 				0DE93BD62A8142B400648218 /* MainViewController.swift in Sources */,
 			);

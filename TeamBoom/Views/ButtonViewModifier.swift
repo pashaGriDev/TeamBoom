@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonViewModifier: ViewModifier {
-    
+
     func body(content: Content) -> some View {
         content
             .font(.title)

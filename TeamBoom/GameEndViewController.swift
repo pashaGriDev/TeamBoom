@@ -35,7 +35,7 @@ struct GameEndViewController: View {
                         .foregroundColor(.yellowGradient)
                         .clipShape(RoundedRectangle(cornerRadius: 50))
                         .shadow(radius: 15)
-                        
+                    
                         Button() {
                             //Some code for restart game...
                         } label: {
@@ -47,7 +47,7 @@ struct GameEndViewController: View {
                         .foregroundColor(.yellowGradient)
                         .clipShape(RoundedRectangle(cornerRadius: 50))
                         .shadow(radius: 15)
-                        
+                    
                     }
                 }
             }
