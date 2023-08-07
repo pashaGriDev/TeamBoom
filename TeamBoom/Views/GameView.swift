@@ -13,6 +13,7 @@ struct GameView: View {
     @State private var isOver = false
     @State private var question = "How are you man? ddddddddoooppp"
     @State private var punishment = "Punishment"
+    @ObservedObject var viewMod = GameViewModel()
     var gameTime = 7.0
 
     var body: some View {
@@ -25,28 +26,31 @@ struct GameView: View {
                                  .animation(.easeIn, value: isGame)
                          }
             VStack {
-                Text(question)
+                Text(viewMod.question)
+                    .frame(width: 300)
                     .font(.largeTitle)
-                    .fontWeight(.black)
-                    .padding()
+                    .padding(.horizontal, 10)
                     .opacity(isGame ? 1 : 0)
-                    .offset(y: isGame ? 30 : -100)
+                    .offset(y: isGame ? 50 : -100)
                     .animation(.easeIn(duration: 0.8), value: isGame)
                 if isOver {
-                    Text(punishment)
+                    Text(viewMod.endGame)
+                        .padding()
                         .font(.largeTitle)
-                        .fontWeight(.black)
                         .opacity(isGame ? 0 : 1)
-                        .offset(y: isGame ? 30 : -100)
+                        .offset(y: isGame ? 100 : -100)
                 }
                 Spacer()
                 Button("Start Game") {
+                    viewMod.updateSelections(index: 1)
+                    viewMod.askQuestion()
                     isOver = false
                     isGame.toggle()
+                    
                     DispatchQueue.main.asyncAfter(deadline: .now() + gameTime) {
                             isOver.toggle()
                             isGame.toggle()
-                            
+                            viewMod.gameOver()
                     }
                 }
                 .modifier(ButtonViewModifier())
