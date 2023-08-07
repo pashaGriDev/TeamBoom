@@ -13,6 +13,7 @@
 		105526ED2A80503C009FFDE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105526EC2A80503C009FFDE8 /* Preview Assets.xcassets */; };
 		105526F42A80507F009FFDE8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 105526F32A80507F009FFDE8 /* .gitignore */; };
 		105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526F52A8057F8009FFDE8 /* Color + ext.swift */; };
+		A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03DE5162A8107F800C5D279 /* CategoriesView.swift */; };
 		AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */; };
 		AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		105526EC2A80503C009FFDE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		105526F32A80507F009FFDE8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		105526F52A8057F8009FFDE8 /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
+		A03DE5162A8107F800C5D279 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradView.swift; sourceTree = "<group>"; };
 		AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 			children = (
 				105526E52A80503A009FFDE8 /* TeamBoomApp.swift */,
 				105526E72A80503A009FFDE8 /* ContentView.swift */,
+				A03DE5162A8107F800C5D279 /* CategoriesView.swift */,
 				AC8C71982A80E6CE0063F55F /* Views */,
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
 				105526E92A80503C009FFDE8 /* Assets.xcassets */,
@@ -189,6 +192,7 @@
 			files = (
 				AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */,
 				AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */,
+				A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */,
 				105526E82A80503A009FFDE8 /* ContentView.swift in Sources */,
 				105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */,
 				105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */,
