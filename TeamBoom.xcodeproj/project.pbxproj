@@ -28,6 +28,7 @@
 		105526F32A80507F009FFDE8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		105526F52A8057F8009FFDE8 /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
 		10AE800F2A812B5E0083A45E /* Bundle + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + ext.swift"; sourceTree = "<group>"; };
+		10AE80112A81330D0083A45E /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		A03DE5162A8107F800C5D279 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradView.swift; sourceTree = "<group>"; };
 		AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifier.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
 				105526E92A80503C009FFDE8 /* Assets.xcassets */,
 				105526EB2A80503C009FFDE8 /* Preview Content */,
+				10AE80112A81330D0083A45E /* categories.json */,
 			);
 			path = TeamBoom;
 			sourceTree = "<group>";
