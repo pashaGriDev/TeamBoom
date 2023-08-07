@@ -16,16 +16,7 @@ struct ContentView: View {
                 Image("textBomb")
                 Image("bomb")
                 Text("TeamBoom")
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(.violet)
-                    .padding()
-                    .background(.yellowOfButton)
-                    .padding()
-                    .background(.orangeGradient)
-                    .padding()
-                    .background(.yellowGradient)
+                    .modifier(ButtonViewModifier())
             }
             .padding()
         }
