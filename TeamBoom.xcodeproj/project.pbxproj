@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DE93BD62A8142B400648218 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE93BD52A8142B400648218 /* MainViewController.swift */; };
 		105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526E52A80503A009FFDE8 /* TeamBoomApp.swift */; };
 		105526E82A80503A009FFDE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526E72A80503A009FFDE8 /* ContentView.swift */; };
 		105526EA2A80503C009FFDE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105526E92A80503C009FFDE8 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE93BD52A8142B400648218 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		105526E22A80503A009FFDE8 /* TeamBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105526E52A80503A009FFDE8 /* TeamBoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBoomApp.swift; sourceTree = "<group>"; };
 		105526E72A80503A009FFDE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				105526E52A80503A009FFDE8 /* TeamBoomApp.swift */,
 				105526E72A80503A009FFDE8 /* ContentView.swift */,
 				A03DE5162A8107F800C5D279 /* CategoriesView.swift */,
+				0DE93BD52A8142B400648218 /* MainViewController.swift */,
 				AC8C71982A80E6CE0063F55F /* Views */,
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
 				105526E92A80503C009FFDE8 /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 				105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */,
 				10AE80102A812B5E0083A45E /* Bundle + ext.swift in Sources */,
 				105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */,
+				0DE93BD62A8142B400648218 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
