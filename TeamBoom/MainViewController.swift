@@ -17,7 +17,7 @@ struct MainViewController: View {
                     Image("bomb")
                     VStack(spacing: 15) {
                         Button() {
-                            
+                            //Some code for start game...
                         } label: {
                             Text("Старт")
                                 .font(.system(size: 22, weight: .bold))
@@ -26,10 +26,9 @@ struct MainViewController: View {
                         .background(.violet)
                         .foregroundColor(.yellowGradient)
                         .clipShape(RoundedRectangle(cornerRadius: 50))
+                        .shadow(radius: 15)
                         
-                        Button() {
-                          
-                        } label: {
+                        NavigationLink(destination: CategoriesView()) {
                             Text("Категории")
                                 .font(.system(size: 22, weight: .bold))
                         }
@@ -37,13 +36,13 @@ struct MainViewController: View {
                         .background(.violet)
                         .foregroundColor(.yellowGradient)
                         .clipShape(RoundedRectangle(cornerRadius: 50))
+                        .shadow(radius: 15)
                         
                         HStack {
                             Spacer()
                             Image("question-mark")
                                 .padding(.trailing, 30)
                         }
-//
                     }
                 }
             }
