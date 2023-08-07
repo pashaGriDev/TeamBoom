@@ -25,7 +25,7 @@ struct GameEndViewController: View {
                         .font(.system(size: 24, weight: .bold))
                     VStack(spacing: 15) {
                         Button() {
-                            //Some code for start game...
+                            //Some code for another task...
                         } label: {
                             Text("Другое задание")
                                 .font(.system(size: 22, weight: .bold))
@@ -37,7 +37,7 @@ struct GameEndViewController: View {
                         .shadow(radius: 15)
                         
                         Button() {
-                           
+                            //Some code for restart game...
                         } label: {
                             Text("Начать заново")
                                 .font(.system(size: 22, weight: .bold))
