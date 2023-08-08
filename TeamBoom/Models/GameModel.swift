@@ -13,7 +13,7 @@ final class GameModel: ObservableObject {
 
 	@Published var selectedCategories: [Category] = []
 	@Published var question = ""
-	@Published var endGame = ""
+	@Published var endGame = "Test punish"
 	private let nakazaniya: PunishModel = Bundle.main.decode("funnyActions.json")
 	private let kategorii: CategoryModel = Bundle.main.decode("categories.json")
 
