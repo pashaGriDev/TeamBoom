@@ -14,22 +14,28 @@ struct GameView: View {
 	@State private var isOver: Bool
 	@State private var question: String
 	@State private var punishment: String
+    @State private var isPaused: Bool
 	private let gameModel: GameModel
 	private var gameTime: Double
 
 	// MARK: - Init
 
-	init(isGame: Bool = false, isOver: Bool = false,
-		 question: String = "How are you man? ddddddddoooppp",
-		 punishment: String = "Punishment",
-		 gameModel: GameModel, gameTime: Double = 40.0) {
-		self.isGame = isGame
-		self.isOver = isOver
-		self.question = question
-		self.punishment = punishment
-		self.gameModel = gameModel
-		self.gameTime = gameTime
-	}
+    init(isGame: Bool = false,
+         isOver: Bool = false,
+         question: String = "",
+         punishment: String = "",
+         isPaused: Bool = false,
+         gameModel: GameModel,
+         gameTime: Double = 10.0)
+
+   {  self.isGame = isGame
+      self.isOver = isOver
+      self.question = question
+      self.punishment = punishment
+      self.isPaused = isPaused
+      self.gameModel = gameModel
+      self.gameTime = gameTime
+    }
 
 	// MARK: - UI
 
@@ -37,7 +43,9 @@ struct GameView: View {
 		ZStack {
 			BackgroundGradientView()
 			if isGame {
-				LottieBombView(name: "animation1", loopMode: .playOnce, animationSpeed: 7.76/gameTime)
+//				LottieBombView(name: "animation1", loopMode: .playOnce, animationSpeed: 7.76/gameTime)
+                LottieView(name: "animation1", loopMode: .playOnce, animationSpeed: 7.76/gameTime, isPaused: isPaused)
+                    .frame(width: 500, height: 500)
 					.scaleEffect(1)
 					.saturation(1.7)
 					.animation(.easeIn, value: isGame)
@@ -59,6 +67,7 @@ struct GameView: View {
 				}
 				Spacer()
 				Button("Stop") {
+                    isPaused.toggle()
 					player.stop()
 					player2.stop()
 				}
@@ -69,7 +78,9 @@ struct GameView: View {
 					isOver = false
 					isGame.toggle()
 					DispatchQueue.main.asyncAfter(deadline: .now() + 0.95*gameTime) {
-						playSound(key: "explosion")
+                        if isGame {
+                            playSound(key: "explosion")
+                        }
 					}
 					DispatchQueue.main.asyncAfter(deadline: .now() + gameTime) {
 						isOver.toggle()
