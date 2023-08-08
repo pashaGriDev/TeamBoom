@@ -72,14 +72,14 @@ struct GameView: View {
 					player2.stop()
 				}
 				Button("Start Game") {
-					playSound(key: "backgroundMusic")
-					playSound2(key: "ticking")
+					playSound(key: "backgroundMusic", player: &player)
+					playSound(key: "ticking", player: &player2)
 					gameModel.askQuestion()
 					isOver = false
 					isGame.toggle()
 					DispatchQueue.main.asyncAfter(deadline: .now() + 0.95*gameTime) {
                         if isGame {
-                            playSound(key: "explosion")
+                            playSound(key: "explosion", player: &player)
                         }
 					}
 					DispatchQueue.main.asyncAfter(deadline: .now() + gameTime) {
