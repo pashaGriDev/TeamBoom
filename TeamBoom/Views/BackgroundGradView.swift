@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct BackgroundGradientView: View {
-
-    var body: some View {
-
-        LinearGradient(colors: [.yellowGradient, .orangeGradient], startPoint: .top, endPoint: .bottom)
-            .ignoresSafeArea()
-    }
+	var body: some View {
+		LinearGradient(colors: [.yellowGradient, .orangeGradient], startPoint: .top, endPoint: .bottom)
+			.ignoresSafeArea()
+	}
 }
 
 struct BackgroundGradientView_Previews: PreviewProvider {
-    static var previews: some View {
-        BackgroundGradientView()
-    }
+	static var previews: some View {
+		BackgroundGradientView()
+	}
 }

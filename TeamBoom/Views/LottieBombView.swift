@@ -5,23 +5,27 @@
 //  Created by Artem on 07.08.2023.
 //
 
-import SwiftUI
 import Lottie
+import SwiftUI
 
 struct LottieBombView: UIViewRepresentable {
-    let name: String
-    let loopMode: LottieLoopMode
-    let animationSpeed: CGFloat
+	// MARK: - Properties
 
-    func makeUIView(context: Context) -> Lottie.LottieAnimationView {
-        let animationView = LottieAnimationView(name: name)
-        animationView.loopMode = loopMode
-        animationView.animationSpeed = animationSpeed
-        animationView.play()
-        return animationView
-    }
+	let name: String
+	let loopMode: LottieLoopMode
+	let animationSpeed: CGFloat
 
-    func updateUIView(_ uiView: LottieAnimationView, context: Context) {
+	// MARK: - Methods
 
-    }
+	func makeUIView(context: Context) -> Lottie.LottieAnimationView {
+		let animationView = LottieAnimationView(name: name)
+		animationView.loopMode = loopMode
+		animationView.animationSpeed = animationSpeed
+		animationView.play()
+		return animationView
+	}
+
+	func updateUIView(_ uiView: LottieAnimationView, context: Context) {
+
+	}
 }

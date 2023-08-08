@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct CategoriesView: View {
-	
+	// MARK: - States & Properties
+
 	let categories = ["Category1",
 					  "Category2",
 					  "Category3",
 					  "Category4",
 					  "Category5",
 					  "Category6"]
-	
+
 	private let columns = [
 		GridItem(.adaptive(minimum: 175))
 	]
-	
+
+	// MARK: - UI
+
 	var body: some View {
 		NavigationView {
 			ZStack {
@@ -28,11 +31,11 @@ struct CategoriesView: View {
 					LazyVGrid(columns: columns) {
 						ForEach(categories, id: \.self) { category in
 							Button {
-								// TODO: Добавить логику выбора категории + логика отображения checkmark
+								// Добавить логику выбора категории + логика отображения checkmark
 								toggleCategory()
 							} label: {
 								ZStack {
-									VStack (alignment: .leading) {
+									VStack(alignment: .leading) {
 										Image(systemName: "checkmark.circle.fill")
 											.resizable()
 											.frame(width: 30, height: 30)
@@ -64,12 +67,18 @@ struct CategoriesView: View {
 			.navigationTitle("Категории")
 		}
 	}
-	
-	private func toggleCategory() {
-		
-	}
-	
+
 }
+
+// MARK: - Private methods
+
+extension CategoriesView {
+	private func toggleCategory() {
+
+	}
+}
+
+// MARK: - Preview
 
 struct CategoriesView_Previews: PreviewProvider {
 	static var previews: some View {

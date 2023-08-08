@@ -8,10 +8,10 @@
 import Foundation
 
 struct CategoryModel: Codable {
-    let categories: [Category]
+	let categories: [Category]
 }
 
 struct Category: Codable {
-    let category: String
-    let questions: [String]
+	let category: String
+	let questions: [String]
 }

@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ButtonViewModifier: ViewModifier {
-
-    func body(content: Content) -> some View {
-        content
-            .font(.title)
-            .foregroundColor(.yellowOfButton)
-            .padding(.horizontal, 70)
-            .padding(.vertical, 20)
-            .background(.violet)
-            .cornerRadius(30)
-            .opacity(1)
-    }
+	func body(content: Content) -> some View {
+		content
+			.font(.title)
+			.foregroundColor(.yellowOfButton)
+			.padding(.horizontal, 70)
+			.padding(.vertical, 20)
+			.background(.violet)
+			.cornerRadius(30)
+			.opacity(1)
+	}
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct PunishModel: Codable {
-    let punishments: [String]
+	let punishments: [String]
 }
