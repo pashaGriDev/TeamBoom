@@ -58,27 +58,25 @@ struct GameView: View {
 						.offset(y: isGame ? 100 : -100)
 				}
 				Spacer()
-                Button("Stop") {
-                    player.stop()
-                    player2.stop()
-                }
+				Button("Stop") {
+					player.stop()
+					player2.stop()
+				}
 				Button("Start Game") {
-                    playSound(key: "backgroundMusic")
-                    playSound2(key: "ticking")
-					gameModel.updateSelections(index: 1)
+					playSound(key: "backgroundMusic")
+					playSound2(key: "ticking")
 					gameModel.askQuestion()
 					isOver = false
 					isGame.toggle()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.95*gameTime) {
-                        playSound(key: "explosion")
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + gameTime) {
-                        isOver.toggle()
-                        isGame.toggle()
-                        gameModel.gameOver()
-                    }
-                }
+					DispatchQueue.main.asyncAfter(deadline: .now() + 0.95*gameTime) {
+						playSound(key: "explosion")
+					}
+					DispatchQueue.main.asyncAfter(deadline: .now() + gameTime) {
+						isOver.toggle()
+						isGame.toggle()
+						gameModel.gameOver()
+					}
+				}
 				.modifier(ButtonViewModifier())
 				.padding(.bottom, 30)
 				.opacity(isGame ? 0 : 1)

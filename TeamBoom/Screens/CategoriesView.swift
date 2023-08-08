@@ -78,6 +78,9 @@ extension CategoriesView {
 			gameModel.selectedCategories.append(category)
 			return
 		}
+		if gameModel.selectedCategories.count < 2 {
+			return
+		}
 		gameModel.selectedCategories.remove(at: index)
 	}
 

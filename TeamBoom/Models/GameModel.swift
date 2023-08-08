@@ -17,11 +17,16 @@ final class GameModel: ObservableObject {
 	private let nakazaniya: PunishModel = Bundle.main.decode("funnyActions.json")
 	let categories: CategoryModel = Bundle.main.decode("categories.json")
 
-	// MARK: - Methods
+	// MARK: - Init
 
-	func updateSelections(index: Int) {
-		selectedCategories.append(categories.categories[index])
+	init() {
+		guard let startCategory = categories.categories.first else {
+			fatalError("Error in decoding categories.json file")
+		}
+		selectedCategories.append(startCategory)
 	}
+
+	// MARK: - Methods
 
 	func askQuestion() {
 		question = selectedCategories.randomElement()?.questions.randomElement() ?? ""
