@@ -14,7 +14,7 @@ struct GameView: View {
 	@State private var isOver = false
 	@State private var question = "How are you man? ddddddddoooppp"
 	@State private var punishment = "Punishment"
-	@ObservedObject var gameModel = GameModel()
+	@StateObject var gameModel = GameModel()
 	var gameTime = 7.0
 
 	// MARK: - UI

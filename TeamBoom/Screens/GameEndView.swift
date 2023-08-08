@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct GameEndView: View {
-	// MARK: - UI
 
+    @ObservedObject var viewMod: GameModel
+
+    // MARK: - UI
 	var body: some View {
 		NavigationView {
 			ZStack {
@@ -20,14 +22,14 @@ struct GameEndView: View {
 						.multilineTextAlignment(.center)
 						.font(.system(size: 24, weight: .bold))
 					Image("explosion")
-					Text("В следующем раунде после каждого ответа хлопать в ладоши")
+                    Text(viewMod.endGame)
 						.padding()
 						.multilineTextAlignment(.center)
 						.foregroundColor(.violet)
 						.font(.system(size: 24, weight: .bold))
 					VStack(spacing: 15) {
 						Button {
-							// Some code for another task...
+                            viewMod.gameOver()
 						} label: {
 							Text("Другое задание")
 								.font(.system(size: 22, weight: .bold))
@@ -63,6 +65,6 @@ struct GameEndView: View {
 
 struct GameEndView_Previews: PreviewProvider {
 	static var previews: some View {
-		GameEndView()
+		GameEndView(viewMod: GameModel())
 	}
 }
