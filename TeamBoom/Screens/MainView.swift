@@ -18,17 +18,16 @@ struct MainView: View {
 					Image("textBomb")
 					Image("bomb")
 					VStack(spacing: 15) {
-						Button {
-							// Some code for start game...
-						} label: {
-							Text("Старт")
-								.font(.system(size: 22, weight: .bold))
-						}
-						.frame(width: 274, height: 79)
-						.background(.violet)
-						.foregroundColor(.yellowGradient)
-						.clipShape(RoundedRectangle(cornerRadius: 50))
-						.shadow(radius: 15)
+						
+                        NavigationLink (destination: GameView()) {
+                                Text("Старт")
+                                    .font(.system(size: 22, weight: .bold))
+                            }
+                            .frame(width: 274, height: 79)
+                            .background(.violet)
+                            .foregroundColor(.yellowGradient)
+                            .clipShape(RoundedRectangle(cornerRadius: 50))
+                            .shadow(radius: 15)
 
 						NavigationLink(destination: CategoriesView()) {
 							Text("Категории")
