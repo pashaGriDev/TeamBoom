@@ -15,12 +15,12 @@ final class GameModel: ObservableObject {
 	@Published var question = ""
 	@Published var endGame = "Test punish"
 	private let nakazaniya: PunishModel = Bundle.main.decode("funnyActions.json")
-	private let kategorii: CategoryModel = Bundle.main.decode("categories.json")
+	let categories: CategoryModel = Bundle.main.decode("categories.json")
 
 	// MARK: - Methods
 
 	func updateSelections(index: Int) {
-		selectedCategories.append(kategorii.categories[index])
+		selectedCategories.append(categories.categories[index])
 	}
 
 	func askQuestion() {

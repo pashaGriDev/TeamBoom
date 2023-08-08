@@ -12,6 +12,8 @@ struct CategoryModel: Codable {
 }
 
 struct Category: Codable {
-	let category: String
+	let id: UUID = UUID()
+	let title: String
+	let image: String
 	let questions: [String]
 }

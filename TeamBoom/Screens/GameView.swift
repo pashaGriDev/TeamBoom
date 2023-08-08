@@ -10,12 +10,26 @@ import SwiftUI
 struct GameView: View {
 	// MARK: - States & Properties
 
-	@State private var isGame = false
-	@State private var isOver = false
-	@State private var question = "How are you man? ddddddddoooppp"
-	@State private var punishment = "Punishment"
-	@StateObject var gameModel = GameModel()
-	var gameTime = 7.0
+	@State private var isGame: Bool
+	@State private var isOver: Bool
+	@State private var question: String
+	@State private var punishment: String
+	private let gameModel: GameModel
+	private var gameTime: Double
+
+	// MARK: - Init
+
+	init(isGame: Bool = false, isOver: Bool = false,
+		 question: String = "How are you man? ddddddddoooppp",
+		 punishment: String = "Punishment",
+		 gameModel: GameModel, gameTime: Double = 7.0) {
+		self.isGame = isGame
+		self.isOver = isOver
+		self.question = question
+		self.punishment = punishment
+		self.gameModel = gameModel
+		self.gameTime = gameTime
+	}
 
 	// MARK: - UI
 
@@ -69,7 +83,9 @@ struct GameView: View {
 // MARK: - Preview
 
 struct GameView_Previews: PreviewProvider {
+
+	static let gameModel = GameModel()
 	static var previews: some View {
-		GameView()
+		GameView(gameModel: gameModel)
 	}
 }
