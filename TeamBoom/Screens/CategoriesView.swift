@@ -10,16 +10,14 @@ import SwiftUI
 struct CategoriesView: View {
 	// MARK: - States & Properties
 
-	let categories = ["Category1",
-					  "Category2",
-					  "Category3",
-					  "Category4",
-					  "Category5",
-					  "Category6"]
+	private let gameModel: GameModel
+	private let columns = [GridItem(.adaptive(minimum: 175))]
 
-	private let columns = [
-		GridItem(.adaptive(minimum: 175))
-	]
+	// MARK: - Init
+
+	init(gameModel: GameModel) {
+		self.gameModel = gameModel
+	}
 
 	// MARK: - UI
 
@@ -29,26 +27,28 @@ struct CategoriesView: View {
 				BackgroundGradientView()
 				ScrollView {
 					LazyVGrid(columns: columns) {
-						ForEach(categories, id: \.self) { category in
+						ForEach(gameModel.categories.categories, id: \.id) { category in
 							Button {
-								// Добавить логику выбора категории + логика отображения checkmark
-								toggleCategory()
+								addCategory(category: category)
 							} label: {
 								ZStack {
-									VStack(alignment: .leading) {
-										Image(systemName: "checkmark.circle.fill")
-											.resizable()
-											.frame(width: 30, height: 30)
-											.foregroundColor(.white)
-											.position(x: 30, y: 30)
+									if isSelectedCategory(category: category) {
+										VStack(alignment: .leading) {
+											Image(systemName: "checkmark.circle.fill")
+												.resizable()
+												.frame(width: 30, height: 30)
+												.foregroundColor(.white)
+												.position(x: 30, y: 30)
+										}
 									}
 									VStack {
-										Image(category)
+										Image(category.image)
 											.resizable()
 											.frame(width: 100, height: 100)
-										Text(category)
+										Text(category.title)
 											.foregroundColor(Color.init(red: 1, green: 1, blue: 0))
 											.font(.headline)
+											.padding(.horizontal)
 									}
 								}
 								.frame(width: 175, height: 175)
@@ -65,23 +65,33 @@ struct CategoriesView: View {
 				.padding(.vertical)
 			}
 			.navigationTitle("Категории")
+			.navigationBarTitleDisplayMode(.inline)
 		}
 	}
-
 }
 
 // MARK: - Private methods
 
 extension CategoriesView {
-	private func toggleCategory() {
+	private func addCategory(category: Category) {
+		guard let index = gameModel.selectedCategories.firstIndex(where: { $0.id == category.id}) else {
+			gameModel.selectedCategories.append(category)
+			return
+		}
+		gameModel.selectedCategories.remove(at: index)
+	}
 
+	private func isSelectedCategory(category: Category) -> Bool {
+		gameModel.selectedCategories.contains { $0.id == category.id}
 	}
 }
 
 // MARK: - Preview
 
 struct CategoriesView_Previews: PreviewProvider {
+	static let gameModel = GameModel()
+
 	static var previews: some View {
-		CategoriesView()
+		CategoriesView(gameModel: GameModel())
 	}
 }
