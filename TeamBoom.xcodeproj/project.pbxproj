@@ -28,9 +28,9 @@
 		AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72042A81A25E0063F55F /* funnyActions.json */; };
 		AC8C72072A81A26D0063F55F /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72062A81A26D0063F55F /* categories.json */; };
 		ACD615542A8283C700FDD52D /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD615532A8283C700FDD52D /* PlaySound.swift */; };
-		ACD615562A8284D200FDD52D /* ticking2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615552A8284D200FDD52D /* ticking2.mp3 */; };
-		ACD615582A8284DC00FDD52D /* Background Music 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615572A8284DC00FDD52D /* Background Music 1.mp3 */; };
-		ACD6155A2A8284EB00FDD52D /* Explosion2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615592A8284EB00FDD52D /* Explosion2.mp3 */; };
+		ACD615562A8284D200FDD52D /* ticking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615552A8284D200FDD52D /* ticking.mp3 */; };
+		ACD615582A8284DC00FDD52D /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */; };
+		ACD6155A2A8284EB00FDD52D /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615592A8284EB00FDD52D /* explosion.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +55,9 @@
 		AC8C72042A81A25E0063F55F /* funnyActions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = funnyActions.json; sourceTree = "<group>"; };
 		AC8C72062A81A26D0063F55F /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		ACD615532A8283C700FDD52D /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		ACD615552A8284D200FDD52D /* ticking2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking2.mp3; sourceTree = "<group>"; };
-		ACD615572A8284DC00FDD52D /* Background Music 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Background Music 1.mp3"; sourceTree = "<group>"; };
-		ACD615592A8284EB00FDD52D /* Explosion2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Explosion2.mp3; sourceTree = "<group>"; };
+		ACD615552A8284D200FDD52D /* ticking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking.mp3; sourceTree = "<group>"; };
+		ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		ACD615592A8284EB00FDD52D /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,9 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				ACD615532A8283C700FDD52D /* PlaySound.swift */,
-				ACD615592A8284EB00FDD52D /* Explosion2.mp3 */,
-				ACD615552A8284D200FDD52D /* ticking2.mp3 */,
-				ACD615572A8284DC00FDD52D /* Background Music 1.mp3 */,
+				ACD615592A8284EB00FDD52D /* explosion.mp3 */,
+				ACD615552A8284D200FDD52D /* ticking.mp3 */,
+				ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -239,14 +239,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD615562A8284D200FDD52D /* ticking2.mp3 in Resources */,
+				ACD615562A8284D200FDD52D /* ticking.mp3 in Resources */,
 				AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */,
 				AC8C72072A81A26D0063F55F /* categories.json in Resources */,
 				105526ED2A80503C009FFDE8 /* Preview Assets.xcassets in Resources */,
-				ACD6155A2A8284EB00FDD52D /* Explosion2.mp3 in Resources */,
+				ACD6155A2A8284EB00FDD52D /* explosion.mp3 in Resources */,
 				AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */,
 				105526F42A80507F009FFDE8 /* .gitignore in Resources */,
-				ACD615582A8284DC00FDD52D /* Background Music 1.mp3 in Resources */,
+				ACD615582A8284DC00FDD52D /* backgroundMusic.mp3 in Resources */,
 				105526EA2A80503C009FFDE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
