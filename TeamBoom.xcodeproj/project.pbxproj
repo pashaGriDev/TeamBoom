@@ -27,6 +27,10 @@
 		AC8C72032A819F490063F55F /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C72002A819F490063F55F /* GameModel.swift */; };
 		AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72042A81A25E0063F55F /* funnyActions.json */; };
 		AC8C72072A81A26D0063F55F /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72062A81A26D0063F55F /* categories.json */; };
+		ACD615542A8283C700FDD52D /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD615532A8283C700FDD52D /* PlaySound.swift */; };
+		ACD615562A8284D200FDD52D /* ticking2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615552A8284D200FDD52D /* ticking2.mp3 */; };
+		ACD615582A8284DC00FDD52D /* Background Music 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615572A8284DC00FDD52D /* Background Music 1.mp3 */; };
+		ACD6155A2A8284EB00FDD52D /* Explosion+2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615592A8284EB00FDD52D /* Explosion+2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		AC8C72002A819F490063F55F /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		AC8C72042A81A25E0063F55F /* funnyActions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = funnyActions.json; sourceTree = "<group>"; };
 		AC8C72062A81A26D0063F55F /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		ACD615532A8283C700FDD52D /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		ACD615552A8284D200FDD52D /* ticking2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking2.mp3; sourceTree = "<group>"; };
+		ACD615572A8284DC00FDD52D /* Background Music 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Background Music 1.mp3"; sourceTree = "<group>"; };
+		ACD615592A8284EB00FDD52D /* Explosion+2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Explosion+2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 				AC8C72082A81A55A0063F55F /* Models */,
 				AC8C71982A80E6CE0063F55F /* Views */,
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
+				ACD615522A8283A800FDD52D /* Sounds */,
 				A07ABD0A2A825BC400B4B5B8 /* JSONs */,
 				105526E92A80503C009FFDE8 /* Assets.xcassets */,
 				105526EB2A80503C009FFDE8 /* Preview Content */,
@@ -152,6 +161,17 @@
 				AC8C71FF2A819F490063F55F /* CategoryModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ACD615522A8283A800FDD52D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				ACD615532A8283C700FDD52D /* PlaySound.swift */,
+				ACD615592A8284EB00FDD52D /* Explosion+2.mp3 */,
+				ACD615552A8284D200FDD52D /* ticking2.mp3 */,
+				ACD615572A8284DC00FDD52D /* Background Music 1.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,11 +239,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD615562A8284D200FDD52D /* ticking2.mp3 in Resources */,
 				AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */,
 				AC8C72072A81A26D0063F55F /* categories.json in Resources */,
 				105526ED2A80503C009FFDE8 /* Preview Assets.xcassets in Resources */,
+				ACD6155A2A8284EB00FDD52D /* Explosion+2.mp3 in Resources */,
 				AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */,
 				105526F42A80507F009FFDE8 /* .gitignore in Resources */,
+				ACD615582A8284DC00FDD52D /* Background Music 1.mp3 in Resources */,
 				105526EA2A80503C009FFDE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8C72012A819F490063F55F /* PunishModel.swift in Sources */,
+				ACD615542A8283C700FDD52D /* PlaySound.swift in Sources */,
 				AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */,
 				AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */,
 				AC8C72032A819F490063F55F /* GameModel.swift in Sources */,
