@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7CC8EC2A83BCAB0076950C /* Animation Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CC8EB2A83BCAB0076950C /* Animation Buttons.swift */; };
 		0DB4C2C62A81603100E791B1 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4C2C52A81603100E791B1 /* GameEndView.swift */; };
 		0DE93BD62A8142B400648218 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE93BD52A8142B400648218 /* MainView.swift */; };
 		105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526E52A80503A009FFDE8 /* TeamBoomApp.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D7CC8EB2A83BCAB0076950C /* Animation Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Buttons.swift"; sourceTree = "<group>"; };
 		0DB4C2C52A81603100E791B1 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		0DE93BD52A8142B400648218 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		105526E22A80503A009FFDE8 /* TeamBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 				A008A1D22A83801F0063E733 /* LottieView.swift */,
 				AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */,
 				AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */,
+				0D7CC8EB2A83BCAB0076950C /* Animation Buttons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7CC8EC2A83BCAB0076950C /* Animation Buttons.swift in Sources */,
 				AC8C72012A819F490063F55F /* PunishModel.swift in Sources */,
 				A008A1D32A83801F0063E733 /* LottieView.swift in Sources */,
 				ACD615542A8283C700FDD52D /* PlaySound.swift in Sources */,

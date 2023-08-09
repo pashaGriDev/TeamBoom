@@ -17,6 +17,7 @@ final class GameModel: ObservableObject {
 	@Published var isOver = false
 	@Published var isPlaying = false
 	@Published var isPaused = false
+    @Published var isBombAnimating = false
 
 	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
 	let categories: CategoryModel = Bundle.main.decode("categories.json")
@@ -39,4 +40,8 @@ final class GameModel: ObservableObject {
 	func getPunishment() {
 		punishment = punishments.punishments.randomElement() ?? ""
 	}
+    
+    func startBombImageAnimation() {
+            isBombAnimating = true
+        }
 }

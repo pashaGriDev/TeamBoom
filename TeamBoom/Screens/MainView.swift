@@ -21,6 +21,12 @@ struct MainView: View {
 				VStack {
 					Image("textBomb")
 					Image("bomb")
+                        .scaleEffect(gameModel.isBombAnimating ? 1.09 : 1.0)
+                        .animation(Animation.easeInOut(duration: 1.9).repeatForever(autoreverses: true))
+                                        .onAppear {
+                                            gameModel.startBombImageAnimation() 
+                                        }
+                                        .padding(.bottom, 15)
 					VStack(spacing: 15) {
 						NavigationLink(destination: GameView(gameModel: gameModel),  label: {
 							Text("Старт")
@@ -47,8 +53,12 @@ struct MainView: View {
                         
 						HStack {
 							Spacer()
-							Image("question-mark")
-								.padding(.trailing, 30)
+                            Button {
+                                //Rules code.
+                            } label: {
+                                Image("question-mark")
+                                    .padding(.trailing, 30)
+                            }
 						}
 					}
 				}
@@ -59,13 +69,6 @@ struct MainView: View {
 	}
 }
 
-// MARK: - Animation Buttons
-struct ThemeAnimationStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.8 : 1.0)
-    }
-}
 
 // MARK: - Preview
 
