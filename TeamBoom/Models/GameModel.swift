@@ -19,7 +19,7 @@ final class GameModel: ObservableObject {
 	@Published var isPlaying = false
 	@Published var isPaused = false
     @Published var boomed = false
-	@Published var gameTime: Double = 5.0
+	@Published var gameTime: Double = 15.0
     @Published var count: Double = 0
 	@Published var isBackgroundMusic: Bool = true
 	@Published var backgroundSound: String = "backgroundMusic"
@@ -47,7 +47,7 @@ final class GameModel: ObservableObject {
 	func getPunishment() {
 		punishment = punishments.punishments.randomElement() ?? ""
 	}
-    
+
     func setUpTimer() {
         Timer
             .publish(every: 0.05, on: .main, in: .common)
@@ -58,7 +58,7 @@ final class GameModel: ObservableObject {
                     playSound(key: "explosion", player: &player2)
                     boomed = true
                 }
-                
+
                 if self.isPaused {
                     for item in cancellables {
                         item.cancel()
@@ -66,10 +66,9 @@ final class GameModel: ObservableObject {
                         player2.pause()
                     }
                 }
-                if self.count >= 1.05*gameTime {
+                if self.count >= 1.048*gameTime {
                     for item in cancellables {
                         player.pause()
-                       // player2.pause()
                         item.cancel()
                         isPaused = true
                         isOver = true
