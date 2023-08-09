@@ -30,19 +30,18 @@ struct MainView: View {
 					VStack(spacing: 15) {
 						NavigationLink(destination: GameView(gameModel: gameModel),  label: {
 							Text("Старт")
-								.font(.system(size: 22, weight: .bold))
+                                .font(.custom(CustomFont.DelaGothicOne, size: 22))
 								.frame(width: 274, height: 79)
 								.background(.violet)
 								.foregroundColor(.yellowGradient)
 								.clipShape(RoundedRectangle(cornerRadius: 50))
 								.shadow(radius: 15)
-                                
 						})
                         .buttonStyle(ThemeAnimationStyle())
                         
 						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
-								.font(.system(size: 22, weight: .bold))
+                                .font(.custom(CustomFont.DelaGothicOne, size: 22))
 								.frame(width: 274, height: 79)
 								.background(.violet)
 								.foregroundColor(.yellowGradient)
