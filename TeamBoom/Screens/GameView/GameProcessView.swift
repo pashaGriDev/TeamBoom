@@ -11,13 +11,11 @@ struct GameProcessView: View {
 	// MARK: - States&Properties
 
 	@StateObject private var gameModel: GameModel
-	private let gameTime: Double
 
 	// MARK: - Init
 
-	init(gameModel: GameModel, gameTime: Double) {
+	init(gameModel: GameModel) {
 		self._gameModel = StateObject(wrappedValue: gameModel)
-		self.gameTime = gameTime
 	}
 
 	// MARK: - UI
@@ -33,28 +31,30 @@ struct GameProcessView: View {
 			Spacer()
 			LottieView(name: "animation1",
 					   loopMode: .playOnce,
-					   animationSpeed: 7.76/gameTime,
+					   animationSpeed: 7.75/gameModel.gameTime,
 					   isPaused: gameModel.isPaused)
 				.frame(width: 500, height: 500)
 				.scaleEffect(1)
 				.saturation(1.7)
 				.animation(.easeIn, value: gameModel.isPlaying)
 			Spacer()
-			Button("Пауза") {
+            Button(gameModel.isPaused ? "Продолжить" : "Пауза") {
 				pauseGame()
 			}
 			.modifier(ButtonViewModifier())
 			.padding(.bottom, 30)
+            .animation(.default, value: gameModel.isPaused)
 		}
 	}
 
 	private func pauseGame() {
 		if !gameModel.isPaused {
 			gameModel.isPaused = true
-			player.stop()
-			player2.stop()
+			player.pause()
+			player2.pause()
 		} else {
 			gameModel.isPaused = false
+            gameModel.setUpTimer()
 			player.play()
 			player2.play()
 		}
@@ -65,6 +65,6 @@ struct GameProcessView: View {
 
 struct GameProcessView_Previews: PreviewProvider {
 	static var previews: some View {
-		GameProcessView(gameModel: GameModel(), gameTime: 5.0)
+		GameProcessView(gameModel: GameModel())
 	}
 }

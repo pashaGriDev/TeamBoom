@@ -52,6 +52,10 @@ struct MainView: View {
                         .buttonStyle(ThemeAnimationStyle())
                         
 						HStack {
+							NavigationLink(destination: SettingsView()) {
+								Image("settings")
+									.padding(.leading, 30)
+							}
 							Spacer()
                             Button {
                                 //Rules code.
