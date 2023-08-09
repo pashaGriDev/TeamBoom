@@ -29,7 +29,7 @@ struct SettingsView: View {
 				BackgroundGradientView()
 				VStack (alignment: .leading) {
 					Text("Время игры")
-						.font(.system(size: 20).bold())
+                        .font(.custom(CustomFont.DelaGothicOne, size: 16))
 						.foregroundColor(Color.violet)
 					LazyVGrid(columns: columns) {
 						ForEach(durations, id: \.self) { duration in
@@ -37,7 +37,7 @@ struct SettingsView: View {
 							} label: {
 								Text(duration)
 							}
-							.font(.system(size: 16).bold())
+                            .font(.custom(CustomFont.DelaGothicOne, size: 16))
 							.foregroundColor(.yellowOfButton)
 							.frame(width: 150)
 							.padding(.horizontal)
@@ -50,16 +50,16 @@ struct SettingsView: View {
 					Spacer()
 					Toggle("Игра с заданиями", isOn: $withPunishment)
 						.padding(.horizontal)
-						.font(.system(size: 20).bold())
+                        .font(.custom(CustomFont.DelaGothicOne, size: 20))
 						.foregroundColor(Color.violet)
 					Toggle("Фоновая музыка", isOn: $withBackgroundMusic)
 						.padding(.horizontal)
-						.font(.system(size: 20).bold())
+                        .font(.custom(CustomFont.DelaGothicOne, size: 20))
 						.foregroundColor(Color.violet)
 
 					HStack {
 						Text("Фоновая музыка")
-							.font(.system(size: 20).bold())
+                            .font(.custom(CustomFont.DelaGothicOne, size: 20))
 							.foregroundColor(Color.violet)
 						Spacer()
 						Picker("", selection: $backgroundMusic) {
@@ -71,7 +71,7 @@ struct SettingsView: View {
 
 					HStack {
 						Text("Тиканье бомбы")
-							.font(.system(size: 20).bold())
+                            .font(.custom(CustomFont.DelaGothicOne, size: 20))
 							.foregroundColor(Color.violet)
 						Spacer()
 						Picker("", selection: $backgroundMusic) {
@@ -83,12 +83,13 @@ struct SettingsView: View {
 
 					HStack {
 						Text("Взрыв бомбы")
-							.font(.system(size: 20).bold())
+                            .font(.custom(CustomFont.DelaGothicOne, size: 20))
 							.foregroundColor(Color.violet)
 						Spacer()
 						Picker("", selection: $bombSound) {
 							ForEach(bombSound, id: \.self) { sound in
 								Text(sound)
+                                
 							}
 						}
 					}

@@ -28,19 +28,19 @@ struct GameEndView: View {
 					Text("Проигравший выполняет задание")
 						.padding()
 						.multilineTextAlignment(.center)
-						.font(.system(size: 24, weight: .bold))
+                        .font(.custom(CustomFont.DelaGothicOne, size: 24))
 					Image("explosion")
 					Text(gameModel.punishment)
 						.padding()
-						.multilineTextAlignment(.center)
 						.foregroundColor(.violet)
-						.font(.system(size: 24, weight: .bold))
+                        .font(.custom(CustomFont.DelaGothicOne, size: 20))
+                        .multilineTextAlignment(.center)
 					VStack(spacing: 15) {
 						Button {
 							gameModel.getPunishment()
 						} label: {
 							Text("Другое задание")
-								.font(.system(size: 22, weight: .bold))
+                                .font(.custom(CustomFont.DelaGothicOne, size: 22))
 						}
 						.frame(width: 274, height: 79)
 						.background(.violet)
@@ -51,7 +51,7 @@ struct GameEndView: View {
 							restartGame()
 						} label: {
 							Text("Начать заново")
-								.font(.system(size: 22, weight: .bold))
+                                .font(.custom(CustomFont.DelaGothicOne, size: 22))
 						}
 						.frame(width: 274, height: 79)
 						.background(.violet)

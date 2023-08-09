@@ -47,7 +47,7 @@ struct CategoriesView: View {
 											.frame(width: 100, height: 100)
 										Text(category.title)
 											.foregroundColor(Color.init(red: 1, green: 1, blue: 0))
-											.font(.headline)
+                                            .font(.custom(CustomFont.DelaGothicOne, size: 16))
 											.padding(.horizontal)
 									}
 								}
