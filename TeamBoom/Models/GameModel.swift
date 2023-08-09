@@ -9,12 +9,16 @@ import SwiftUI
 
 final class GameModel: ObservableObject {
 
-	// MARK: - Properties
+	// MARK: - States&Properties
 
 	@Published var selectedCategories: [Category] = []
 	@Published var question = ""
-	@Published var endGame = "Test punish"
-	private let nakazaniya: PunishModel = Bundle.main.decode("funnyActions.json")
+	@Published var punishment = ""
+	@Published var isOver = false
+	@Published var isPlaying = false
+	@Published var isPaused = false
+
+	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
 	let categories: CategoryModel = Bundle.main.decode("categories.json")
 
 	// MARK: - Init
@@ -32,7 +36,7 @@ final class GameModel: ObservableObject {
 		question = selectedCategories.randomElement()?.questions.randomElement() ?? ""
 	}
 
-	func gameOver() {
-		endGame = nakazaniya.punishments.randomElement() ?? ""
+	func getPunishment() {
+		punishment = punishments.punishments.randomElement() ?? ""
 	}
 }
