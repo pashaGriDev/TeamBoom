@@ -22,7 +22,7 @@ struct MainView: View {
 					Image("textBomb")
 					Image("bomb")
 					VStack(spacing: 15) {
-						NavigationLink(destination: GameView(gameModel: gameModel), label: {
+						NavigationLink(destination: GameView(gameModel: gameModel),  label: {
 							Text("Старт")
 								.font(.system(size: 22, weight: .bold))
 								.frame(width: 274, height: 79)
@@ -30,7 +30,10 @@ struct MainView: View {
 								.foregroundColor(.yellowGradient)
 								.clipShape(RoundedRectangle(cornerRadius: 50))
 								.shadow(radius: 15)
+                                
 						})
+                        .buttonStyle(ThemeAnimationStyle())
+                        
 						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
 								.font(.system(size: 22, weight: .bold))
@@ -40,6 +43,8 @@ struct MainView: View {
 								.clipShape(RoundedRectangle(cornerRadius: 50))
 								.shadow(radius: 15)
 						})
+                        .buttonStyle(ThemeAnimationStyle())
+                        
 						HStack {
 							Spacer()
 							Image("question-mark")
@@ -52,6 +57,14 @@ struct MainView: View {
 		.navigationBarTitle("Игра для компании", displayMode: .inline)
 		.navigationBarTitleDisplayMode(.large)
 	}
+}
+
+// MARK: - Animation Buttons
+struct ThemeAnimationStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.8 : 1.0)
+    }
 }
 
 // MARK: - Preview
