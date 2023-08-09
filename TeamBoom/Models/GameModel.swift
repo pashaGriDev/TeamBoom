@@ -82,7 +82,7 @@ final class GameModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
+
     func startBombImageAnimation() {
             isBombAnimating = true
         }
