@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct GameEndView: View {
+	// MARK: - States&Properties
 
-    @ObservedObject var viewMod: GameModel
+	private let gameModel: GameModel
 
-    // MARK: - UI
+	// MARK: - Init
+
+	init(gameModel: GameModel) {
+		self.gameModel = gameModel
+	}
+
+	// MARK: - UI
+
 	var body: some View {
 		NavigationView {
 			ZStack {
@@ -22,14 +30,14 @@ struct GameEndView: View {
 						.multilineTextAlignment(.center)
 						.font(.system(size: 24, weight: .bold))
 					Image("explosion")
-                    Text(viewMod.endGame)
+					Text(gameModel.punishment)
 						.padding()
 						.multilineTextAlignment(.center)
 						.foregroundColor(.violet)
 						.font(.system(size: 24, weight: .bold))
 					VStack(spacing: 15) {
 						Button {
-                            viewMod.gameOver()
+							gameModel.getPunishment()
 						} label: {
 							Text("Другое задание")
 								.font(.system(size: 22, weight: .bold))
@@ -39,9 +47,8 @@ struct GameEndView: View {
 						.foregroundColor(.yellowGradient)
 						.clipShape(RoundedRectangle(cornerRadius: 50))
 						.shadow(radius: 15)
-
 						Button {
-							// Some code for restart game...
+							restartGame()
 						} label: {
 							Text("Начать заново")
 								.font(.system(size: 22, weight: .bold))
@@ -51,13 +58,17 @@ struct GameEndView: View {
 						.foregroundColor(.yellowGradient)
 						.clipShape(RoundedRectangle(cornerRadius: 50))
 						.shadow(radius: 15)
-
 					}
 				}
 			}
 		}
-		.navigationBarTitle("Игра для компании", displayMode: .inline)
-		.navigationBarTitleDisplayMode(.large)
+	}
+
+	// MARK: - Methods
+
+	private func restartGame() {
+		gameModel.isPlaying = false
+		gameModel.isOver = false
 	}
 }
 
@@ -65,6 +76,6 @@ struct GameEndView: View {
 
 struct GameEndView_Previews: PreviewProvider {
 	static var previews: some View {
-		GameEndView(viewMod: GameModel())
+		GameEndView(gameModel: GameModel())
 	}
 }
