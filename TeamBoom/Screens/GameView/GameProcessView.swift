@@ -31,28 +31,30 @@ struct GameProcessView: View {
 			Spacer()
 			LottieView(name: "animation1",
 					   loopMode: .playOnce,
-					   animationSpeed: 7.76/gameModel.gameTime,
+					   animationSpeed: 7.75/gameModel.gameTime,
 					   isPaused: gameModel.isPaused)
 				.frame(width: 500, height: 500)
 				.scaleEffect(1)
 				.saturation(1.7)
 				.animation(.easeIn, value: gameModel.isPlaying)
 			Spacer()
-			Button("Пауза") {
+            Button(gameModel.isPaused ? "Продолжить" : "Пауза") {
 				pauseGame()
 			}
 			.modifier(ButtonViewModifier())
 			.padding(.bottom, 30)
+            .animation(.default, value: gameModel.isPaused)
 		}
 	}
 
 	private func pauseGame() {
 		if !gameModel.isPaused {
 			gameModel.isPaused = true
-			player.stop()
-			player2.stop()
+			player.pause()
+			player2.pause()
 		} else {
 			gameModel.isPaused = false
+            gameModel.setUpTimer()
 			player.play()
 			player2.play()
 		}
