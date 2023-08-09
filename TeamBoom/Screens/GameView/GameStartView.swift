@@ -45,16 +45,8 @@ struct GameStartView: View {
 		playSound(key: "ticking", player: &player2)
 		gameModel.askQuestion()
 		gameModel.isPlaying.toggle()
-
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.95 * gameModel.gameTime) {
-			playSound(key: "explosion", player: &player)
-			player2.stop()
-		}
-
-		DispatchQueue.main.asyncAfter(deadline: .now() + gameModel.gameTime) {
-			gameModel.isOver.toggle()
-			gameModel.getPunishment()
-		}
+        gameModel.isPaused = false
+        gameModel.setUpTimer()
 	}
 }
 
