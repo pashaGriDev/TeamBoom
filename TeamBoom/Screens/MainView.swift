@@ -41,6 +41,10 @@ struct MainView: View {
 								.shadow(radius: 15)
 						})
 						HStack {
+							NavigationLink(destination: SettingsView()) {
+								Image("settings")
+									.padding(.leading, 30)
+							}
 							Spacer()
 							Image("question-mark")
 								.padding(.trailing, 30)
