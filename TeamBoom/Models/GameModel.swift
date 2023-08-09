@@ -26,6 +26,8 @@ final class GameModel: ObservableObject {
 	@Published var tickSound: String = "ticking"
 	@Published var explosionSound: String = "explosion"
     private var cancellables = Set<AnyCancellable>()
+    @Published var isBombAnimating = false
+
 	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
 	let categories: CategoryModel = Bundle.main.decode("categories.json")
 
@@ -80,4 +82,8 @@ final class GameModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    func startBombImageAnimation() {
+            isBombAnimating = true
+        }
 }
