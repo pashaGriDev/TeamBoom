@@ -27,7 +27,7 @@ struct SettingsView: View {
 		NavigationView {
 			ZStack {
 				BackgroundGradientView()
-				VStack (alignment: .leading) {
+				VStack(alignment: .leading) {
 					Text("Время игры")
                         .font(.custom(CustomFont.DelaGothicOne, size: 16))
 						.foregroundColor(Color.violet)
@@ -89,7 +89,7 @@ struct SettingsView: View {
 						Picker("", selection: $bombSound) {
 							ForEach(bombSound, id: \.self) { sound in
 								Text(sound)
-                                
+
 							}
 						}
 					}

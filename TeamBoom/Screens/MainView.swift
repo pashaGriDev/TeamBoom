@@ -24,11 +24,11 @@ struct MainView: View {
                         .scaleEffect(gameModel.isBombAnimating ? 1.09 : 1.0)
                         .animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true))
                                         .onAppear {
-                                            gameModel.startBombImageAnimation() 
+                                            gameModel.startBombImageAnimation()
                                         }
                                         .padding(.bottom, 15)
 					VStack(spacing: 15) {
-						NavigationLink(destination: GameView(gameModel: gameModel),  label: {
+						NavigationLink(destination: GameView(gameModel: gameModel), label: {
 							Text("Старт")
                                 .font(.custom(CustomFont.DelaGothicOne, size: 22))
 								.frame(width: 274, height: 79)
@@ -38,7 +38,7 @@ struct MainView: View {
 								.shadow(radius: 15)
 						})
                         .buttonStyle(ThemeAnimationStyle())
-                        
+
 						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
                                 .font(.custom(CustomFont.DelaGothicOne, size: 22))
@@ -49,7 +49,7 @@ struct MainView: View {
 								.shadow(radius: 15)
 						})
                         .buttonStyle(ThemeAnimationStyle())
-                        
+
 						HStack {
 							NavigationLink(destination: SettingsView()) {
 								Image("settings")
@@ -57,7 +57,7 @@ struct MainView: View {
 							}
 							Spacer()
                             Button {
-                                //Rules code.
+                                // Rules code.
                             } label: {
                                 Image("question-mark")
                                     .padding(.trailing, 30)
@@ -71,7 +71,6 @@ struct MainView: View {
 		.navigationBarTitleDisplayMode(.large)
 	}
 }
-
 
 // MARK: - Preview
 
