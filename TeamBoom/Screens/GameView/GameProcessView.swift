@@ -10,13 +10,13 @@ import SwiftUI
 struct GameProcessView: View {
 	// MARK: - States&Properties
 
-	private let gameModel: GameModel
+	@StateObject private var gameModel: GameModel
 	private let gameTime: Double
 
 	// MARK: - Init
 
 	init(gameModel: GameModel, gameTime: Double) {
-		self.gameModel = gameModel
+		self._gameModel = StateObject(wrappedValue: gameModel)
 		self.gameTime = gameTime
 	}
 
@@ -31,17 +31,32 @@ struct GameProcessView: View {
 				.multilineTextAlignment(.center)
 				.padding(.horizontal, 10)
 			Spacer()
-			LottieBombView(name: "animation1", loopMode: .playOnce, animationSpeed: 7.76/gameTime)
+			LottieView(name: "animation1",
+					   loopMode: .playOnce,
+					   animationSpeed: 7.76/gameTime,
+					   isPaused: gameModel.isPaused)
+				.frame(width: 500, height: 500)
 				.scaleEffect(1)
 				.saturation(1.7)
 				.animation(.easeIn, value: gameModel.isPlaying)
 			Spacer()
 			Button("Пауза") {
-				player.stop()
-				player2.stop()
+				pauseGame()
 			}
 			.modifier(ButtonViewModifier())
 			.padding(.bottom, 30)
+		}
+	}
+
+	private func pauseGame() {
+		if !gameModel.isPaused {
+			gameModel.isPaused = true
+			player.stop()
+			player2.stop()
+		} else {
+			gameModel.isPaused = false
+			player.play()
+			player2.play()
 		}
 	}
 }

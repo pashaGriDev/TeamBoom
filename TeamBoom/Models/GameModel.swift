@@ -16,6 +16,7 @@ final class GameModel: ObservableObject {
 	@Published var punishment = ""
 	@Published var isOver = false
 	@Published var isPlaying = false
+	@Published var isPaused = false
 
 	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
 	let categories: CategoryModel = Bundle.main.decode("categories.json")

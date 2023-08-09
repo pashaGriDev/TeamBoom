@@ -10,13 +10,13 @@ import SwiftUI
 struct GameStartView: View {
 	// MARK: - States&Properties
 
-	private let gameModel: GameModel
+	@StateObject private var gameModel: GameModel
 	private let gameTime: Double
 
 	// MARK: - Init
 
 	init(gameModel: GameModel, gameTime: Double) {
-		self.gameModel = gameModel
+		self._gameModel = StateObject(wrappedValue: gameModel)
 		self.gameTime = gameTime
 	}
 
@@ -58,7 +58,6 @@ struct GameStartView: View {
 		}
 	}
 }
-
 
 // MARK: - Preview
 

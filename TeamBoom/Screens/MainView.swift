@@ -22,27 +22,24 @@ struct MainView: View {
 					Image("textBomb")
 					Image("bomb")
 					VStack(spacing: 15) {
-
-						NavigationLink(destination: GameView(gameModel: gameModel)) {
+						NavigationLink(destination: GameView(gameModel: gameModel), label: {
 							Text("Старт")
 								.font(.system(size: 22, weight: .bold))
-						}
-						.frame(width: 274, height: 79)
-						.background(.violet)
-						.foregroundColor(.yellowGradient)
-						.clipShape(RoundedRectangle(cornerRadius: 50))
-						.shadow(radius: 15)
-
-						NavigationLink(destination: CategoriesView(gameModel: gameModel)) {
+								.frame(width: 274, height: 79)
+								.background(.violet)
+								.foregroundColor(.yellowGradient)
+								.clipShape(RoundedRectangle(cornerRadius: 50))
+								.shadow(radius: 15)
+						})
+						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
 								.font(.system(size: 22, weight: .bold))
-						}
-						.frame(width: 274, height: 79)
-						.background(.violet)
-						.foregroundColor(.yellowGradient)
-						.clipShape(RoundedRectangle(cornerRadius: 50))
-						.shadow(radius: 15)
-
+								.frame(width: 274, height: 79)
+								.background(.violet)
+								.foregroundColor(.yellowGradient)
+								.clipShape(RoundedRectangle(cornerRadius: 50))
+								.shadow(radius: 15)
+						})
 						HStack {
 							Spacer()
 							Image("question-mark")
