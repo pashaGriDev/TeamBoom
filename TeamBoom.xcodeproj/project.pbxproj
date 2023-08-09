@@ -22,7 +22,6 @@
 		AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */; };
 		AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */; };
 		AC8C71B12A8131250063F55F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AC8C71B02A8131250063F55F /* Lottie */; };
-		AC8C71B62A8131BC0063F55F /* LottieBombView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71B52A8131BC0063F55F /* LottieBombView.swift */; };
 		AC8C71B82A8131C60063F55F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71B72A8131C60063F55F /* GameView.swift */; };
 		AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C71B92A8131EB0063F55F /* animation1.json */; };
 		AC8C72012A819F490063F55F /* PunishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71FE2A819F490063F55F /* PunishModel.swift */; };
@@ -52,7 +51,6 @@
 		A0D883CF2A82DB9E00961D89 /* GameProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProcessView.swift; sourceTree = "<group>"; };
 		AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradView.swift; sourceTree = "<group>"; };
 		AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifier.swift; sourceTree = "<group>"; };
-		AC8C71B52A8131BC0063F55F /* LottieBombView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieBombView.swift; sourceTree = "<group>"; };
 		AC8C71B72A8131C60063F55F /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AC8C71B92A8131EB0063F55F /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation1.json; sourceTree = "<group>"; };
 		AC8C71FE2A819F490063F55F /* PunishModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunishModel.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			children = (
 				A008A1D22A83801F0063E733 /* LottieView.swift */,
 				AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */,
-				AC8C71B52A8131BC0063F55F /* LottieBombView.swift */,
 				AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */,
 			);
 			path = Views;
@@ -303,7 +300,6 @@
 				A0D883D02A82DB9E00961D89 /* GameProcessView.swift in Sources */,
 				AC8C72032A819F490063F55F /* GameModel.swift in Sources */,
 				A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */,
-				AC8C71B62A8131BC0063F55F /* LottieBombView.swift in Sources */,
 				AC8C71B82A8131C60063F55F /* GameView.swift in Sources */,
 				105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */,
 				0DB4C2C62A81603100E791B1 /* GameEndView.swift in Sources */,
