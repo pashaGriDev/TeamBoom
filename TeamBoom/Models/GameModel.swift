@@ -17,6 +17,11 @@ final class GameModel: ObservableObject {
 	@Published var isOver = false
 	@Published var isPlaying = false
 	@Published var isPaused = false
+	@Published var gameTime: Double = 5.0
+	@Published var isBackgroundMusic: Bool = true
+	@Published var backgroundSound: String = "backgroundMusic"
+	@Published var tickSound: String = "ticking"
+	@Published var explosionSound: String = "explosion"
 
 	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
 	let categories: CategoryModel = Bundle.main.decode("categories.json")

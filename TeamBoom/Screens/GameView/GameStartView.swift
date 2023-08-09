@@ -11,13 +11,11 @@ struct GameStartView: View {
 	// MARK: - States&Properties
 
 	@StateObject private var gameModel: GameModel
-	private let gameTime: Double
 
 	// MARK: - Init
 
-	init(gameModel: GameModel, gameTime: Double) {
+	init(gameModel: GameModel) {
 		self._gameModel = StateObject(wrappedValue: gameModel)
-		self.gameTime = gameTime
 	}
 
 	// MARK: - UI
@@ -48,12 +46,12 @@ struct GameStartView: View {
 		gameModel.askQuestion()
 		gameModel.isPlaying.toggle()
 
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.95 * gameTime) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.95 * gameModel.gameTime) {
 			playSound(key: "explosion", player: &player)
 			player2.stop()
 		}
 
-		DispatchQueue.main.asyncAfter(deadline: .now() + gameTime) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + gameModel.gameTime) {
 			gameModel.isOver.toggle()
 			gameModel.getPunishment()
 		}
@@ -64,6 +62,6 @@ struct GameStartView: View {
 
 struct GameStartView_Previews: PreviewProvider {
 	static var previews: some View {
-		GameStartView(gameModel: GameModel(), gameTime: 5.0)
+		GameStartView(gameModel: GameModel())
 	}
 }

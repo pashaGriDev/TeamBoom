@@ -11,13 +11,11 @@ struct GameView: View {
 	// MARK: - States&Properties
 
 	@StateObject private var gameModel: GameModel
-	private var gameTime: Double
 
 	// MARK: - Init
 
-	init(gameModel: GameModel, gameTime: Double = 5.0) {
+	init(gameModel: GameModel) {
 		self._gameModel = StateObject(wrappedValue: gameModel)
-		self.gameTime = gameTime
 	}
 
 	// MARK: - UI
@@ -30,10 +28,10 @@ struct GameView: View {
 					if gameModel.isOver {
 						GameEndView(gameModel: gameModel)
 					} else {
-						GameProcessView(gameModel: gameModel, gameTime: gameTime)
+						GameProcessView(gameModel: gameModel)
 					}
 				} else {
-					GameStartView(gameModel: gameModel, gameTime: gameTime)
+					GameStartView(gameModel: gameModel)
 				}
 			}
 		}
