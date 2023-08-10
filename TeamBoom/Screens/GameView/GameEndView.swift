@@ -67,7 +67,20 @@ struct GameEndView: View {
 					}
 				}
 			}
+            
 		}
+        
+        .navigationTitle("Title")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Игра")
+                        .font(.custom(CustomFont.DelaGothicOne, size: 30))
+                        .foregroundColor(.violet)
+                }
+            }
+        }
 	}
 
 	// MARK: - Methods
