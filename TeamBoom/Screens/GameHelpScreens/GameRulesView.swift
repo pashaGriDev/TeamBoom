@@ -16,10 +16,6 @@ struct GameRulesView: View {
 		ZStack {
 			BackgroundGradientView()
 			VStack {
-				Text("Правила игры")
-					.font(.custom(CustomFonts.DelaGothicOne, size: 40))
-					.foregroundColor(Color.violet)
-
 				VStack(alignment: .center, spacing: 5) {
 					ForEach(0..<rulesArray.count) { index in
 						if index == 1 {
@@ -30,7 +26,18 @@ struct GameRulesView: View {
 					.padding(10)
 				}
 			}
-
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("Правила игры")
+                            .font(.custom(CustomFonts.DelaGothicOne, size: 30))
+                            .foregroundColor(.violet)
+                    }
+                }
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: CustomBackButton())
 		}
 	}
 }
