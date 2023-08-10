@@ -37,6 +37,16 @@ struct GameView: View {
 				}
 			}
 		}
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Игра")
+                        .font(.custom(CustomFonts.DelaGothicOne, size: 30))
+                        .foregroundColor(.violet)
+                }
+            }
+        }
 	}
 }
 
