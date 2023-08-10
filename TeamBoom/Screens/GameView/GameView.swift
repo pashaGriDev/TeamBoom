@@ -11,6 +11,7 @@ struct GameView: View {
 	// MARK: - States&Properties
 
 	@ObservedObject var gameModel: GameModel
+	var buttonPressed: String? = ""
 
 	// MARK: - UI
 
@@ -28,6 +29,13 @@ struct GameView: View {
 					GameStartView(gameModel: gameModel)
 				}
 			}
+			.onAppear {
+				if buttonPressed == "start" {
+					gameModel.isPlaying = false
+					gameModel.isPaused = false
+					gameModel.isOver = false
+				}
+			}
 		}
 	}
 }
@@ -38,6 +46,6 @@ struct GameView_Previews: PreviewProvider {
 
 	static let gameModel = GameModel()
 	static var previews: some View {
-		GameView(gameModel: gameModel)
+		GameView(gameModel: gameModel, buttonPressed: "")
 	}
 }

@@ -11,6 +11,7 @@ struct MainView: View {
 	// MARK: - States & Properties
 
 	@StateObject private var gameModel = GameModel()
+	@State private var pressedLink: String? = nil
 
 	// MARK: - UI
 
@@ -28,7 +29,9 @@ struct MainView: View {
 						}
 						.padding(.bottom, 15)
 					VStack(spacing: 15) {
-						NavigationLink(destination: GameView(gameModel: gameModel), label: {
+						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
+									   tag: "start",
+									   selection: $pressedLink) {
 							Text("Старт")
 								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 								.frame(width: 274, height: 79)
@@ -36,8 +39,23 @@ struct MainView: View {
 								.foregroundColor(.yellowGradient)
 								.clipShape(RoundedRectangle(cornerRadius: 50))
 								.shadow(radius: 15)
-						})
+						}
 						.buttonStyle(ThemeAnimationStyle())
+
+						if gameModel.isPaused {
+							NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
+										   tag: "continue",
+										   selection: $pressedLink) {
+								Text("Продолжить")
+									.font(.custom(CustomFonts.DelaGothicOne, size: 22))
+									.frame(width: 274, height: 79)
+									.background(.violet)
+									.foregroundColor(.yellowGradient)
+									.clipShape(RoundedRectangle(cornerRadius: 50))
+									.shadow(radius: 15)
+							}
+							.buttonStyle(ThemeAnimationStyle())
+						}
 
 						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
@@ -63,6 +81,7 @@ struct MainView: View {
 						}
 					}
 				}
+				.padding()
 			}
 		}
 		.navigationBarTitle("Игра для компании", displayMode: .inline)

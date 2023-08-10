@@ -20,14 +20,14 @@ struct GameStartView: View {
 				.font(.custom(CustomFonts.DelaGothicOne, size: 26))
 				.foregroundColor(Color.violet)
 				.frame(width: 300)
-                .multilineTextAlignment(.center)
+				.multilineTextAlignment(.center)
 			Spacer()
 			Image("bomb2")
 			Spacer()
 			Button("Запустить") {
 				startGame()
 			}
-            .font(.custom(CustomFonts.DelaGothicOne, size: 20))
+			.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 			.modifier(ButtonViewModifier())
 			.padding(.bottom, 30)
 		}
@@ -42,8 +42,8 @@ struct GameStartView: View {
 		playSound(key: gameModel.tickSound, player: &player2)
 		gameModel.askQuestion()
 		gameModel.isPlaying.toggle()
-        gameModel.isPaused = false
-        gameModel.setUpTimer()
+		gameModel.isPaused = false
+		gameModel.setUpTimer()
 	}
 }
 

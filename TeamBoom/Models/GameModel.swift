@@ -79,23 +79,23 @@ final class GameModel: ObservableObject {
 			.publish(every: 0.05, on: .main, in: .common)
 			.autoconnect()
 			.sink { [unowned self] _ in
-				self.count += 0.05
-				if self.count >= gameTime*0.98 && !boomed {
+				count += 0.05
+				if count >= gameTime*0.98 && !boomed {
 					playSound(key: explosionSound, player: &player2)
 					boomed = true
 				}
 
-				if self.isPaused {
+				if isPaused {
 					for item in cancellables {
 						item.cancel()
 						if withBackgroundMusic {
 							player.pause()
 						}
-
 						player2.pause()
 					}
 				}
-				if self.count >= 1.048*gameTime {
+
+				if count >= 1.048*gameTime {
 					for item in cancellables {
 						if withBackgroundMusic {
 							player.pause()
