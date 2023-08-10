@@ -22,7 +22,10 @@ struct GameStartView: View {
 				.frame(width: 300)
 				.multilineTextAlignment(.center)
 			Spacer()
-			Image("bomb2")
+			Image("bomb3")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 450, height: 450)
 			Spacer()
 			Button("Запустить") {
 				startGame()
