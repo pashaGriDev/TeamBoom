@@ -10,13 +10,7 @@ import SwiftUI
 struct GameEndView: View {
 	// MARK: - States&Properties
 
-	@StateObject private var gameModel: GameModel
-
-	// MARK: - Init
-
-	init(gameModel: GameModel) {
-		self._gameModel = StateObject(wrappedValue: gameModel)
-	}
+	@ObservedObject var gameModel: GameModel
 
 	// MARK: - UI
 

@@ -8,57 +8,55 @@
 import SwiftUI
 
 struct MainView: View {
-    // MARK: - States & Properties
-    
-    @StateObject private var gameModel = GameModel()
-    
-    // MARK: - UI
-    
-    var body: some View {
-        NavigationView {
-            ZStack {
-                BackgroundGradientView()
-                VStack {
-                    Image("textBomb")
-                    Image("bomb")
-                        .scaleEffect(gameModel.isBombAnimating ? 1.08 : 1.0)
-                        .animation(Animation.easeInOut(duration: 3.9).repeatForever(autoreverses: true))
-                        .onAppear {
-                            gameModel.startBombImageAnimation()
-                        }
-                        .padding(.bottom, 15)
-                    VStack(spacing: 15) {
-                        NavigationLink(destination: GameView(gameModel: gameModel),  label: {
-                            Text("Старт")
+	// MARK: - States & Properties
+
+	@StateObject private var gameModel = GameModel()
+
+	// MARK: - UI
+
+	var body: some View {
+		NavigationView {
+			ZStack {
+				BackgroundGradientView()
+				VStack {
+					Image("textBomb")
+					Image("bomb")
+                        .scaleEffect(gameModel.isBombAnimating ? 1.09 : 1.0)
+                        .animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true))
+                                        .onAppear {
+                                            gameModel.startBombImageAnimation()
+                                        }
+                                        .padding(.bottom, 15)
+					VStack(spacing: 15) {
+						NavigationLink(destination: GameView(gameModel: gameModel), label: {
+							Text("Старт")
                                 .font(.custom(CustomFont.DelaGothicOne, size: 22))
-                                .frame(width: 274, height: 79)
-                                .background(.violet)
-                                .foregroundColor(.yellowGradient)
-                                .clipShape(RoundedRectangle(cornerRadius: 50))
-                                .shadow(radius: 15)
-                        })
+								.frame(width: 274, height: 79)
+								.background(.violet)
+								.foregroundColor(.yellowGradient)
+								.clipShape(RoundedRectangle(cornerRadius: 50))
+								.shadow(radius: 15)
+						})
                         .buttonStyle(ThemeAnimationStyle())
-                        
-                        NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
-                            Text("Категории")
+
+						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
+							Text("Категории")
                                 .font(.custom(CustomFont.DelaGothicOne, size: 22))
-                                .frame(width: 274, height: 79)
-                                .background(.violet)
-                                .foregroundColor(.yellowGradient)
-                                .clipShape(RoundedRectangle(cornerRadius: 50))
-                                .shadow(radius: 15)
-                        })
+								.frame(width: 274, height: 79)
+								.background(.violet)
+								.foregroundColor(.yellowGradient)
+								.clipShape(RoundedRectangle(cornerRadius: 50))
+								.shadow(radius: 15)
+						})
                         .buttonStyle(ThemeAnimationStyle())
-                        
-                        HStack {
-                            NavigationLink(destination: SettingsView()) {
-                                Image("settings")
-                                    .padding(.leading, 30)
-                            }
-                            Spacer()
-                            Button {
-                                //Rules code.
-                            } label: {
+
+						HStack {
+							NavigationLink(destination: SettingsView(gameModel: gameModel)) {
+								Image("settings")
+									.padding(.leading, 30)
+							}
+							Spacer()
+                            NavigationLink(destination: GameHelpView()) {
                                 Image("question-mark")
                                     .padding(.trailing, 30)
                             }
@@ -71,7 +69,6 @@ struct MainView: View {
         .navigationBarTitleDisplayMode(.large)
     }
 }
-
 
 // MARK: - Preview
 

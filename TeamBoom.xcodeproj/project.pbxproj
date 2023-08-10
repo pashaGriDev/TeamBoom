@@ -18,11 +18,21 @@
 		105526F42A80507F009FFDE8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 105526F32A80507F009FFDE8 /* .gitignore */; };
 		105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526F52A8057F8009FFDE8 /* Color + ext.swift */; };
 		10AE80102A812B5E0083A45E /* Bundle + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AE800F2A812B5E0083A45E /* Bundle + ext.swift */; };
+		6F4CB58B2A84E2D1005521D7 /* GameRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4CB58A2A84E2D1005521D7 /* GameRulesView.swift */; };
+		6F826E732A84EDFD0059430F /* RuleSet.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6F826E722A84EDFD0059430F /* RuleSet.rtf */; };
+		6F826E752A84EF060059430F /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F826E742A84EF060059430F /* RuleSet.swift */; };
+		6FB4C9392A84E46F0071AD1D /* GameHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4C9382A84E46F0071AD1D /* GameHelpView.swift */; };
 		A008A1D32A83801F0063E733 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008A1D22A83801F0063E733 /* LottieView.swift */; };
 		A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03DE5162A8107F800C5D279 /* CategoriesView.swift */; };
 		A072DF292A83EE5B00B702EC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DF282A83EE5B00B702EC /* SettingsView.swift */; };
 		A0D883CE2A82D9DA00961D89 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D883CD2A82D9DA00961D89 /* GameStartView.swift */; };
 		A0D883D02A82DB9E00961D89 /* GameProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D883CF2A82DB9E00961D89 /* GameProcessView.swift */; };
+		AC7512662A850AED008EC31A /* ticking3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC7512652A850AED008EC31A /* ticking3.mp3 */; };
+		AC7512682A850AF5008EC31A /* backgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC7512672A850AF5008EC31A /* backgroundMusic2.mp3 */; };
+		AC75126A2A850AFD008EC31A /* backgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC7512692A850AFD008EC31A /* backgroundMusic3.mp3 */; };
+		AC75126C2A850B05008EC31A /* explosion2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC75126B2A850B05008EC31A /* explosion2.mp3 */; };
+		AC75126E2A850B0E008EC31A /* explosion3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC75126D2A850B0E008EC31A /* explosion3.mp3 */; };
+		AC7512702A850B48008EC31A /* ticking2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC75126F2A850B48008EC31A /* ticking2.mp3 */; };
 		AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */; };
 		AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */; };
 		AC8C71B12A8131250063F55F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AC8C71B02A8131250063F55F /* Lottie */; };
@@ -53,11 +63,21 @@
 		105526F32A80507F009FFDE8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		105526F52A8057F8009FFDE8 /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
 		10AE800F2A812B5E0083A45E /* Bundle + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + ext.swift"; sourceTree = "<group>"; };
+		6F4CB58A2A84E2D1005521D7 /* GameRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRulesView.swift; sourceTree = "<group>"; };
+		6F826E722A84EDFD0059430F /* RuleSet.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = RuleSet.rtf; sourceTree = "<group>"; };
+		6F826E742A84EF060059430F /* RuleSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
+		6FB4C9382A84E46F0071AD1D /* GameHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelpView.swift; sourceTree = "<group>"; };
 		A008A1D22A83801F0063E733 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		A03DE5162A8107F800C5D279 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		A072DF282A83EE5B00B702EC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A0D883CD2A82D9DA00961D89 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
 		A0D883CF2A82DB9E00961D89 /* GameProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProcessView.swift; sourceTree = "<group>"; };
+		AC7512652A850AED008EC31A /* ticking3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking3.mp3; sourceTree = "<group>"; };
+		AC7512672A850AF5008EC31A /* backgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic2.mp3; sourceTree = "<group>"; };
+		AC7512692A850AFD008EC31A /* backgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic3.mp3; sourceTree = "<group>"; };
+		AC75126B2A850B05008EC31A /* explosion2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion2.mp3; sourceTree = "<group>"; };
+		AC75126D2A850B0E008EC31A /* explosion3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion3.mp3; sourceTree = "<group>"; };
+		AC75126F2A850B48008EC31A /* ticking2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking2.mp3; sourceTree = "<group>"; };
 		AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradView.swift; sourceTree = "<group>"; };
 		AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifier.swift; sourceTree = "<group>"; };
 		AC8C71B72A8131C60063F55F /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -137,6 +157,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6F826E6C2A84EB6F0059430F /* GameHelpScreens */ = {
+			isa = PBXGroup;
+			children = (
+				6F4CB58A2A84E2D1005521D7 /* GameRulesView.swift */,
+				6FB4C9382A84E46F0071AD1D /* GameHelpView.swift */,
+			);
+			path = GameHelpScreens;
+			sourceTree = "<group>";
+		};
+		6F826E6D2A84EB9F0059430F /* GameHelpViews */ = {
+			isa = PBXGroup;
+			children = (
+				6F826E722A84EDFD0059430F /* RuleSet.rtf */,
+				6F826E742A84EF060059430F /* RuleSet.swift */,
+			);
+			path = GameHelpViews;
+			sourceTree = "<group>";
+		};
 		A07ABD092A825B9E00B4B5B8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +182,7 @@
 				A03DE5162A8107F800C5D279 /* CategoriesView.swift */,
 				A072DF282A83EE5B00B702EC /* SettingsView.swift */,
 				A0D883D12A82E2E200961D89 /* GameView */,
+				6F826E6C2A84EB6F0059430F /* GameHelpScreens */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,6 +211,7 @@
 		AC8C71982A80E6CE0063F55F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F826E6D2A84EB9F0059430F /* GameHelpViews */,
 				A008A1D22A83801F0063E733 /* LottieView.swift */,
 				AC8C71A02A8102270063F55F /* ButtonViewModifier.swift */,
 				AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */,
@@ -204,8 +244,14 @@
 			children = (
 				ACD615532A8283C700FDD52D /* PlaySound.swift */,
 				ACD615592A8284EB00FDD52D /* explosion.mp3 */,
+				AC75126B2A850B05008EC31A /* explosion2.mp3 */,
+				AC75126D2A850B0E008EC31A /* explosion3.mp3 */,
 				ACD615552A8284D200FDD52D /* ticking.mp3 */,
+				AC75126F2A850B48008EC31A /* ticking2.mp3 */,
+				AC7512652A850AED008EC31A /* ticking3.mp3 */,
 				ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */,
+				AC7512672A850AF5008EC31A /* backgroundMusic2.mp3 */,
+				AC7512692A850AFD008EC31A /* backgroundMusic3.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -276,15 +322,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD615562A8284D200FDD52D /* ticking.mp3 in Resources */,
+				AC75126E2A850B0E008EC31A /* explosion3.mp3 in Resources */,
+				AC7512682A850AF5008EC31A /* backgroundMusic2.mp3 in Resources */,
 				AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */,
 				AC8C72072A81A26D0063F55F /* categories.json in Resources */,
 				105526ED2A80503C009FFDE8 /* Preview Assets.xcassets in Resources */,
 				ACD6155A2A8284EB00FDD52D /* explosion.mp3 in Resources */,
 				AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */,
 				105526F42A80507F009FFDE8 /* .gitignore in Resources */,
+				6F826E732A84EDFD0059430F /* RuleSet.rtf in Resources */,
+				AC7512702A850B48008EC31A /* ticking2.mp3 in Resources */,
 				ACD615582A8284DC00FDD52D /* backgroundMusic.mp3 in Resources */,
 				0D7CC8EE2A8407070076950C /* DelaGothicOne-Regular.ttf in Resources */,
+				AC7512662A850AED008EC31A /* ticking3.mp3 in Resources */,
+				AC75126A2A850AFD008EC31A /* backgroundMusic3.mp3 in Resources */,
 				105526EA2A80503C009FFDE8 /* Assets.xcassets in Resources */,
+				AC75126C2A850B05008EC31A /* explosion2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FB4C9392A84E46F0071AD1D /* GameHelpView.swift in Sources */,
 				0D7CC8EC2A83BCAB0076950C /* Animation Buttons.swift in Sources */,
 				AC8C72012A819F490063F55F /* PunishModel.swift in Sources */,
 				A008A1D32A83801F0063E733 /* LottieView.swift in Sources */,
@@ -325,6 +379,7 @@
 				A072DF292A83EE5B00B702EC /* SettingsView.swift in Sources */,
 				A0D883D02A82DB9E00961D89 /* GameProcessView.swift in Sources */,
 				AC8C72032A819F490063F55F /* GameModel.swift in Sources */,
+				6F4CB58B2A84E2D1005521D7 /* GameRulesView.swift in Sources */,
 				A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */,
 				AC8C71B82A8131C60063F55F /* GameView.swift in Sources */,
 				105526F62A8057F8009FFDE8 /* Color + ext.swift in Sources */,
@@ -333,6 +388,7 @@
 				A0D883CE2A82D9DA00961D89 /* GameStartView.swift in Sources */,
 				AC8C72022A819F490063F55F /* CategoryModel.swift in Sources */,
 				105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */,
+				6F826E752A84EF060059430F /* RuleSet.swift in Sources */,
 				0DE93BD62A8142B400648218 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeamBoom/Preview Content\"";
-				DEVELOPMENT_TEAM = N2CSX799P5;
+				DEVELOPMENT_TEAM = 9T65XWHQL7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeamBoom/Info.plist;
@@ -477,7 +533,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zlibabaika.TeamBoom;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zlibabaika.TeamBoomAndrey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -496,7 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TeamBoom/Preview Content\"";
-				DEVELOPMENT_TEAM = N2CSX799P5;
+				DEVELOPMENT_TEAM = 9T65XWHQL7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeamBoom/Info.plist;
@@ -511,7 +567,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zlibabaika.TeamBoom;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zlibabaika.TeamBoomAndrey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

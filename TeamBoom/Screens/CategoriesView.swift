@@ -10,14 +10,8 @@ import SwiftUI
 struct CategoriesView: View {
 	// MARK: - States & Properties
 
-	private let gameModel: GameModel
+	@ObservedObject var gameModel: GameModel
 	private let columns = [GridItem(.adaptive(minimum: 175))]
-
-	// MARK: - Init
-
-	init(gameModel: GameModel) {
-		self.gameModel = gameModel
-	}
 
 	// MARK: - UI
 
@@ -25,9 +19,9 @@ struct CategoriesView: View {
 		NavigationView {
 			ZStack {
 				BackgroundGradientView()
-				ScrollView {
+				ScrollView(showsIndicators: false) {
 					LazyVGrid(columns: columns) {
-						ForEach(gameModel.categories.categories, id: \.id) { category in
+                        ForEach(gameModel.categories.categories, id: \.id) { category in
 							Button {
 								addCategory(category: category)
 							} label: {
@@ -42,12 +36,13 @@ struct CategoriesView: View {
 										}
 									}
 									VStack {
-										Image(category.image)
+										Image(systemName: category.image)
 											.resizable()
-											.frame(width: 100, height: 100)
+											.frame(width: 60, height: 60)
+											.foregroundColor(.yellowOfButton)
 										Text(category.title)
-											.foregroundColor(Color.init(red: 1, green: 1, blue: 0))
-                                            .font(.custom(CustomFont.DelaGothicOne, size: 16))
+											.foregroundColor(.yellowOfButton)
+											.font(.custom(CustomFont.DelaGothicOne, size: 16))
 											.padding(.horizontal)
 									}
 								}
@@ -59,10 +54,11 @@ struct CategoriesView: View {
 										.stroke(.black)
 								}
 							}
+							.padding(.vertical, 4)
 						}
 					}
+					.padding()
 				}
-				.padding(.vertical)
 			}
 			.navigationTitle("Категории")
 			.navigationBarTitleDisplayMode(.inline)
