@@ -76,7 +76,7 @@ struct GameEndView: View {
             ToolbarItem(placement: .principal) {
                 VStack {
                     Text("Игра")
-                        .font(.custom(CustomFont.DelaGothicOne, size: 30))
+                        .font(.custom(CustomFonts.DelaGothicOne, size: 30))
                         .foregroundColor(.violet)
                 }
             }
