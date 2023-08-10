@@ -21,7 +21,7 @@ struct CategoriesView: View {
 				BackgroundGradientView()
 				ScrollView {
 					LazyVGrid(columns: columns) {
-						ForEach(gameModel.categories.categories, id: \.id) { category in
+						ForEach(gameModel.getCategories(), id: \.id) { category in
 							Button {
 								addCategory(category: category)
 							} label: {
@@ -41,7 +41,7 @@ struct CategoriesView: View {
 											.frame(width: 100, height: 100)
 										Text(category.title)
 											.foregroundColor(Color.init(red: 1, green: 1, blue: 0))
-                                            .font(.custom(CustomFont.DelaGothicOne, size: 16))
+											.font(.custom(CustomFont.DelaGothicOne, size: 16))
 											.padding(.horizontal)
 									}
 								}

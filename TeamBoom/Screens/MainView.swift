@@ -51,7 +51,7 @@ struct MainView: View {
                         .buttonStyle(ThemeAnimationStyle())
 
 						HStack {
-							NavigationLink(destination: SettingsView()) {
+							NavigationLink(destination: SettingsView(gameModel: gameModel)) {
 								Image("settings")
 									.padding(.leading, 30)
 							}
