@@ -10,7 +10,7 @@ import SwiftUI
 struct GameStartView: View {
 	// MARK: - States&Properties
 
-	@ObservedObject var gameModel: GameModel
+	@ObservedObject var gameModel: GameViewModel
 
 	// MARK: - UI
 
@@ -23,21 +23,23 @@ struct GameStartView: View {
 				.multilineTextAlignment(.center)
 			Spacer()
 			Image("bomb3")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 320, height: 320)
+				.resizable()
+				.scaledToFit()
+				.frame(width: 320, height: 320)
 			Spacer()
 			Button("Запустить") {
 				startGame()
 			}
 			.font(.custom(CustomFonts.DelaGothicOne, size: 20))
-			.modifier(ButtonViewModifier())
+			.modifier(GameButtonModifier())
 			.padding(.bottom, 30)
 		}
 	}
+}
 
-	// MARK: - Methods
+// MARK: - Methods
 
+extension GameStartView {
 	private func startGame() {
 		if gameModel.withBackgroundMusic {
 			playSound(key: gameModel.backgroundSound, player: &player)
@@ -54,6 +56,6 @@ struct GameStartView: View {
 
 struct GameStartView_Previews: PreviewProvider {
 	static var previews: some View {
-		GameStartView(gameModel: GameModel())
+		GameStartView(gameModel: GameViewModel())
 	}
 }

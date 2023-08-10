@@ -10,7 +10,7 @@ import SwiftUI
 struct GameProcessView: View {
 	// MARK: - States&Properties
 
-	@ObservedObject var gameModel: GameModel
+	@ObservedObject var gameModel: GameViewModel
 
 	// MARK: - UI
 
@@ -37,14 +37,16 @@ struct GameProcessView: View {
 				pauseGame()
 			}
 			.font(.custom(CustomFonts.DelaGothicOne, size: 20))
-			.modifier(ButtonViewModifier())
+			.modifier(GameButtonModifier())
 			.padding(.bottom, 30)
 			.animation(.default, value: gameModel.isPaused)
 		}
 	}
+}
 
-	// MARK: - Methods
+// MARK: - Methods
 
+extension GameProcessView {
 	private func pauseGame() {
 		if !gameModel.isPaused {
 			gameModel.isPaused = true
@@ -67,6 +69,6 @@ struct GameProcessView: View {
 
 struct GameProcessView_Previews: PreviewProvider {
 	static var previews: some View {
-		GameProcessView(gameModel: GameModel())
+		GameProcessView(gameModel: GameViewModel())
 	}
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonViewModifier: ViewModifier {
+struct GameButtonModifier: ViewModifier {
 	func body(content: Content) -> some View {
 		content
 			.font(.title)

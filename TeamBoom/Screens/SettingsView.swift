@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
 	// MARK: - States&Properties
 
-	@ObservedObject var gameModel: GameModel
+	@ObservedObject var gameModel: GameViewModel
 	private let columns = [GridItem(.adaptive(minimum: 175))]
 
 	// MARK: - UI
@@ -33,8 +33,7 @@ struct SettingsView: View {
 							.font(.custom(CustomFonts.DelaGothicOne, size: 16))
 							.foregroundColor(gameModel.selectedDuration == duration ? .yellowOfButton : .violet)
 							.frame(width: 150)
-							.padding(.horizontal)
-							.padding(.vertical)
+							.padding()
 							.background(gameModel.selectedDuration == duration ? .violet : .yellowOfButton)
 							.cornerRadius(30)
 							.opacity(1)
@@ -101,22 +100,23 @@ struct SettingsView: View {
 				.padding(.horizontal)
 			}
 		}
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                VStack {
-                    Text("Настройки")
-                        .font(.custom(CustomFonts.DelaGothicOne, size: 30))
-                        .foregroundColor(.violet)
-                }
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: CustomBackButton())
+		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItem(placement: .principal) {
+				VStack {
+					Text("Настройки")
+						.modifier(ToolBarButtonModifer())
+				}
+			}
+		}
+		.navigationBarBackButtonHidden(true)
+		.navigationBarItems(leading: CustomBackButton())
 	}
+}
 
-	// MARK: - Methods
+// MARK: - Methods
 
+extension SettingsView {
 	private func changeDuration(duration: String) {
 		gameModel.changeDuration(duration: duration)
 	}
@@ -126,6 +126,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView(gameModel: GameModel())
+		SettingsView(gameModel: GameViewModel())
 	}
 }

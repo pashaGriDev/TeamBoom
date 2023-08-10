@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoriesView: View {
 	// MARK: - States & Properties
 
-	@ObservedObject var gameModel: GameModel
+	@ObservedObject var gameModel: GameViewModel
 	private let columns = [GridItem(.adaptive(minimum: 175))]
 
 	// MARK: - UI
@@ -21,7 +21,7 @@ struct CategoriesView: View {
 				BackgroundGradientView()
 				ScrollView(showsIndicators: false) {
 					LazyVGrid(columns: columns) {
-                        ForEach(gameModel.getCategories(), id: \.id) { category in
+						ForEach(gameModel.getCategories(), id: \.id) { category in
 							Button {
 								addCategory(category: category)
 							} label: {
@@ -60,25 +60,22 @@ struct CategoriesView: View {
 					.padding()
 				}
 			}
-            
 		}
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                VStack {
-                    Text("Категории")
-                        .font(.custom(CustomFonts.DelaGothicOne, size: 30))
-                        .foregroundColor(.violet)
-                    
-                }
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: CustomBackButton())
+		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItem(placement: .principal) {
+				VStack {
+					Text("Категории")
+						.modifier(ToolBarButtonModifer())
+				}
+			}
+		}
+		.navigationBarBackButtonHidden(true)
+		.navigationBarItems(leading: CustomBackButton())
 	}
 }
 
-// MARK: - Private methods
+// MARK: - Methods
 
 extension CategoriesView {
 	private func addCategory(category: Category) {
@@ -100,9 +97,9 @@ extension CategoriesView {
 // MARK: - Preview
 
 struct CategoriesView_Previews: PreviewProvider {
-	static let gameModel = GameModel()
+	static let gameModel = GameViewModel()
 
 	static var previews: some View {
-		CategoriesView(gameModel: GameModel())
+		CategoriesView(gameModel: GameViewModel())
 	}
 }
