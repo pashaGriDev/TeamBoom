@@ -60,9 +60,19 @@ struct CategoriesView: View {
 					.padding()
 				}
 			}
-			.navigationTitle("Категории")
-			.navigationBarTitleDisplayMode(.inline)
+            
 		}
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Категории")
+                        .font(.custom(CustomFonts.DelaGothicOne, size: 30))
+                        .foregroundColor(.violet)
+                    
+                }
+            }
+        }
 	}
 }
 

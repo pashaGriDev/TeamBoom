@@ -20,7 +20,6 @@ struct MainView: View {
 			ZStack {
 				BackgroundGradientView()
 					.ignoresSafeArea()
-
 				VStack {
 					Spacer()
 					Image("bomb")

@@ -51,6 +51,8 @@ struct GameHelpView: View {
 					}
 				}
 			}
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: CustomBackButton())
 		}
 	}
 }
