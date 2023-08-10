@@ -22,9 +22,9 @@ final class GameModel: ObservableObject {
 	@Published var gameTime: Double = 15.0
     @Published var count: Double = 0
 	@Published var isBackgroundMusic: Bool = true
-	@Published var backgroundSound: String = "backgroundMusic"
-	@Published var tickSound: String = "ticking"
-	@Published var explosionSound: String = "explosion"
+	@Published var backgroundSound: String = "backgroundMusic1"
+	@Published var tickSound: String = "ticking2"
+	@Published var explosionSound: String = "explosion2"
     private var cancellables = Set<AnyCancellable>()
     @Published var isBombAnimating = false
 
