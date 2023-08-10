@@ -21,7 +21,7 @@ struct CategoriesView: View {
 				BackgroundGradientView()
                 ScrollView(showsIndicators: false) {
 					LazyVGrid(columns: columns) {
-						ForEach(gameModel.categories.categories, id: \.id) { category in
+						ForEach(gameModel.categories.categories) { category in
 							Button {
 								addCategory(category: category)
 							} label: {
