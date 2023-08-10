@@ -20,6 +20,7 @@ struct MainView: View {
                 BackgroundGradientView()
                 VStack {
                     Image("textBomb")
+                        .offset(y: -40)
                     Image("bomb")
                         .scaleEffect(gameModel.isBombAnimating ? 1.09 : 1.0)
                         .animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: gameModel.isBombAnimating)
@@ -66,12 +67,18 @@ struct MainView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                        VStack(spacing: 5) {
+                            Text("Игра для компании")
+                                .font(.custom(CustomFont.DelaGothicOne, size: 32))
+                                .foregroundColor(.black)
+                        }
+                }
+            }
         }
-        .navigationBarTitle("Игра для компании", displayMode: .inline)
-        .navigationBarTitleDisplayMode(.large)
     }
 }
-
 // MARK: - Preview
 
 struct MainView_Previews: PreviewProvider {
