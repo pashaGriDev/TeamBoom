@@ -8,59 +8,57 @@
 import SwiftUI
 
 struct GameHelpView: View {
-    var body: some View {
-            ZStack{
-                BackgroundGradientView()
-                VStack(spacing: 15){
-                  
-                    NavigationLink(destination: GameRulesView()) {
-                        Text("Правила игры")
-                            .font(.custom(CustomFont.DelaGothicOne, size: 22))
-                            .frame(width: 274, height: 79)
-                            .background(.violet)
-                            .foregroundColor(.yellowGradient)
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
-                            .shadow(radius: 15)
-                    }
-                    
-                    NavigationLink(destination: GameRulesView()) {
-                        Text("Категории")
-                            .font(.custom(CustomFont.DelaGothicOne, size: 22))
-                            .frame(width: 274, height: 79)
-                            .background(.violet)
-                            .foregroundColor(.yellowGradient)
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
-                            .shadow(radius: 15)
-                    }
-                    
-                    NavigationLink(destination: GameRulesView()) {
-                        Text("Настройки")
-                            .font(.custom(CustomFont.DelaGothicOne, size: 22))
-                            .frame(width: 274, height: 79)
-                            .background(.violet)
-                            .foregroundColor(.yellowGradient)
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
-                            .shadow(radius: 15)
-                    }
-                    
-                }
-                .toolbar{
-                    ToolbarItem(placement: .principal) {
-                        VStack{
-                            Text("Помощь")
-                                .font(.custom(CustomFont.DelaGothicOne, size: 40))
-                                .foregroundColor(Color.violet)
-                        }
-                    }
-                }
+	// MARK: - UI
 
-            }
-          
-    }
+	var body: some View {
+		ZStack {
+			BackgroundGradientView()
+			VStack(spacing: 15) {
+				NavigationLink(destination: GameRulesView()) {
+					Text("Правила игры")
+						.font(.custom(CustomFont.DelaGothicOne, size: 22))
+						.frame(width: 274, height: 79)
+						.background(.violet)
+						.foregroundColor(.yellowGradient)
+						.clipShape(RoundedRectangle(cornerRadius: 50))
+						.shadow(radius: 15)
+				}
+				NavigationLink(destination: GameRulesView()) {
+					Text("Категории")
+						.font(.custom(CustomFont.DelaGothicOne, size: 22))
+						.frame(width: 274, height: 79)
+						.background(.violet)
+						.foregroundColor(.yellowGradient)
+						.clipShape(RoundedRectangle(cornerRadius: 50))
+						.shadow(radius: 15)
+				}
+				NavigationLink(destination: GameRulesView()) {
+					Text("Настройки")
+						.font(.custom(CustomFont.DelaGothicOne, size: 22))
+						.frame(width: 274, height: 79)
+						.background(.violet)
+						.foregroundColor(.yellowGradient)
+						.clipShape(RoundedRectangle(cornerRadius: 50))
+						.shadow(radius: 15)
+				}
+			}
+			.toolbar {
+				ToolbarItem(placement: .principal) {
+					VStack {
+						Text("Помощь")
+							.font(.custom(CustomFont.DelaGothicOne, size: 40))
+							.foregroundColor(Color.violet)
+					}
+				}
+			}
+		}
+	}
 }
 
+// MARK: - Preview
+
 struct GameHelpView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameHelpView()
-    }
+	static var previews: some View {
+		GameHelpView()
+	}
 }

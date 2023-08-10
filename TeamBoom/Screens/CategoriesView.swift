@@ -19,7 +19,7 @@ struct CategoriesView: View {
 		NavigationView {
 			ZStack {
 				BackgroundGradientView()
-                ScrollView(showsIndicators: false) {
+				ScrollView(showsIndicators: false) {
 					LazyVGrid(columns: columns) {
 						ForEach(gameModel.categories.categories) { category in
 							Button {
@@ -39,11 +39,10 @@ struct CategoriesView: View {
 										Image(systemName: category.image)
 											.resizable()
 											.frame(width: 60, height: 60)
-                                            .foregroundColor(.yellowOfButton)
-                                        
+											.foregroundColor(.yellowOfButton)
 										Text(category.title)
-                                            .foregroundColor(.yellowOfButton)
-                                            .font(.custom(CustomFont.DelaGothicOne, size: 16))
+											.foregroundColor(.yellowOfButton)
+											.font(.custom(CustomFont.DelaGothicOne, size: 16))
 											.padding(.horizontal)
 									}
 								}
@@ -55,10 +54,10 @@ struct CategoriesView: View {
 										.stroke(.black)
 								}
 							}
-                            .padding(.vertical, 4)
+							.padding(.vertical, 4)
 						}
 					}
-                    .padding()
+					.padding()
 				}
 			}
 			.navigationTitle("Категории")
