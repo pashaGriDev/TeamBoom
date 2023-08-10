@@ -36,7 +36,9 @@ struct GameStartView: View {
 	// MARK: - Methods
 
 	private func startGame() {
-		playSound(key: "backgroundMusic", player: &player)
+		if gameModel.withBackgroundMusic {
+			playSound(key: "backgroundMusic", player: &player)
+		}
 		playSound(key: "ticking", player: &player2)
 		gameModel.askQuestion()
 		gameModel.isPlaying.toggle()

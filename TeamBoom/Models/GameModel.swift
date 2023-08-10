@@ -30,7 +30,7 @@ final class GameModel: ObservableObject {
 	@Published var selectedDuration: String = "Среднее"
 	@Published var gameTime: Double = 10.0
 	@Published var withBackgroundMusic: Bool = true
-	@Published var withPunishment: Bool = false
+	@Published var withPunishment: Bool = true
 	@Published var isBackgroundMusic: Bool = true
 	@Published var backgroundSound: String = "backgroundMusic"
 	@Published var tickSound: String = "ticking"
@@ -88,13 +88,18 @@ final class GameModel: ObservableObject {
 				if self.isPaused {
 					for item in cancellables {
 						item.cancel()
-						player.pause()
+						if withBackgroundMusic {
+							player.pause()
+						}
+
 						player2.pause()
 					}
 				}
 				if self.count >= 1.048*gameTime {
 					for item in cancellables {
-						player.pause()
+						if withBackgroundMusic {
+							player.pause()
+						}
 						item.cancel()
 						isPaused = true
 						isOver = true

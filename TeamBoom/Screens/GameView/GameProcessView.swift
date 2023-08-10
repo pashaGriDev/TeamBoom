@@ -27,31 +27,37 @@ struct GameProcessView: View {
 					   loopMode: .playOnce,
 					   animationSpeed: 7.75/gameModel.gameTime,
 					   isPaused: gameModel.isPaused)
-				.frame(width: 500, height: 500)
-				.scaleEffect(1)
-				.saturation(1.7)
-				.animation(.easeIn, value: gameModel.isPlaying)
+			.frame(width: 500, height: 500)
+			.scaleEffect(1)
+			.saturation(1.7)
+			.animation(.easeIn, value: gameModel.isPlaying)
 			Spacer()
-            Button(gameModel.isPaused ? "Продолжить" : "Пауза") {
+			Button(gameModel.isPaused ? "Продолжить" : "Пауза") {
 				pauseGame()
 			}
-            .font(.custom(CustomFont.DelaGothicOne, size: 20))
+			.font(.custom(CustomFont.DelaGothicOne, size: 20))
 			.modifier(ButtonViewModifier())
 			.padding(.bottom, 30)
-            .animation(.default, value: gameModel.isPaused)
+			.animation(.default, value: gameModel.isPaused)
 		}
 	}
+
+	// MARK: - Methods
 
 	private func pauseGame() {
 		if !gameModel.isPaused {
 			gameModel.isPaused = true
-			player.pause()
 			player2.pause()
+			if gameModel.withBackgroundMusic {
+				player.pause()
+			}
 		} else {
 			gameModel.isPaused = false
-            gameModel.setUpTimer()
-			player.play()
+			gameModel.setUpTimer()
 			player2.play()
+			if gameModel.withBackgroundMusic {
+				player.play()
+			}
 		}
 	}
 }
