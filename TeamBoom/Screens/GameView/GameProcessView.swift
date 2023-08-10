@@ -22,6 +22,7 @@ struct GameProcessView: View {
 				.frame(width: 300)
 				.multilineTextAlignment(.center)
 				.padding(.horizontal, 10)
+				.offset(y: 20)
 			Spacer()
 			LottieView(name: "animation1",
 					   loopMode: .playOnce,
