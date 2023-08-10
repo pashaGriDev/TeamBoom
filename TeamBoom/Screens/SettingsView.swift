@@ -21,7 +21,7 @@ struct SettingsView: View {
 				BackgroundGradientView()
 				VStack(alignment: .leading) {
 					Text("Время игры")
-						.font(.custom(CustomFont.DelaGothicOne, size: 20))
+						.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 						.foregroundColor(Color.violet)
 					LazyVGrid(columns: columns) {
 						ForEach(gameModel.getDurations().keys.sorted(), id: \.self) { duration in
@@ -30,7 +30,7 @@ struct SettingsView: View {
 							} label: {
 								Text(duration)
 							}
-							.font(.custom(CustomFont.DelaGothicOne, size: 16))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 16))
 							.foregroundColor(gameModel.selectedDuration == duration ? .yellowOfButton : .violet)
 							.frame(width: 150)
 							.padding(.horizontal)
@@ -47,17 +47,17 @@ struct SettingsView: View {
 					Spacer()
 					VStack(spacing: 30) {
 						Toggle("Игра с заданиями", isOn: $gameModel.withPunishment)
-							.font(.custom(CustomFont.DelaGothicOne, size: 20))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 							.foregroundColor(Color.violet)
 							.tint(Color.violet)
 						Toggle("Фоновая музыка", isOn: $gameModel.withBackgroundMusic)
-							.font(.custom(CustomFont.DelaGothicOne, size: 20))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 							.foregroundColor(Color.violet)
 							.tint(Color.violet)
 
 						HStack {
 							Text("Фоновая музыка")
-								.font(.custom(CustomFont.DelaGothicOne, size: 20))
+								.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 								.foregroundColor(Color.violet)
 							Spacer()
 							Picker("", selection: $gameModel.backgroundSound) {
@@ -69,7 +69,7 @@ struct SettingsView: View {
 						}
 						HStack {
 							Text("Тиканье бомбы")
-								.font(.custom(CustomFont.DelaGothicOne, size: 20))
+								.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 								.foregroundColor(Color.violet)
 							Spacer()
 							Picker("", selection: $gameModel.tickSound) {
@@ -83,7 +83,7 @@ struct SettingsView: View {
 
 						HStack {
 							Text("Взрыв бомбы")
-								.font(.custom(CustomFont.DelaGothicOne, size: 20))
+								.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 								.foregroundColor(Color.violet)
 							Spacer()
 							Picker("", selection: $gameModel.explosionSound) {

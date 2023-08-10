@@ -23,19 +23,19 @@ struct GameEndView: View {
 						Text("Проигравший выполняет задание")
 							.padding()
 							.multilineTextAlignment(.center)
-							.font(.custom(CustomFont.DelaGothicOne, size: 24))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 24))
 					} else {
 						Text("Время вышло!")
 							.padding()
 							.multilineTextAlignment(.center)
-							.font(.custom(CustomFont.DelaGothicOne, size: 24))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 24))
 					}
 					Image("explosion")
 					if gameModel.withPunishment {
 						Text(gameModel.punishment)
 							.padding()
 							.foregroundColor(.violet)
-							.font(.custom(CustomFont.DelaGothicOne, size: 20))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 							.multilineTextAlignment(.center)
 					}
 					VStack(spacing: 15) {
@@ -44,7 +44,7 @@ struct GameEndView: View {
 								gameModel.getPunishment()
 							} label: {
 								Text("Другое задание")
-									.font(.custom(CustomFont.DelaGothicOne, size: 22))
+									.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 							}
 							.frame(width: 274, height: 79)
 							.background(.violet)
@@ -56,7 +56,7 @@ struct GameEndView: View {
 							restartGame()
 						} label: {
 							Text("Начать заново")
-								.font(.custom(CustomFont.DelaGothicOne, size: 22))
+								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 						}
 						.frame(width: 274, height: 79)
 						.background(.violet)

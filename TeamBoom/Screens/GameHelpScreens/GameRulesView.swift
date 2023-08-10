@@ -15,14 +15,14 @@ struct GameRulesView: View {
 
 		ZStack {
 			BackgroundGradientView()
-			VStack{
+			VStack {
 				Text("Правила игры")
-					.font(.custom(CustomFont.DelaGothicOne, size: 40))
+					.font(.custom(CustomFonts.DelaGothicOne, size: 40))
 					.foregroundColor(Color.violet)
 
-				VStack(alignment: .center, spacing: 5){
+				VStack(alignment: .center, spacing: 5) {
 					ForEach(0..<rulesArray.count) { index in
-						if index == 1{
+						if index == 1 {
 							RuleView(index: index+1, content: rulesArray[index], buttonLabel: "Старт игры")
 						}
 						RuleView(index: index+1, content: rulesArray[index])
@@ -34,8 +34,6 @@ struct GameRulesView: View {
 		}
 	}
 }
-
-
 
 struct RuleView: View {
 
@@ -51,21 +49,21 @@ struct RuleView: View {
 
 	var body: some View {
 		VStack {
-			HStack{
+			HStack {
 				Text(String(index))
-					.font(.custom(CustomFont.DelaGothicOne, size: 22))
+					.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 					.frame(width: 40, height: 40)
 					.background(.violet)
 					.foregroundColor(.yellowGradient)
 					.clipShape(RoundedRectangle(cornerRadius: 50))
 					.shadow(radius: 15)
 				Text(content)
-					.font(.custom(CustomFont.DelaGothicOne, size: 15))
+					.font(.custom(CustomFonts.DelaGothicOne, size: 15))
 					.multilineTextAlignment(.center)
 			}
 			if withButton {
 				Text(String(buttonLabel!))
-					.font(.custom(CustomFont.DelaGothicOne, size: 18))
+					.font(.custom(CustomFonts.DelaGothicOne, size: 18))
 					.frame(width: 150, height: 40)
 					.background(.violet)
 					.foregroundColor(.yellowGradient)
@@ -75,7 +73,6 @@ struct RuleView: View {
 		}
 	}
 }
-
 
 struct GameRulesView_Previews: PreviewProvider {
 	static var previews: some View {

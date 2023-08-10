@@ -17,7 +17,7 @@ struct GameStartView: View {
 	var body: some View {
 		VStack(alignment: .center) {
 			Text("Нажмите “Запустить” чтобы начать игру")
-				.font(.custom(CustomFont.DelaGothicOne, size: 26))
+				.font(.custom(CustomFonts.DelaGothicOne, size: 26))
 				.foregroundColor(Color.violet)
 				.frame(width: 300)
                 .multilineTextAlignment(.center)
@@ -27,7 +27,7 @@ struct GameStartView: View {
 			Button("Запустить") {
 				startGame()
 			}
-            .font(.custom(CustomFont.DelaGothicOne, size: 20))
+            .font(.custom(CustomFonts.DelaGothicOne, size: 20))
 			.modifier(ButtonViewModifier())
 			.padding(.bottom, 30)
 		}

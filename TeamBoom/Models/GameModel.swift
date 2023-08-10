@@ -14,7 +14,7 @@ final class GameModel: ObservableObject {
 
 	private let durations: [String: Double] = ["Короткое": 5.0, "Среднее": 10.0, "Длинное": 20.0, "Случайное": Double.random(in: 5...20)]
 	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
-	let categories: CategoryModel = Bundle.main.decode("categories.json")
+	private let categories: CategoryModel = Bundle.main.decode("categories.json")
 	// States
 	let backgroundSounds: [String: String] = ["Мелодия 1": "backgroundMusic", "Мелодия 2": "backgroundMusic2", "Мелодия 3": "backgroundMusic3"]
 	let tickSounds: [String: String] = ["Тикание 1": "ticking", "Тикание 2": "ticking2", "Тикание 3": "ticking3"]
