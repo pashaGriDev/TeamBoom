@@ -19,7 +19,7 @@ final class GameModel: ObservableObject {
 	@Published var isPlaying = false
 	@Published var isPaused = false
     @Published var boomed = false
-	@Published var gameTime: Double = 15.0
+	@Published var gameTime: Double = 1.0
     @Published var count: Double = 0
 	@Published var isBackgroundMusic: Bool = true
 	@Published var backgroundSound: String = "backgroundMusic"
