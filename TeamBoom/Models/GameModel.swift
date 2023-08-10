@@ -81,7 +81,7 @@ final class GameModel: ObservableObject {
 			.sink { [unowned self] _ in
 				self.count += 0.05
 				if self.count >= gameTime*0.98 && !boomed {
-					playSound(key: "explosion", player: &player2)
+					playSound(key: explosionSound, player: &player2)
 					boomed = true
 				}
 
