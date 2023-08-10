@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
 	// MARK: - States&Properties
 
-	@ObservedObject var gameModel: GameModel
+	@ObservedObject var gameModel: GameViewModel
 	private let columns = [GridItem(.adaptive(minimum: 175))]
 
 	// MARK: - UI
@@ -126,6 +126,6 @@ extension SettingsView {
 
 struct SettingsView_Previews: PreviewProvider {
 	static var previews: some View {
-		SettingsView(gameModel: GameModel())
+		SettingsView(gameModel: GameViewModel())
 	}
 }

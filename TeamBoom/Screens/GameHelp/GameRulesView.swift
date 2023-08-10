@@ -8,39 +8,51 @@
 import SwiftUI
 
 struct GameRulesView: View {
+	// MARK: - States&Properties
 
-	var rulesArray = rules.components(separatedBy: "\n")
+	private var rulesArray = rules.components(separatedBy: "\n")
+
+	// MARK: - UI
 
 	var body: some View {
-
 		ZStack {
 			BackgroundGradientView()
 			VStack {
 				VStack(alignment: .center, spacing: 5) {
 					ForEach(0..<rulesArray.count) { index in
 						if index == 1 {
-							RuleView(index: index+1, content: rulesArray[index], buttonLabel: "Старт игры")
+							RuleView(index: index + 1, content: rulesArray[index], buttonLabel: "Старт игры")
 						}
 						RuleView(index: index+1, content: rulesArray[index])
 					}
 					.padding(10)
 				}
 			}
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack {
-                        Text("Правила игры")
-                            .font(.custom(CustomFonts.DelaGothicOne, size: 30))
-                            .foregroundColor(.violet)
-                    }
-                }
-            }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: CustomBackButton())
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItem(placement: .principal) {
+					VStack {
+						Text("Правила игры")
+							.font(.custom(CustomFonts.DelaGothicOne, size: 30))
+							.foregroundColor(.violet)
+					}
+				}
+			}
+			.navigationBarBackButtonHidden(true)
+			.navigationBarItems(leading: CustomBackButton())
 		}
 	}
 }
+
+// MARK: - Preview
+
+struct GameRulesView_Previews: PreviewProvider {
+	static var previews: some View {
+		GameRulesView()
+	}
+}
+
+// MARK: - RuleView
 
 struct RuleView: View {
 
@@ -78,11 +90,5 @@ struct RuleView: View {
 					.shadow(radius: 15)
 			}
 		}
-	}
-}
-
-struct GameRulesView_Previews: PreviewProvider {
-	static var previews: some View {
-		GameRulesView()
 	}
 }

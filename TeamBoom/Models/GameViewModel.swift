@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-final class GameModel: ObservableObject {
+final class GameViewModel: ObservableObject {
 
 	// MARK: - States&Properties
 

@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoriesView: View {
 	// MARK: - States & Properties
 
-	@ObservedObject var gameModel: GameModel
+	@ObservedObject var gameModel: GameViewModel
 	private let columns = [GridItem(.adaptive(minimum: 175))]
 
 	// MARK: - UI
@@ -97,9 +97,9 @@ extension CategoriesView {
 // MARK: - Preview
 
 struct CategoriesView_Previews: PreviewProvider {
-	static let gameModel = GameModel()
+	static let gameModel = GameViewModel()
 
 	static var previews: some View {
-		CategoriesView(gameModel: GameModel())
+		CategoriesView(gameModel: GameViewModel())
 	}
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
 	// MARK: - States & Properties
 
-	@StateObject private var gameModel = GameModel()
+	@StateObject private var gameModel = GameViewModel()
 	@State private var pressedLink: String? = nil
 
 	// MARK: - UI
