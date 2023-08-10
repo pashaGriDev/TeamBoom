@@ -73,6 +73,8 @@ struct CategoriesView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton())
 	}
 }
 
