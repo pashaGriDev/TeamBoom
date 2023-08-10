@@ -25,7 +25,7 @@ struct MainView: View {
 					Image("bomb")
 						.scaledToFit()
 						.frame(width: 400, height: 400)
-						.scaleEffect(gameModel.isBombAnimating ? 0.70 : 0.80)
+						.scaleEffect(gameModel.isBombAnimating ? 0.80 : 0.90)
 						.animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: gameModel.isBombAnimating)
 						.onAppear {
 							withAnimation {
@@ -41,17 +41,12 @@ struct MainView: View {
 				VStack(spacing: 5) {
 					Image("textBomb")
 					Spacer()
-					VStack(spacing: 5) {
+					VStack(spacing: 7) {
 						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
 									   tag: "start",
 									   selection: $pressedLink) {
 							Text(gameModel.isPaused ? "Рестарт" : "Старт")
-								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
-								.frame(width: 274, height: 79)
-								.background(.violet)
-								.foregroundColor(.yellowGradient)
-								.clipShape(RoundedRectangle(cornerRadius: 50))
-								.shadow(radius: 15)
+								.modifier(MenuButtonModifier())
 						}
 						.buttonStyle(ThemeAnimationStyle())
 
@@ -71,12 +66,7 @@ struct MainView: View {
 
 						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
-								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
-								.frame(width: 274, height: 79)
-								.background(.violet)
-								.foregroundColor(.yellowGradient)
-								.clipShape(RoundedRectangle(cornerRadius: 50))
-								.shadow(radius: 15)
+								.modifier(MenuButtonModifier())
 						})
 						.buttonStyle(ThemeAnimationStyle())
 

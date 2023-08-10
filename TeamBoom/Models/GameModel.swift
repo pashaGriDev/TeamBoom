@@ -12,7 +12,7 @@ final class GameModel: ObservableObject {
 
 	// MARK: - States&Properties
 
-	private let durations: [String: Double] = ["Короткое": 5.0, "Среднее": 10.0, "Длинное": 20.0, "Случайное": Double.random(in: 5...20)]
+	private let durations: [String: Double] = ["Короткое": 10.0, "Среднее": 20.0, "Длинное": 45.0, "Случайное": Double.random(in: 10...45)]
 	private let punishments: PunishModel = Bundle.main.decode("funnyActions.json")
 	private let categories: CategoryModel = Bundle.main.decode("categories.json")
 	// States

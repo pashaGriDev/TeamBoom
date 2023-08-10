@@ -37,7 +37,7 @@ struct GameProcessView: View {
 				pauseGame()
 			}
 			.font(.custom(CustomFonts.DelaGothicOne, size: 20))
-			.modifier(ButtonViewModifier())
+			.modifier(GameButtonModifier())
 			.padding(.bottom, 30)
 			.animation(.default, value: gameModel.isPaused)
 		}
