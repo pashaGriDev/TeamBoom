@@ -56,9 +56,7 @@ struct MainView: View {
 									.padding(.leading, 30)
 							}
 							Spacer()
-                            Button {
-                                // Rules code.
-                            } label: {
+                            NavigationLink(destination: GameHelpView()) {
                                 Image("question-mark")
                                     .padding(.trailing, 30)
                             }
