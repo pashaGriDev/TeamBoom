@@ -99,7 +99,7 @@ struct MainView: View {
 				ToolbarItem(placement: .principal) {
 					VStack(spacing: 5) {
 						Text("Игра для компании")
-							.font(.custom(CustomFonts.DelaGothicOne, size: 32))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 30))
 							.foregroundColor(.black)
 					}
 				}
