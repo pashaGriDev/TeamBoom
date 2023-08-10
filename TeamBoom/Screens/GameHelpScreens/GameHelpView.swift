@@ -16,7 +16,7 @@ struct GameHelpView: View {
 			VStack(spacing: 15) {
 				NavigationLink(destination: GameRulesView()) {
 					Text("Правила игры")
-						.font(.custom(CustomFont.DelaGothicOne, size: 22))
+						.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 						.frame(width: 274, height: 79)
 						.background(.violet)
 						.foregroundColor(.yellowGradient)
@@ -25,7 +25,7 @@ struct GameHelpView: View {
 				}
 				NavigationLink(destination: GameRulesView()) {
 					Text("Категории")
-						.font(.custom(CustomFont.DelaGothicOne, size: 22))
+						.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 						.frame(width: 274, height: 79)
 						.background(.violet)
 						.foregroundColor(.yellowGradient)
@@ -34,7 +34,7 @@ struct GameHelpView: View {
 				}
 				NavigationLink(destination: GameRulesView()) {
 					Text("Настройки")
-						.font(.custom(CustomFont.DelaGothicOne, size: 22))
+						.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 						.frame(width: 274, height: 79)
 						.background(.violet)
 						.foregroundColor(.yellowGradient)
@@ -46,7 +46,7 @@ struct GameHelpView: View {
 				ToolbarItem(placement: .principal) {
 					VStack {
 						Text("Помощь")
-							.font(.custom(CustomFont.DelaGothicOne, size: 40))
+							.font(.custom(CustomFonts.DelaGothicOne, size: 40))
 							.foregroundColor(Color.violet)
 					}
 				}

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D7CC8EC2A83BCAB0076950C /* Animation Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CC8EB2A83BCAB0076950C /* Animation Buttons.swift */; };
 		0D7CC8EE2A8407070076950C /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CC8ED2A8407070076950C /* DelaGothicOne-Regular.ttf */; };
-		0D7CC8F22A8408270076950C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CC8F12A8408270076950C /* CustomFont.swift */; };
+		0D7CC8F22A8408270076950C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CC8F12A8408270076950C /* CustomFonts.swift */; };
 		0DB4C2C62A81603100E791B1 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4C2C52A81603100E791B1 /* GameEndView.swift */; };
 		0DE93BD62A8142B400648218 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE93BD52A8142B400648218 /* MainView.swift */; };
 		105526E62A80503A009FFDE8 /* TeamBoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105526E52A80503A009FFDE8 /* TeamBoomApp.swift */; };
@@ -53,7 +53,7 @@
 		0D7CC8EB2A83BCAB0076950C /* Animation Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Buttons.swift"; sourceTree = "<group>"; };
 		0D7CC8ED2A8407070076950C /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
 		0D7CC8EF2A84075F0076950C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		0D7CC8F12A8408270076950C /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		0D7CC8F12A8408270076950C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		0DB4C2C52A81603100E791B1 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		0DE93BD52A8142B400648218 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		105526E22A80503A009FFDE8 /* TeamBoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamBoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				0D7CC8ED2A8407070076950C /* DelaGothicOne-Regular.ttf */,
-				0D7CC8F12A8408270076950C /* CustomFont.swift */,
+				0D7CC8F12A8408270076950C /* CustomFonts.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -140,10 +140,7 @@
 				AC8C72082A81A55A0063F55F /* Models */,
 				AC8C71982A80E6CE0063F55F /* Views */,
 				AC8C719D2A80E7AC0063F55F /* Extensions */,
-				ACD615522A8283A800FDD52D /* Sounds */,
-				A07ABD0A2A825BC400B4B5B8 /* JSONs */,
-				105526E92A80503C009FFDE8 /* Assets.xcassets */,
-				0D7CC8F02A8407FE0076950C /* Font */,
+				A05326D12A8512120077C36B /* Resources */,
 				105526EB2A80503C009FFDE8 /* Preview Content */,
 			);
 			path = TeamBoom;
@@ -175,6 +172,17 @@
 			path = GameHelpViews;
 			sourceTree = "<group>";
 		};
+		A05326D12A8512120077C36B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				105526E92A80503C009FFDE8 /* Assets.xcassets */,
+				0D7CC8F02A8407FE0076950C /* Font */,
+				ACD615522A8283A800FDD52D /* Sounds */,
+				A07ABD0A2A825BC400B4B5B8 /* JSON */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A07ABD092A825B9E00B4B5B8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,14 +195,14 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		A07ABD0A2A825BC400B4B5B8 /* JSONs */ = {
+		A07ABD0A2A825BC400B4B5B8 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
 				AC8C71B92A8131EB0063F55F /* animation1.json */,
 				AC8C72042A81A25E0063F55F /* funnyActions.json */,
 				AC8C72062A81A26D0063F55F /* categories.json */,
 			);
-			path = JSONs;
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		A0D883D12A82E2E200961D89 /* GameView */ = {
@@ -373,7 +381,7 @@
 				AC8C72012A819F490063F55F /* PunishModel.swift in Sources */,
 				A008A1D32A83801F0063E733 /* LottieView.swift in Sources */,
 				ACD615542A8283C700FDD52D /* PlaySound.swift in Sources */,
-				0D7CC8F22A8408270076950C /* CustomFont.swift in Sources */,
+				0D7CC8F22A8408270076950C /* CustomFonts.swift in Sources */,
 				AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */,
 				AC8C71A12A8102270063F55F /* ButtonViewModifier.swift in Sources */,
 				A072DF292A83EE5B00B702EC /* SettingsView.swift in Sources */,
