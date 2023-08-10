@@ -45,7 +45,7 @@ struct MainView: View {
 						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
 									   tag: "start",
 									   selection: $pressedLink) {
-							Text("Старт")
+							Text(gameModel.isPaused ? "Рестарт" : "Старт")
 								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
 								.frame(width: 274, height: 79)
 								.background(.violet)

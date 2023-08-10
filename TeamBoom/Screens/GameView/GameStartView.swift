@@ -25,7 +25,7 @@ struct GameStartView: View {
 			Image("bomb3")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 450, height: 450)
+                .frame(width: 320, height: 320)
 			Spacer()
 			Button("Запустить") {
 				startGame()
