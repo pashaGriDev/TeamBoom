@@ -19,39 +19,51 @@ struct GameEndView: View {
 			ZStack {
 				BackgroundGradientView()
 				VStack {
-					Text("Проигравший выполняет задание")
-						.padding()
-						.multilineTextAlignment(.center)
-                        .font(.custom(CustomFont.DelaGothicOne, size: 24))
+					if gameModel.withPunishment {
+						Text("Проигравший выполняет задание")
+							.padding()
+							.multilineTextAlignment(.center)
+							.font(.custom(CustomFont.DelaGothicOne, size: 24))
+					} else {
+						Text("Время вышло!")
+							.padding()
+							.multilineTextAlignment(.center)
+							.font(.custom(CustomFont.DelaGothicOne, size: 24))
+					}
 					Image("explosion")
-					Text(gameModel.punishment)
-						.padding()
-						.foregroundColor(.violet)
-                        .font(.custom(CustomFont.DelaGothicOne, size: 20))
-                        .multilineTextAlignment(.center)
+					if gameModel.withPunishment {
+						Text(gameModel.punishment)
+							.padding()
+							.foregroundColor(.violet)
+							.font(.custom(CustomFont.DelaGothicOne, size: 20))
+							.multilineTextAlignment(.center)
+					}
 					VStack(spacing: 15) {
-						Button {
-							gameModel.getPunishment()
-						} label: {
-							Text("Другое задание")
-                                .font(.custom(CustomFont.DelaGothicOne, size: 22))
+						if gameModel.withPunishment {
+							Button {
+								gameModel.getPunishment()
+							} label: {
+								Text("Другое задание")
+									.font(.custom(CustomFont.DelaGothicOne, size: 22))
+							}
+							.frame(width: 274, height: 79)
+							.background(.violet)
+							.foregroundColor(.yellowGradient)
+							.clipShape(RoundedRectangle(cornerRadius: 50))
+							.shadow(radius: 15)
 						}
-						.frame(width: 274, height: 79)
-						.background(.violet)
-						.foregroundColor(.yellowGradient)
-						.clipShape(RoundedRectangle(cornerRadius: 50))
-						.shadow(radius: 15)
 						Button {
 							restartGame()
 						} label: {
 							Text("Начать заново")
-                                .font(.custom(CustomFont.DelaGothicOne, size: 22))
+								.font(.custom(CustomFont.DelaGothicOne, size: 22))
 						}
 						.frame(width: 274, height: 79)
 						.background(.violet)
 						.foregroundColor(.yellowGradient)
 						.clipShape(RoundedRectangle(cornerRadius: 50))
 						.shadow(radius: 15)
+
 					}
 				}
 			}

@@ -105,6 +105,8 @@ struct SettingsView: View {
 		}
 	}
 
+	// MARK: - Methods
+
 	private func changeDuration(duration: String) {
 		gameModel.changeDuration(duration: duration)
 	}
