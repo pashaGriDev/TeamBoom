@@ -24,16 +24,16 @@ struct MainView: View {
 				VStack {
 					Spacer()
 					Image("bomb")
-					.scaledToFit()
-					.frame(width: 400, height: 400)
-					.scaleEffect(gameModel.isBombAnimating ? 0.70 : 0.80)
-					.animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: gameModel.isBombAnimating)
-					.onAppear {
-						withAnimation {
-							gameModel.startBombImageAnimation()
+						.scaledToFit()
+						.frame(width: 400, height: 400)
+						.scaleEffect(gameModel.isBombAnimating ? 0.70 : 0.80)
+						.animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: gameModel.isBombAnimating)
+						.onAppear {
+							withAnimation {
+								gameModel.startBombImageAnimation()
+							}
 						}
-					}
-					.offset(y: -60)
+						.offset(y: -60)
 					Spacer()
 					Spacer()
 					Spacer()
@@ -54,22 +54,21 @@ struct MainView: View {
 								.clipShape(RoundedRectangle(cornerRadius: 50))
 								.shadow(radius: 15)
 						}
-									   .buttonStyle(ThemeAnimationStyle())
+						.buttonStyle(ThemeAnimationStyle())
 
-						if gameModel.isPaused {
-							NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
-										   tag: "continue",
-										   selection: $pressedLink) {
-								Text("Продолжить")
-									.font(.custom(CustomFonts.DelaGothicOne, size: 22))
-									.frame(width: 274, height: 79)
-									.background(.violet)
-									.foregroundColor(.yellowGradient)
-									.clipShape(RoundedRectangle(cornerRadius: 50))
-									.shadow(radius: 15)
-							}
-										   .buttonStyle(ThemeAnimationStyle())
+						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
+									   tag: "continue",
+									   selection: $pressedLink) {
+							Text("Продолжить")
+								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
+								.frame(width: 274, height: 79)
+								.background(gameModel.isPaused ? .violet : .gray)
+								.foregroundColor(.yellowGradient)
+								.clipShape(RoundedRectangle(cornerRadius: 50))
+								.shadow(radius: 15)
 						}
+						.buttonStyle(ThemeAnimationStyle())
+						.disabled(!gameModel.isPaused)
 
 						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
 							Text("Категории")
