@@ -100,9 +100,19 @@ struct SettingsView: View {
 				}
 				.padding(.horizontal)
 			}
-			.navigationTitle("Настройки")
-			.navigationBarTitleDisplayMode(.inline)
 		}
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Настройки")
+                        .font(.custom(CustomFonts.DelaGothicOne, size: 30))
+                        .foregroundColor(.violet)
+                }
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton())
 	}
 
 	// MARK: - Methods
