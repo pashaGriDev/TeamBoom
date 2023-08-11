@@ -37,6 +37,7 @@ struct GameEndView: View {
 						.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 						.multilineTextAlignment(.center)
                         .minimumScaleFactor(0.7)
+                        .frame(width: .infinity, height: 120)
 				}
                 
 				VStack(spacing: 15) {
@@ -75,7 +76,7 @@ struct GameEndView: View {
 							.stroke(.black)
 					}
 				}
-                .padding(.bottom, -40)
+                .padding(.bottom, 30)
 			}
 		}
 	}
