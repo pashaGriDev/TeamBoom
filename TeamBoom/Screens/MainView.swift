@@ -123,11 +123,13 @@ struct MainView: View {
 			}
 		}
 	}
+		}
+	}
 }
 // MARK: - Preview
 
 struct MainView_Previews: PreviewProvider {
-	static var previews: some View {
-		MainView()
-	}
+    static var previews: some View {
+        MainView()
+    }
 }

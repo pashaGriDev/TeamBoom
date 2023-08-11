@@ -16,17 +16,21 @@ struct GameHelpView: View {
 			VStack(spacing: 15) {
 				NavigationLink(destination: GameRulesView()) {
 					Text("Правила игры")
+                        .frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
 				NavigationLink(destination: GameCategoriesView()) {
 					Text("Категории")
+                        .frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
 				NavigationLink(destination: GameRulesView()) {
 					Text("Настройки")
+                        .frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
 			}
+            .buttonStyle(ThemeAnimationStyle())
 			.toolbar {
 				ToolbarItem(placement: .principal) {
 					VStack {

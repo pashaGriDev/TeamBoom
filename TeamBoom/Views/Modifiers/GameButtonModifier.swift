@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct GameButtonModifier: ViewModifier {
-	func body(content: Content) -> some View {
-		content
-			.font(.title)
+struct GameButtonModifier: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            configuration.label
+        }
+            .font(.custom(CustomFonts.DelaGothicOne, size: 20))
 			.foregroundColor(.yellowOfButton)
 			.padding(.horizontal, 70)
 			.padding(.vertical, 20)
