@@ -66,6 +66,7 @@ struct SettingsView: View {
 										.tag(gameModel.backgroundSounds[key] ?? "")
 								}
 							}
+							.tint(.black)
 						}
 
 						HStack {
@@ -79,7 +80,7 @@ struct SettingsView: View {
 										.tag(gameModel.tickSounds[key] ?? "")
 								}
 							}
-							.foregroundColor(Color.black)
+							.tint(.black)
 						}
 
 						HStack {
@@ -93,6 +94,7 @@ struct SettingsView: View {
 										.tag(gameModel.bombSounds[key] ?? "")
 								}
 							}
+							.tint(.black)
 						}
 					}
 					Spacer()

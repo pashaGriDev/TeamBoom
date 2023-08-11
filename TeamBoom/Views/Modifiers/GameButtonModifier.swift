@@ -17,5 +17,10 @@ struct GameButtonModifier: ViewModifier {
 			.background(.violet)
 			.cornerRadius(30)
 			.opacity(1)
+			.shadow(radius: 5, y: 5)
+			.overlay {
+				RoundedRectangle(cornerRadius: 30)
+					.stroke(.black)
+			}
 	}
 }
