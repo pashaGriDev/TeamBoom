@@ -31,7 +31,7 @@ struct GameStartView: View {
 				startGame()
 			}
 			.font(.custom(CustomFonts.DelaGothicOne, size: 20))
-			.modifier(GameButtonModifier())
+			.buttonStyle(GameButtonModifier())
 			.padding(.bottom, 30)
 		}
 	}
