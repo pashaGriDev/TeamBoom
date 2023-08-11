@@ -23,6 +23,7 @@ struct SettingsView: View {
 					Text("Время игры")
 						.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 						.foregroundColor(Color.violet)
+						.shadow(radius: 5, y: 5)
 					LazyVGrid(columns: columns) {
 						ForEach(gameModel.getDurations().keys.sorted(), id: \.self) { duration in
 							Button(duration) {
@@ -66,6 +67,7 @@ struct SettingsView: View {
 								}
 							}
 						}
+
 						HStack {
 							Text("Тиканье бомбы")
 								.font(.custom(CustomFonts.DelaGothicOne, size: 20))
@@ -77,7 +79,7 @@ struct SettingsView: View {
 										.tag(gameModel.tickSounds[key] ?? "")
 								}
 							}
-							.pickerStyle(.menu)
+							.foregroundColor(Color.black)
 						}
 
 						HStack {
