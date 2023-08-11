@@ -123,9 +123,8 @@ struct MainView: View {
 			}
 		}
 	}
-		}
-	}
 }
+
 // MARK: - Preview
 
 struct MainView_Previews: PreviewProvider {
