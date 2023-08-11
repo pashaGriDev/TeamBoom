@@ -62,6 +62,7 @@ struct GameCategoriesView: View {
 									.stroke(.black)
 							}
 						}
+                        .buttonStyle(ThemeAnimationStyle())
 						.padding(.vertical, 4)
 					}
 				}

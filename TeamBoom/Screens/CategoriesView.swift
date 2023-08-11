@@ -54,7 +54,9 @@ struct CategoriesView: View {
                                             .stroke(.black)
                                     }
                                 }
+                                .buttonStyle(ThemeAnimationStyle())
                                 .padding(.vertical, 4)
+                                .shadow(radius: 5, y: 5)
                             }
                         }
                         .padding()
