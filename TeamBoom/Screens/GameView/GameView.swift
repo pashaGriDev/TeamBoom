@@ -12,6 +12,7 @@ struct GameView: View {
 
 	@ObservedObject var gameModel: GameViewModel
 	var buttonPressed: String? = ""
+    @Environment(\.dismiss) private var dismiss
 
 	// MARK: - UI
 
@@ -19,35 +20,39 @@ struct GameView: View {
 		NavigationView {
 			ZStack {
 				BackgroundGradientView()
-				if gameModel.isPlaying {
-					if gameModel.isOver {
+                if gameModel.isPlaying || gameModel.count != 0 {
+                    if gameModel.isOver {
 						GameEndView(gameModel: gameModel)
 					} else {
-						GameProcessView(gameModel: gameModel)
+                        GameProcessView(gameModel: gameModel)
 					}
 				} else {
 					GameStartView(gameModel: gameModel)
 				}
 			}
-			.onAppear {
-				if buttonPressed == "start" {
-					gameModel.isPlaying = false
-					gameModel.isPaused = false
-					gameModel.isOver = false
-				}
-			}
 		}
-		.navigationBarTitleDisplayMode(.inline)
-		.toolbar {
-			ToolbarItem(placement: .principal) {
-				VStack {
-					Text("Игра")
-						.modifier(ToolBarButtonModifer())
-				}
-			}
-		}
-		.navigationBarBackButtonHidden(true)
-		.navigationBarItems(leading: CustomBackButton())
+        .navigationTitle("Игра")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    if !gameModel.isOver && gameModel.isPlaying {
+                        gameModel.isPaused = true
+                        player2.pause()
+                        if gameModel.withBackgroundMusic {
+                            player.pause()
+                        }
+                    }
+                    dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(.violet)
+                            .font(.title)
+                    }
+                }
+            }
+        }
 	}
 }
 

@@ -46,8 +46,9 @@ extension GameStartView {
 		}
 		playSound(key: gameModel.tickSound, player: &player2)
 		gameModel.askQuestion()
-		gameModel.isPlaying.toggle()
+		gameModel.isPlaying = true
 		gameModel.isPaused = false
+        gameModel.isOver = false
 		gameModel.setUpTimer()
 	}
 }

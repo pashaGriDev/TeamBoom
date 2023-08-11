@@ -32,10 +32,11 @@ struct GameEndView: View {
 				Image("explosion")
 				if gameModel.withPunishment {
 					Text(gameModel.punishment)
-						.padding()
+                        .padding(8)
 						.foregroundColor(.violet)
 						.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 						.multilineTextAlignment(.center)
+                        .minimumScaleFactor(0.7)
 				}
 				VStack(spacing: 15) {
 					if gameModel.withPunishment {

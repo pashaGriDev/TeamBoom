@@ -42,7 +42,12 @@ struct MainView: View {
 					Image("textBomb")
 					Spacer()
 					VStack(spacing: 7) {
-						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
+						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
+                            .onAppear(perform: {
+                                gameModel.count = 0
+                                gameModel.isPaused = false
+                                gameModel.isPlaying = false
+                            }),
 									   tag: "start",
 									   selection: $pressedLink) {
 							Text(gameModel.isPaused ? "Рестарт" : "Старт")
@@ -50,7 +55,15 @@ struct MainView: View {
 						}
 						.buttonStyle(ThemeAnimationStyle())
 
-						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink),
+						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
+                            .onAppear(perform: {
+                                if gameModel.count != 0 {
+                                    player.play()
+                                    player2.play()
+                                    gameModel.setUpTimer()
+                                    gameModel.isPaused = false
+                                }
+                            }),
 									   tag: "continue",
 									   selection: $pressedLink) {
 							Text("Продолжить")
