@@ -75,6 +75,7 @@ extension GameEndView {
 	private func restartGame() {
 		gameModel.isPlaying = false
 		gameModel.isOver = false
+        gameModel.isPaused = false
 	}
 }
 
