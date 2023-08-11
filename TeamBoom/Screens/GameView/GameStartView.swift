@@ -41,9 +41,9 @@ struct GameStartView: View {
 extension GameStartView {
 	private func startGame() {
 		if gameModel.withBackgroundMusic {
-			playSound(key: gameModel.backgroundSound, player: &player)
+            playSound(key: gameModel.backgroundSound, player: &player)
 		}
-		playSound(key: gameModel.tickSound, player: &player2)
+        playSound(key: gameModel.tickSound, player: &player2)
 		gameModel.askQuestion()
 		gameModel.isPlaying = true
 		gameModel.isPaused = false
