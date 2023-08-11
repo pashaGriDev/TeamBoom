@@ -56,7 +56,7 @@ struct GameEndView: View {
 								.stroke(.black)
 						}
 					}
-					Button {
+                    Button {
 						restartGame()
 					} label: {
 						Text("Начать заново")

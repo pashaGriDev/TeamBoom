@@ -37,7 +37,6 @@ struct GameProcessView: View {
 			Button(gameModel.isPaused ? "Продолжить" : "Пауза") {
 				pauseGame()
 			}
-			.font(.custom(CustomFonts.DelaGothicOne, size: 20))
 			.buttonStyle(GameButtonModifier())
 			.padding(.bottom, 30)
 			.animation(.default, value: gameModel.isPaused)

@@ -12,7 +12,7 @@ struct GameButtonModifier: ButtonStyle {
         HStack {
             configuration.label
         }
-			.font(.title)
+            .font(.custom(CustomFonts.DelaGothicOne, size: 20))
 			.foregroundColor(.yellowOfButton)
 			.padding(.horizontal, 70)
 			.padding(.vertical, 20)
