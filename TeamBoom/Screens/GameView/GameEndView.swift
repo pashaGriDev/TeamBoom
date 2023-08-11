@@ -38,6 +38,7 @@ struct GameEndView: View {
 						.multilineTextAlignment(.center)
                         .minimumScaleFactor(0.7)
 				}
+                
 				VStack(spacing: 15) {
 					if gameModel.withPunishment {
 						Button {
@@ -45,6 +46,7 @@ struct GameEndView: View {
 						} label: {
 							Text("Другое задание")
 								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
+                                .frame(width: 274, height: 79)
 						}
 						.frame(width: 274, height: 79)
 						.background(.violet)
@@ -61,6 +63,7 @@ struct GameEndView: View {
 					} label: {
 						Text("Начать заново")
 							.font(.custom(CustomFonts.DelaGothicOne, size: 22))
+                            .frame(width: 274, height: 79)
 					}
 					.frame(width: 274, height: 79)
 					.background(.violet)
@@ -72,6 +75,7 @@ struct GameEndView: View {
 							.stroke(.black)
 					}
 				}
+                .padding(.bottom, -40)
 			}
 		}
 	}
