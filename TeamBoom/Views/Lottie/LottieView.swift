@@ -53,7 +53,7 @@ struct LottieView: UIViewRepresentable {
 		if isPaused {
 			context.coordinator.parent.animationView.pause()
 		} else {
-			context.coordinator.parent.animationView.play(fromFrame: progress*480, toFrame: 488)
+			context.coordinator.parent.animationView.play(fromFrame: progress*480, toFrame: 480)
 		}
 	}
 

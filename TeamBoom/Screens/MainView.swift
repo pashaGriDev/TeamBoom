@@ -58,7 +58,9 @@ struct MainView: View {
 						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
                             .onAppear(perform: {
                                 if gameModel.count != 0 {
-                                    player.play()
+                                    if gameModel.withBackgroundMusic {
+                                        player.play()
+                                    }
                                     player2.play()
                                     gameModel.setUpTimer()
                                     gameModel.isPaused = false
