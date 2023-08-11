@@ -19,15 +19,16 @@ struct GameProcessView: View {
 			Text(gameModel.question)
 				.font(.title.bold())
 				.foregroundColor(Color.violet)
-				.frame(width: 300)
+                .frame(width: 300, alignment: .center)
 				.multilineTextAlignment(.center)
 				.padding(.horizontal, 10)
 				.offset(y: 20)
+                .minimumScaleFactor(0.7)
 			Spacer()
 			LottieView(name: "animation1",
 					   loopMode: .playOnce,
 					   animationSpeed: 7.75/gameModel.gameTime,
-					   isPaused: gameModel.isPaused)
+                       isPaused: gameModel.isPaused, progress: gameModel.count/gameModel.gameTime)
 			.frame(width: 500, height: 500)
 			.scaleEffect(1)
 			.saturation(1.7)
