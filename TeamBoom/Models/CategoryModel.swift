@@ -12,7 +12,7 @@ struct CategoryModel: Codable {
 }
 
 struct Category: Codable {
-	let id: UUID = UUID()
+//	let id: UUID = UUID()
 	let title: String
 	let image: String
 	let questions: [String]
