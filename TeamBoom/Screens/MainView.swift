@@ -59,9 +59,9 @@ struct MainView: View {
                             .onAppear(perform: {
                                 if gameModel.count != 0 {
                                     if gameModel.withBackgroundMusic {
-//                                        player.play()
+                                        playSound(key: gameModel.backgroundSound, player: &player)
                                     }
-//                                    player2.play()
+                                    playSound(key: gameModel.tickSound, player: &player2)
                                     gameModel.setUpTimer()
                                     gameModel.isPaused = false
                                 }
@@ -90,7 +90,15 @@ struct MainView: View {
 						.buttonStyle(ThemeAnimationStyle())
 
 						HStack {
-							NavigationLink(destination: SettingsView(gameModel: gameModel)) {
+							NavigationLink(destination: SettingsView(gameModel: gameModel)
+                                .onAppear(perform: {
+                                    gameModel.isOver = false
+                                    gameModel.isPlaying = false
+                                    gameModel.count = 0
+                                    gameModel.isPaused = false
+                                }),
+                                           tag: "settings",
+                                           selection: $pressedLink) {
 								Image("settings")
 									.padding(.leading, 30)
 							}
