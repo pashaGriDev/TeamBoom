@@ -19,7 +19,7 @@ struct CategoriesView: View {
 		NavigationView {
 			ZStack {
 				BackgroundGradientView()
-				ScrollView(showsIndicators: false) {
+//				ScrollView(showsIndicators: false) {
 					LazyVGrid(columns: columns) {
 						ForEach(gameModel.getCategories(), id: \.title) { category in
 							Button {
@@ -58,7 +58,7 @@ struct CategoriesView: View {
 						}
 					}
 					.padding()
-				}
+//				}
 			}
 		}
 		.navigationBarTitleDisplayMode(.inline)
