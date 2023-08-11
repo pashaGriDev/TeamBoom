@@ -15,6 +15,7 @@ TeamBoom - приложение для вечеринок, чтобы развл
 - [Artem](https://github.com/Artemaj9)
 - [Ivan Lyaskovets](https://github.com/lyaskovetsiv)
 - [Daniil Kulikovskiy](https://github.com/Senior-Pomidorr)
+- [Andrey Bo](https://github.com/MrMurman)
 
 TL - [pashaGriDev](https://github.com/pashaGriDev)
 
