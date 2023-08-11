@@ -30,6 +30,7 @@ struct GameHelpView: View {
 						.modifier(MenuButtonModifier())
 				}
 			}
+            .buttonStyle(ThemeAnimationStyle())
 			.toolbar {
 				ToolbarItem(placement: .principal) {
 					VStack {

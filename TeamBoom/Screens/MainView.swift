@@ -25,7 +25,7 @@ struct MainView: View {
 					Image("bomb")
 						.scaledToFit()
 						.frame(width: 400, height: 400)
-						.scaleEffect(gameModel.isBombAnimating ? 0.80 : 0.90)
+						.scaleEffect(gameModel.isBombAnimating ? 0.85 : 0.95)
 						.animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: gameModel.isBombAnimating)
 						.onAppear {
 							withAnimation {
@@ -100,6 +100,7 @@ struct MainView: View {
 									.padding(.trailing, 30)
 							}
 						}
+                        .buttonStyle(ThemeAnimationStyle())
 					}
 				}
 			}
