@@ -15,6 +15,10 @@ struct MenuButtonModifier: ViewModifier {
 			.background(.violet)
 			.foregroundColor(.yellowGradient)
 			.clipShape(RoundedRectangle(cornerRadius: 50))
-			.shadow(radius: 15)
+			.shadow(radius: 5, y: 5)
+			.overlay {
+				RoundedRectangle(cornerRadius: 50)
+					.stroke(.black)
+			}
 	}
 }

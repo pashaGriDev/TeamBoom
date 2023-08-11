@@ -72,7 +72,11 @@ struct MainView: View {
 								.background(gameModel.isPaused ? .violet : .gray)
 								.foregroundColor(.yellowGradient)
 								.clipShape(RoundedRectangle(cornerRadius: 50))
-								.shadow(radius: 15)
+								.shadow(radius: 5, y: 5)
+								.overlay {
+									RoundedRectangle(cornerRadius: 50)
+										.stroke(.black)
+								}
 						}
 						.buttonStyle(ThemeAnimationStyle())
 						.disabled(!gameModel.isPaused)
