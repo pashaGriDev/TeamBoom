@@ -18,7 +18,7 @@ struct GameHelpView: View {
 					Text("Правила игры")
 						.modifier(MenuButtonModifier())
 				}
-				NavigationLink(destination: GameRulesView()) {
+				NavigationLink(destination: GameCategoriesView()) {
 					Text("Категории")
 						.modifier(MenuButtonModifier())
 				}
