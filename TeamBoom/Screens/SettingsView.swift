@@ -41,8 +41,10 @@ struct SettingsView: View {
 									.stroke(.black)
 							}
 						}
+                        
 						.shadow(radius: 5, y: 5)
 					}
+                    .buttonStyle(ThemeAnimationStyle())
 					.padding(.horizontal)
 					Spacer()
 					VStack(spacing: 30) {
