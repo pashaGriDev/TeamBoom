@@ -19,7 +19,7 @@ struct GameRulesView: View {
 			BackgroundGradientView()
 			VStack {
 				VStack(alignment: .center, spacing: 5) {
-					ForEach(0..<rulesArray.count) { index in
+                    ForEach(rulesArray.indices, id: \.self) { index in
 						if index == 1 {
 							RuleView(index: index + 1, content: rulesArray[index], buttonLabel: "Старт игры")
 						}
