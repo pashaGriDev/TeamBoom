@@ -20,31 +20,49 @@ final class GameViewModel: ObservableObject {
 	let tickSounds: [String: String] = ["Тикание 1": "ticking", "Тикание 2": "ticking2", "Тикание 3": "ticking3"]
 	let bombSounds: [String: String] = ["Взрыв 1": "explosion", "Взрыв 2": "explosion2", "Взрыв 3": "explosion3"]
 	// Game flags
-	@Published var isOver = false
-	@Published var isPlaying = false
-	@Published var isPaused = false
-	@Published var boomed = false
-	@Published var isBombAnimating = false
+	@AppStorage("isOver") var isOver = false
+	@AppStorage("isPlaying") var isPlaying = false
+	@AppStorage("isPaused") var isPaused = false
+	@AppStorage("boomed") var boomed = false
+	@AppStorage("isBombAnimating") var isBombAnimating = false
 	// Settings
-	@Published var selectedCategories: [Category] = []
-	@Published var selectedDuration: String = "Среднее"
-	@Published var gameTime: Double = 10.0
-	@Published var withBackgroundMusic: Bool = true
-	@Published var withPunishment: Bool = true
-	@Published var isBackgroundMusic: Bool = true
-	@Published var backgroundSound: String = "backgroundMusic"
-	@Published var tickSound: String = "ticking"
-	@Published var explosionSound: String = "explosion"
+    @Published var selectedCategories: [Category] = [] {
+        didSet {
+            let encoder = JSONEncoder()
+            
+            if let encoded = try? encoder.encode(selectedCategories) {
+                UserDefaults.standard.set(encoded, forKey: "selectedCategories")
+            }
+        }
+    }
+	@AppStorage("selectedDuration") var selectedDuration: String = "Среднее"
+	@AppStorage("gameTime") var gameTime: Double = 10.0
+	@AppStorage("withBackgroundMusic") var withBackgroundMusic: Bool = true
+	@AppStorage("withPunishment") var withPunishment: Bool = true
+    @AppStorage("isBackgroundMusic") var isBackgroundMusic: Bool = true
+	@AppStorage("backgroundSound") var backgroundSound: String = "backgroundMusic"
+	@AppStorage("tickSound") var tickSound: String = "ticking"
+	@AppStorage("explosionSound") var explosionSound: String = "explosion"
 	// Game properties
-	@Published var count: Double = 0
-	@Published var question = ""
-	@Published var punishment = ""
+	@AppStorage("count") var count: Double = 0
+	@AppStorage("question") var question = ""
+	@AppStorage("punishment") var punishment = ""
 	// Cancellables
 	private var cancellables = Set<AnyCancellable>()
 
 	// MARK: - Init
 
 	init() {
+        
+        if let savedItems = UserDefaults.standard.data(forKey: "selectedCategories") {
+            let decoder = JSONDecoder()
+            
+            if let decodedItems = try? decoder.decode([Category].self, from: savedItems) {
+                selectedCategories = decodedItems
+                return
+            }
+        }
+        
 		guard let startCategory = categories.categories.first else {
 			fatalError("Error in decoding categories.json file")
 		}

@@ -59,9 +59,9 @@ struct MainView: View {
                             .onAppear(perform: {
                                 if gameModel.count != 0 {
                                     if gameModel.withBackgroundMusic {
-                                        player.play()
+//                                        player.play()
                                     }
-                                    player2.play()
+//                                    player2.play()
                                     gameModel.setUpTimer()
                                     gameModel.isPaused = false
                                 }
