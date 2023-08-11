@@ -21,7 +21,7 @@ struct CategoriesView: View {
 				BackgroundGradientView()
 				ScrollView(showsIndicators: false) {
 					LazyVGrid(columns: columns) {
-						ForEach(gameModel.getCategories(), id: \.id) { category in
+						ForEach(gameModel.getCategories(), id: \.title) { category in
 							Button {
 								addCategory(category: category)
 							} label: {
@@ -79,7 +79,7 @@ struct CategoriesView: View {
 
 extension CategoriesView {
 	private func addCategory(category: Category) {
-		guard let index = gameModel.selectedCategories.firstIndex(where: { $0.id == category.id}) else {
+		guard let index = gameModel.selectedCategories.firstIndex(where: { $0.title == category.title}) else {
 			gameModel.selectedCategories.append(category)
 			return
 		}
@@ -90,7 +90,7 @@ extension CategoriesView {
 	}
 
 	private func isSelectedCategory(category: Category) -> Bool {
-		gameModel.selectedCategories.contains { $0.id == category.id}
+		gameModel.selectedCategories.contains { $0.title == category.title}
 	}
 }
 
