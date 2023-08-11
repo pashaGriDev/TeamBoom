@@ -11,7 +11,7 @@ struct SettingsView: View {
 	// MARK: - States&Properties
 
 	@ObservedObject var gameModel: GameViewModel
-	private let columns = [GridItem(.adaptive(minimum: 175))]
+	private let columns = [GridItem(.adaptive(minimum: 155))]
 
 	// MARK: - UI
 
@@ -25,14 +25,12 @@ struct SettingsView: View {
 						.foregroundColor(Color.violet)
 					LazyVGrid(columns: columns) {
 						ForEach(gameModel.getDurations().keys.sorted(), id: \.self) { duration in
-							Button {
+							Button(duration) {
 								changeDuration(duration: duration)
-							} label: {
-								Text(duration)
 							}
 							.font(.custom(CustomFonts.DelaGothicOne, size: 16))
 							.foregroundColor(gameModel.selectedDuration == duration ? .yellowOfButton : .violet)
-							.frame(width: 150)
+							.frame(width: 130)
 							.padding()
 							.background(gameModel.selectedDuration == duration ? .violet : .yellowOfButton)
 							.cornerRadius(30)
@@ -42,7 +40,9 @@ struct SettingsView: View {
 									.stroke(.black)
 							}
 						}
+						.shadow(radius: 5, y: 5)
 					}
+					.padding(.horizontal)
 					Spacer()
 					VStack(spacing: 30) {
 						Toggle("Игра с заданиями", isOn: $gameModel.withPunishment)
