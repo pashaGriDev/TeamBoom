@@ -39,7 +39,7 @@ struct GameEndView: View {
                         .minimumScaleFactor(0.7)
                         .frame(width: .infinity, height: 120)
 				}
-                
+
 				VStack(spacing: 15) {
 					if gameModel.withPunishment {
 						Button {

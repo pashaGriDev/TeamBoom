@@ -4,7 +4,7 @@
 //
 //  Created by Artem on 07.08.2023.
 //
-
+// swiftlint:disable line_length
 import Combine
 import SwiftUI
 
@@ -29,7 +29,7 @@ final class GameViewModel: ObservableObject {
     @Published var selectedCategories: [Category] = [] {
         didSet {
             let encoder = JSONEncoder()
-            
+
             if let encoded = try? encoder.encode(selectedCategories) {
                 UserDefaults.standard.set(encoded, forKey: "selectedCategories")
             }
@@ -49,20 +49,20 @@ final class GameViewModel: ObservableObject {
 	@AppStorage("punishment") var punishment = ""
 	// Cancellables
 	private var cancellables = Set<AnyCancellable>()
-
+    // swiftlint:enable line_length
 	// MARK: - Init
 
 	init() {
-        
+
         if let savedItems = UserDefaults.standard.data(forKey: "selectedCategories") {
             let decoder = JSONDecoder()
-            
+
             if let decodedItems = try? decoder.decode([Category].self, from: savedItems) {
                 selectedCategories = decodedItems
                 return
             }
         }
-        
+
 		guard let startCategory = categories.categories.first else {
 			fatalError("Error in decoding categories.json file")
 		}

@@ -4,6 +4,7 @@
 //
 //  Created by Андрей Бородкин on 10.08.2023.
 //
+// swiftlint:disable line_length
 
 import Foundation
 
@@ -17,3 +18,5 @@ let rules =
 Проигравшим считается тот, в чьих руках взорвалась бомба.
 Если в настройках выбран режим игры 'С заданиями', то проигравший выполняет задание.
 """
+
+// swiftlint:enable line_length

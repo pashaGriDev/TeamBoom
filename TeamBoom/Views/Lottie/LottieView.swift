@@ -21,7 +21,8 @@ struct LottieView: UIViewRepresentable {
 
 	// MARK: - Init
 
-	init(name: String,
+	init(
+        name: String,
         loopMode: LottieLoopMode = .playOnce,
         animationSpeed: CGFloat = 1,
         contentMode: UIView.ContentMode = .scaleAspectFit,

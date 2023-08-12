@@ -4,6 +4,7 @@
 //
 //  Created by Иван Лясковец on 11.08.2023.
 //
+// swiftlint:disable line_length
 
 import SwiftUI
 
@@ -12,7 +13,7 @@ struct GameCategoriesView: View {
 
 	private let helpCategories: [String: String] = ["Путешествия": "airplane", "Еда и напитки": "leaf.fill", "Кино и телевидение": "film.fill", "Музыка": "music.note"]
 	private let columns = [GridItem(.adaptive(minimum: 175))]
-
+    // swiftlint:enable line_length
 	// MARK: - UI
 
     var body: some View {

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     // MARK: - States&Properties
-    
+
     let columns = [GridItem(.adaptive(minimum: 155))]
     @StateObject  var gameModel: GameViewModel
-    
+
     // MARK: - Init
     init(gameModel: GameViewModel) {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.tintColor
@@ -23,7 +23,7 @@ struct SettingsView: View {
         self._gameModel = StateObject(wrappedValue: gameModel)
     }
     // MARK: - UI
-    
+
     var body: some View {
         ZStack {
             BackgroundGradientView()
@@ -49,7 +49,7 @@ struct SettingsView: View {
                                 .stroke(.black)
                         }
                     }
-                    
+
                     .shadow(radius: 5, y: 5)
                 }
                 .buttonStyle(ThemeAnimationStyle())
@@ -77,7 +77,7 @@ struct SettingsView: View {
                         .pickerStyle(.segmented)
                         .background(.orangeGradient.opacity(0.1))
                     }
-                    
+
                     VStack(alignment: .leading) {
                         Text("Тиканье бомбы")
                             .font(.custom(CustomFonts.DelaGothicOne, size: 20))
@@ -91,7 +91,7 @@ struct SettingsView: View {
                         .pickerStyle(.segmented)
                         .background(.orangeGradient.opacity(0.1))
                     }
-                    
+
                     VStack(alignment: .leading) {
                         Text("Взрыв бомбы")
                             .font(.custom(CustomFonts.DelaGothicOne, size: 20))
@@ -121,13 +121,12 @@ struct SettingsView: View {
                         .modifier(ToolBarButtonModifer())
                 }
             }
-        //.navigationBarBackButtonHidden(true)
+        // .navigationBarBackButtonHidden(true)
      //   .navigationBarItems(leading: CustomBackButton())
         }
     }
-      
-    }
 
+    }
 
 // MARK: - Methods
 
@@ -144,6 +143,3 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView(gameModel: GameViewModel())
     }
 }
-
-
-						
