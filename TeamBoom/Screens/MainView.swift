@@ -8,54 +8,54 @@
 import SwiftUI
 
 struct MainView: View {
-	// MARK: - States & Properties
+    // MARK: - States & Properties
+    @StateObject private var gameModel = GameViewModel()
+    @State private var pressedLink: String?
+    @State private var isBombAnimating = false
 
-	@StateObject private var gameModel = GameViewModel()
-	@State private var pressedLink: String?
+    // MARK: - UI
 
-	// MARK: - UI
-
-	var body: some View {
-		NavigationView {
-			ZStack {
-				BackgroundGradientView()
-					.ignoresSafeArea()
-				VStack {
-					Spacer()
-					Image("bomb")
-						.scaledToFit()
-						.frame(width: 400, height: 400)
-						.scaleEffect(gameModel.isBombAnimating ? 0.80 : 0.90)
-						.animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: gameModel.isBombAnimating)
-						.onAppear {
-							withAnimation {
-								gameModel.startBombImageAnimation()
-							}
-						}
-						.offset(y: -60)
-					Spacer()
-					Spacer()
-					Spacer()
-				}
-				Spacer()
-				VStack(spacing: 5) {
-					Image("textBomb")
-					Spacer()
-					VStack(spacing: 7) {
-						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
+    var body: some View {
+        NavigationView {
+            ZStack {
+                BackgroundGradientView()
+                    .ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    Image("bomb")
+                        .scaledToFit()
+                        .frame(width: 400, height: 400)
+                        .scaleEffect(isBombAnimating ? 0.80 : 0.90)
+                        .animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: isBombAnimating)
+                        .onAppear {
+                            withAnimation {
+                                startBombImageAnimation()
+                            }
+                        }
+                        .offset(y: -60)
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                }
+                Spacer()
+                VStack(spacing: 5) {
+                    Image("textBomb")
+                    Spacer()
+                    VStack(spacing: 7) {
+                        NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
                             .onAppear(perform: {
                                 gameModel.count = 0
                                 gameModel.isPaused = false
                                 gameModel.isPlaying = false
                             }),
-									   tag: "start",
-									   selection: $pressedLink) {
-							Text(gameModel.isPaused ? "Рестарт" : "Старт")
-								.modifier(MenuButtonModifier())
-						}
-						.buttonStyle(ThemeAnimationStyle())
+                                       tag: "start",
+                                       selection: $pressedLink) {
+                            Text(gameModel.isPaused ? "Рестарт" : "Старт")
+                                .modifier(MenuButtonModifier())
+                        }
+                        .buttonStyle(ThemeAnimationStyle())
 
-						NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
+                        NavigationLink(destination: GameView(gameModel: gameModel, buttonPressed: pressedLink)
                             .onAppear(perform: {
                                 if gameModel.count != 0 {
                                     if gameModel.withBackgroundMusic {
@@ -66,31 +66,31 @@ struct MainView: View {
                                     gameModel.isPaused = false
                                 }
                             }),
-									   tag: "continue",
-									   selection: $pressedLink) {
-							Text("Продолжить")
-								.font(.custom(CustomFonts.DelaGothicOne, size: 22))
-								.frame(width: 274, height: 79)
-								.background(gameModel.isPaused ? .violet : .gray)
-								.foregroundColor(.yellowGradient)
-								.clipShape(RoundedRectangle(cornerRadius: 50))
-								.shadow(radius: 5, y: 5)
-								.overlay {
-									RoundedRectangle(cornerRadius: 50)
-										.stroke(.black)
-								}
-						}
-						.buttonStyle(ThemeAnimationStyle())
-						.disabled(!gameModel.isPaused)
+                                       tag: "continue",
+                                       selection: $pressedLink) {
+                            Text("Продолжить")
+                                .font(.custom(CustomFonts.DelaGothicOne, size: 22))
+                                .frame(width: 274, height: 79)
+                                .background(gameModel.isPaused ? .violet : .gray)
+                                .foregroundColor(.yellowGradient)
+                                .clipShape(RoundedRectangle(cornerRadius: 50))
+                                .shadow(radius: 5, y: 5)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 50)
+                                        .stroke(.black)
+                                }
+                        }
+                        .buttonStyle(ThemeAnimationStyle())
+                        .disabled(!gameModel.isPaused)
 
-						NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
-							Text("Категории")
-								.modifier(MenuButtonModifier())
-						})
-						.buttonStyle(ThemeAnimationStyle())
+                        NavigationLink(destination: CategoriesView(gameModel: gameModel), label: {
+                            Text("Категории")
+                                .modifier(MenuButtonModifier())
+                        })
+                        .buttonStyle(ThemeAnimationStyle())
 
-						HStack {
-							NavigationLink(destination: SettingsView(gameModel: gameModel)
+                        HStack {
+                            NavigationLink(destination: SettingsView(gameModel: gameModel)
                                 .onAppear(perform: {
                                     gameModel.isOver = false
                                     gameModel.isPlaying = false
@@ -99,30 +99,34 @@ struct MainView: View {
                                 }),
                                            tag: "settings",
                                            selection: $pressedLink) {
-								Image("settings")
-									.padding(.leading, 30)
-							}
-							Spacer()
-							NavigationLink(destination: GameHelpView()) {
-								Image("question-mark")
-									.padding(.trailing, 30)
-							}
-						}
-					}
-				}
-			}
-			.navigationBarTitleDisplayMode(.inline)
-			.toolbar {
-				ToolbarItem(placement: .principal) {
-					VStack(spacing: 5) {
-						Text("Игра для компании")
-							.font(.custom(CustomFonts.DelaGothicOne, size: 30))
-							.foregroundColor(.black)
-					}
-				}
-			}
-		}
-	}
+                                Image("settings")
+                                    .padding(.leading, 30)
+                            }
+                            Spacer()
+                            NavigationLink(destination: GameHelpView()) {
+                                Image("question-mark")
+                                    .padding(.trailing, 30)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 5) {
+                        Text("Игра для компании")
+                            .font(.custom(CustomFonts.DelaGothicOne, size: 30))
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+        }
+    }
+    
+    func startBombImageAnimation() {
+        isBombAnimating = true
+    }
 }
 
 // MARK: - Preview

@@ -24,7 +24,6 @@ final class GameViewModel: ObservableObject {
 	@AppStorage("isPlaying") var isPlaying = false
 	@AppStorage("isPaused") var isPaused = false
 	@AppStorage("boomed") var boomed = false
-	@AppStorage("isBombAnimating") var isBombAnimating = false
 	// Settings
     @Published var selectedCategories: [Category] = [] {
         didSet {
@@ -128,9 +127,5 @@ final class GameViewModel: ObservableObject {
 				}
 			}
 			.store(in: &cancellables)
-	}
-
-	func startBombImageAnimation() {
-		isBombAnimating = true
 	}
 }
