@@ -31,7 +31,7 @@ struct GameStartView: View {
 				startGame()
 			}
 			.buttonStyle(GameButtonModifier())
-			.padding(.bottom, 30)
+			.padding(.bottom, 30) // add Spacer()
 		}
 	}
 }
