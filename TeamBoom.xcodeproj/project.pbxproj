@@ -35,12 +35,13 @@
 		A072DF292A83EE5B00B702EC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DF282A83EE5B00B702EC /* SettingsView.swift */; };
 		A0D883CE2A82D9DA00961D89 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D883CD2A82D9DA00961D89 /* GameStartView.swift */; };
 		A0D883D02A82DB9E00961D89 /* GameProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D883CF2A82DB9E00961D89 /* GameProcessView.swift */; };
-		AC7512662A850AED008EC31A /* ticking3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC7512652A850AED008EC31A /* ticking3.mp3 */; };
+		AC0EB0C72A8796F600FF3E91 /* ticking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC0EB0C42A8796F600FF3E91 /* ticking.mp3 */; };
+		AC0EB0C82A8796F600FF3E91 /* ticking3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC0EB0C52A8796F600FF3E91 /* ticking3.mp3 */; };
+		AC0EB0C92A8796F600FF3E91 /* ticking2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC0EB0C62A8796F600FF3E91 /* ticking2.mp3 */; };
 		AC7512682A850AF5008EC31A /* backgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC7512672A850AF5008EC31A /* backgroundMusic2.mp3 */; };
 		AC75126A2A850AFD008EC31A /* backgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC7512692A850AFD008EC31A /* backgroundMusic3.mp3 */; };
 		AC75126C2A850B05008EC31A /* explosion2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC75126B2A850B05008EC31A /* explosion2.mp3 */; };
 		AC75126E2A850B0E008EC31A /* explosion3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC75126D2A850B0E008EC31A /* explosion3.mp3 */; };
-		AC7512702A850B48008EC31A /* ticking2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC75126F2A850B48008EC31A /* ticking2.mp3 */; };
 		AC8C719A2A80E6EC0063F55F /* BackgroundGradView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */; };
 		AC8C71A12A8102270063F55F /* GameButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C71A02A8102270063F55F /* GameButtonModifier.swift */; };
 		AC8C71B12A8131250063F55F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AC8C71B02A8131250063F55F /* Lottie */; };
@@ -52,7 +53,6 @@
 		AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72042A81A25E0063F55F /* funnyActions.json */; };
 		AC8C72072A81A26D0063F55F /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8C72062A81A26D0063F55F /* categories.json */; };
 		ACD615542A8283C700FDD52D /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD615532A8283C700FDD52D /* PlaySound.swift */; };
-		ACD615562A8284D200FDD52D /* ticking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615552A8284D200FDD52D /* ticking.mp3 */; };
 		ACD615582A8284DC00FDD52D /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */; };
 		ACD6155A2A8284EB00FDD52D /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACD615592A8284EB00FDD52D /* explosion.mp3 */; };
 /* End PBXBuildFile section */
@@ -88,12 +88,13 @@
 		A072DF282A83EE5B00B702EC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A0D883CD2A82D9DA00961D89 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
 		A0D883CF2A82DB9E00961D89 /* GameProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProcessView.swift; sourceTree = "<group>"; };
-		AC7512652A850AED008EC31A /* ticking3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking3.mp3; sourceTree = "<group>"; };
+		AC0EB0C42A8796F600FF3E91 /* ticking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking.mp3; sourceTree = "<group>"; };
+		AC0EB0C52A8796F600FF3E91 /* ticking3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking3.mp3; sourceTree = "<group>"; };
+		AC0EB0C62A8796F600FF3E91 /* ticking2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking2.mp3; sourceTree = "<group>"; };
 		AC7512672A850AF5008EC31A /* backgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic2.mp3; sourceTree = "<group>"; };
 		AC7512692A850AFD008EC31A /* backgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic3.mp3; sourceTree = "<group>"; };
 		AC75126B2A850B05008EC31A /* explosion2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion2.mp3; sourceTree = "<group>"; };
 		AC75126D2A850B0E008EC31A /* explosion3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion3.mp3; sourceTree = "<group>"; };
-		AC75126F2A850B48008EC31A /* ticking2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking2.mp3; sourceTree = "<group>"; };
 		AC8C71992A80E6EC0063F55F /* BackgroundGradView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradView.swift; sourceTree = "<group>"; };
 		AC8C71A02A8102270063F55F /* GameButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButtonModifier.swift; sourceTree = "<group>"; };
 		AC8C71B72A8131C60063F55F /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		AC8C72042A81A25E0063F55F /* funnyActions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = funnyActions.json; sourceTree = "<group>"; };
 		AC8C72062A81A26D0063F55F /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		ACD615532A8283C700FDD52D /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		ACD615552A8284D200FDD52D /* ticking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ticking.mp3; sourceTree = "<group>"; };
 		ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		ACD615592A8284EB00FDD52D /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,9 +310,9 @@
 				ACD615592A8284EB00FDD52D /* explosion.mp3 */,
 				AC75126B2A850B05008EC31A /* explosion2.mp3 */,
 				AC75126D2A850B0E008EC31A /* explosion3.mp3 */,
-				ACD615552A8284D200FDD52D /* ticking.mp3 */,
-				AC75126F2A850B48008EC31A /* ticking2.mp3 */,
-				AC7512652A850AED008EC31A /* ticking3.mp3 */,
+				AC0EB0C42A8796F600FF3E91 /* ticking.mp3 */,
+				AC0EB0C62A8796F600FF3E91 /* ticking2.mp3 */,
+				AC0EB0C52A8796F600FF3E91 /* ticking3.mp3 */,
 				ACD615572A8284DC00FDD52D /* backgroundMusic.mp3 */,
 				AC7512672A850AF5008EC31A /* backgroundMusic2.mp3 */,
 				AC7512692A850AFD008EC31A /* backgroundMusic3.mp3 */,
@@ -385,21 +385,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD615562A8284D200FDD52D /* ticking.mp3 in Resources */,
 				AC75126E2A850B0E008EC31A /* explosion3.mp3 in Resources */,
 				AC7512682A850AF5008EC31A /* backgroundMusic2.mp3 in Resources */,
 				AC8C71BA2A8131EB0063F55F /* animation1.json in Resources */,
 				AC8C72072A81A26D0063F55F /* categories.json in Resources */,
 				105526ED2A80503C009FFDE8 /* Preview Assets.xcassets in Resources */,
 				ACD6155A2A8284EB00FDD52D /* explosion.mp3 in Resources */,
+				AC0EB0C82A8796F600FF3E91 /* ticking3.mp3 in Resources */,
 				AC8C72052A81A25E0063F55F /* funnyActions.json in Resources */,
 				105526F42A80507F009FFDE8 /* .gitignore in Resources */,
 				6F826E732A84EDFD0059430F /* RuleSet.rtf in Resources */,
-				AC7512702A850B48008EC31A /* ticking2.mp3 in Resources */,
+				AC0EB0C92A8796F600FF3E91 /* ticking2.mp3 in Resources */,
 				ACD615582A8284DC00FDD52D /* backgroundMusic.mp3 in Resources */,
 				0D7CC8EE2A8407070076950C /* DelaGothicOne-Regular.ttf in Resources */,
-				AC7512662A850AED008EC31A /* ticking3.mp3 in Resources */,
 				AC75126A2A850AFD008EC31A /* backgroundMusic3.mp3 in Resources */,
+				AC0EB0C72A8796F600FF3E91 /* ticking.mp3 in Resources */,
 				105526EA2A80503C009FFDE8 /* Assets.xcassets in Resources */,
 				AC75126C2A850B05008EC31A /* explosion2.mp3 in Resources */,
 			);
