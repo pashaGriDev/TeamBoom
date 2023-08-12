@@ -27,11 +27,11 @@ struct GameEndView: View {
                 Text(isPunishment ? taslTitle : timeIsOverTitle)
                     .padding()
                     .font(.custom(CustomFonts.DelaGothicOne, size: 24))
+                    .multilineTextAlignment(.center)
                 
 				Image("explosion")
                     .resizable()
                     .scaledToFit()
-                    .padding()
                 
 				if isPunishment {
 					Text(gameModel.punishment)
@@ -39,6 +39,7 @@ struct GameEndView: View {
 						.foregroundColor(.violet)
 						.font(.custom(CustomFonts.DelaGothicOne, size: 20))
                         .minimumScaleFactor(0.7)
+                        .multilineTextAlignment(.center)
 				}
 
 				VStack(spacing: 15) {
@@ -59,7 +60,6 @@ struct GameEndView: View {
 				}
                 .font(.custom(CustomFonts.DelaGothicOne, size: 22))
                 .padding(.bottom, 30)
-                .multilineTextAlignment(.center)
 			}
 		}
 }
