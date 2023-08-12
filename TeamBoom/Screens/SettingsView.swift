@@ -57,10 +57,12 @@ struct SettingsView: View {
                 Spacer()
                 VStack(spacing: 30) {
                     Toggle("Игра с заданиями", isOn: $gameModel.withPunishment)
+                        .toggleStyle(SwitchToggleStyle(tint: Color.violet))
                         .font(.custom(CustomFonts.DelaGothicOne, size: 20))
                         .foregroundColor(Color.violet)
                         .tint(Color.violet)
                     Toggle("Фоновая музыка", isOn: $gameModel.withBackgroundMusic)
+                        .toggleStyle(SwitchToggleStyle(tint: Color.violet))
                         .font(.custom(CustomFonts.DelaGothicOne, size: 20))
                         .foregroundColor(Color.violet)
                         .tint(Color.violet)
@@ -121,12 +123,11 @@ struct SettingsView: View {
                         .modifier(ToolBarButtonModifer())
                 }
             }
-        // .navigationBarBackButtonHidden(true)
-     //   .navigationBarItems(leading: CustomBackButton())
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton())
     }
-
-    }
+}
 
 // MARK: - Methods
 
