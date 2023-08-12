@@ -14,4 +14,3 @@ struct ToolBarButtonModifer: ViewModifier {
 			.foregroundColor(.violet)
 	}
 }
-

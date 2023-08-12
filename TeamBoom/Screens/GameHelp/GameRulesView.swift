@@ -18,7 +18,7 @@ struct GameRulesView: View {
 		ZStack {
 			BackgroundGradientView()
 			VStack {
-				VStack(alignment: .center, spacing: 5) {
+				VStack(alignment: .leading, spacing: 5) {
                     ForEach(rulesArray.indices, id: \.self) { index in
 						if index == 1 {
 							RuleView(index: index + 1, content: rulesArray[index], buttonLabel: "Старт игры")

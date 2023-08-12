@@ -11,7 +11,7 @@ struct MainView: View {
 	// MARK: - States & Properties
 
 	@StateObject private var gameModel = GameViewModel()
-	@State private var pressedLink: String? = nil
+	@State private var pressedLink: String?
 
 	// MARK: - UI
 
@@ -123,9 +123,8 @@ struct MainView: View {
 			}
 		}
 	}
-		}
-	}
 }
+
 // MARK: - Preview
 
 struct MainView_Previews: PreviewProvider {

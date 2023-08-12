@@ -13,7 +13,7 @@ struct GameHelpView: View {
 	var body: some View {
 		ZStack {
 			BackgroundGradientView()
-			VStack(spacing: 15) {
+            VStack(alignment: .leading, spacing: 15) {
 				NavigationLink(destination: GameRulesView()) {
 					Text("Правила игры")
                         .frame(width: 274, height: 79)
