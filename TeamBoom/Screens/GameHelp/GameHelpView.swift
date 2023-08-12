@@ -24,7 +24,7 @@ struct GameHelpView: View {
                         .frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
-				NavigationLink(destination: GameRulesView()) {
+				NavigationLink(destination: GameSettingsHelpView()) {
 					Text("Настройки")
                         .frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
