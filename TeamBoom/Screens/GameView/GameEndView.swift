@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameEndView: View {
+
     private let timeIsOverTitle = "Время вышло!"
     private let taslTitle = "Проигравший выполняет задание"
     
@@ -17,9 +18,9 @@ struct GameEndView: View {
     
 	// MARK: - States&Properties
 
-	@ObservedObject var gameModel: GameViewModel
+    @ObservedObject var gameModel: GameViewModel
 
-	// MARK: - UI
+    // MARK: - UI
 
 	var body: some View {
 			VStack {
@@ -66,19 +67,19 @@ struct GameEndView: View {
 // MARK: - Methods
 
 extension GameEndView {
-	private func restartGame() {
-		gameModel.isPlaying = false
-		gameModel.isOver = false
+    private func restartGame() {
+        gameModel.isPlaying = false
+        gameModel.isOver = false
         gameModel.isPaused = false
-	}
+    }
 }
 
 // MARK: - Preview
 
 struct GameEndView_Previews: PreviewProvider {
-	static var previews: some View {
-		GameEndView(gameModel: GameViewModel())
-	}
+    static var previews: some View {
+        GameEndView(gameModel: GameViewModel())
+    }
 }
 
 // MARK: - Modifier
