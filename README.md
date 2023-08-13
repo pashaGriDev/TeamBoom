@@ -4,11 +4,11 @@ TeamBoom - приложение для вечеринок, чтобы развл
 Подробней о правилах можно почитать в приложении.
 
 #### Screenshots
-![screenshots1](/Assets/1.png){width=40px}
-![screenshots1](/Assets/2.png){width=40px}
-![screenshots1](/Assets/3.png){width=40px}
-![screenshots1](/Assets/4.png){width=40px}
-![screenshots1](/Assets/5.png){width=40px}
+![screenshots1](/Assets/1.png)
+![screenshots1](/Assets/2.png)
+![screenshots1](/Assets/3.png)
+![screenshots1](/Assets/4.png)
+![screenshots1](/Assets/5.png)
 
 **Это приложение является первым испытанием в проекте [Swift Marathon](https://t.me/swiftmarathon) в рамках прохождения курса от [Paul Hudson "100 days of SwiftUI"](https://www.hackingwithswift.com/100/swiftui)**
 
