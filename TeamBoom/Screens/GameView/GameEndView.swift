@@ -8,99 +8,71 @@
 import SwiftUI
 
 struct GameEndView: View {
-
-    private let timeIsOverTitle = "Время вышло!"
-    private let taslTitle = "Проигравший выполняет задание"
-
-    private var isPunishment: Bool {
-        gameModel.withPunishment
-    }
-
 	// MARK: - States&Properties
 
-    @ObservedObject var gameModel: GameViewModel
+	@ObservedObject var gameModel: GameViewModel
 
-    // MARK: - UI
+	private let timeIsOverTitle = "Время вышло!"
+	private let taslTitle = "Проигравший выполняет задание"
+	private var isPunishment: Bool {
+		gameModel.withPunishment
+	}
+
+	// MARK: - UI
 
 	var body: some View {
-			VStack {
-                Text(isPunishment ? taslTitle : timeIsOverTitle)
-                    .padding()
-                    .font(.custom(CustomFonts.DelaGothicOne, size: 24))
-                    .multilineTextAlignment(.center)
-
-				Image("explosion")
-                    .resizable()
-                    .scaledToFit()
-
-				if isPunishment {
-					Text(gameModel.punishment)
-                        .padding()
-						.foregroundColor(.violet)
-						.font(.custom(CustomFonts.DelaGothicOne, size: 20))
-                        .minimumScaleFactor(0.7)
-                        .multilineTextAlignment(.center)
-				}
-
-				VStack(spacing: 15) {
-					if gameModel.withPunishment {
-						Button {
-							gameModel.getPunishment()
-						} label: {
-							Text("Другое задание")
-						}
-                        .customButtonEndViewStyle()
-					}
-                    Button {
-						restartGame()
-					} label: {
-						Text("Начать заново")
-					}
-                    .customButtonEndViewStyle()
-				}
-                .font(.custom(CustomFonts.DelaGothicOne, size: 22))
-                .padding(.bottom, 30)
+		VStack {
+			Text(isPunishment ? taslTitle : timeIsOverTitle)
+				.padding()
+				.font(.custom(CustomFonts.DelaGothicOne, size: 24))
+				.multilineTextAlignment(.center)
+			Image("explosion")
+				.resizable()
+				.scaledToFit()
+			if isPunishment {
+				Text(gameModel.punishment)
+					.padding()
+					.foregroundColor(.violet)
+					.font(.custom(CustomFonts.DelaGothicOne, size: 20))
+					.minimumScaleFactor(0.7)
+					.multilineTextAlignment(.center)
 			}
+			VStack(spacing: 15) {
+				if gameModel.withPunishment {
+					Button {
+						gameModel.getPunishment()
+					} label: {
+						Text("Другое задание")
+					}
+					.customButtonEndViewStyle()
+				}
+				Button {
+					restartGame()
+				} label: {
+					Text("Начать заново")
+				}
+				.customButtonEndViewStyle()
+			}
+			.font(.custom(CustomFonts.DelaGothicOne, size: 22))
+			.padding(.bottom, 30)
 		}
+	}
 }
 
 // MARK: - Methods
 
 extension GameEndView {
-    private func restartGame() {
-        gameModel.isPlaying = false
-        gameModel.isOver = false
-        gameModel.isPaused = false
-    }
+	private func restartGame() {
+		gameModel.isPlaying = false
+		gameModel.isOver = false
+		gameModel.isPaused = false
+	}
 }
 
 // MARK: - Preview
 
 struct GameEndView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameEndView(gameModel: GameViewModel())
-    }
-}
-
-// MARK: - Modifier
-
-struct CustomButtonEndViewStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .frame(width: 274, height: 79)
-            .background(.violet)
-            .foregroundColor(.yellowGradient)
-            .clipShape(RoundedRectangle(cornerRadius: 50))
-            .shadow(radius: 5, y: 5)
-            .overlay {
-                RoundedRectangle(cornerRadius: 50)
-                    .stroke(.black)
-            }
-    }
-}
-
-extension View {
-    func customButtonEndViewStyle() -> some View {
-        modifier(CustomButtonEndViewStyle())
-    }
+	static var previews: some View {
+		GameEndView(gameModel: GameViewModel())
+	}
 }

@@ -25,20 +25,20 @@ final class GameViewModel: ObservableObject {
 	@AppStorage("isPaused") var isPaused = false
 	@AppStorage("boomed") var boomed = false
 	// Settings
-    @Published var selectedCategories: [Category] = [] {
-        didSet {
-            let encoder = JSONEncoder()
+	@Published var selectedCategories: [Category] = [] {
+		didSet {
+			let encoder = JSONEncoder()
 
-            if let encoded = try? encoder.encode(selectedCategories) {
-                UserDefaults.standard.set(encoded, forKey: "selectedCategories")
-            }
-        }
-    }
+			if let encoded = try? encoder.encode(selectedCategories) {
+				UserDefaults.standard.set(encoded, forKey: "selectedCategories")
+			}
+		}
+	}
 	@AppStorage("selectedDuration") var selectedDuration: String = "Среднее"
 	@AppStorage("gameTime") var gameTime: Double = 10.0
 	@AppStorage("withBackgroundMusic") var withBackgroundMusic: Bool = true
 	@AppStorage("withPunishment") var withPunishment: Bool = true
-    @AppStorage("isBackgroundMusic") var isBackgroundMusic: Bool = true
+	@AppStorage("isBackgroundMusic") var isBackgroundMusic: Bool = true
 	@AppStorage("backgroundSound") var backgroundSound: String = "backgroundMusic"
 	@AppStorage("tickSound") var tickSound: String = "ticking"
 	@AppStorage("explosionSound") var explosionSound: String = "explosion"
@@ -48,20 +48,17 @@ final class GameViewModel: ObservableObject {
 	@AppStorage("punishment") var punishment = ""
 	// Cancellables
 	private var cancellables = Set<AnyCancellable>()
-    // swiftlint:enable line_length
+	// swiftlint:enable line_length
 	// MARK: - Init
 
 	init() {
-
-        if let savedItems = UserDefaults.standard.data(forKey: "selectedCategories") {
-            let decoder = JSONDecoder()
-
-            if let decodedItems = try? decoder.decode([Category].self, from: savedItems) {
-                selectedCategories = decodedItems
-                return
-            }
-        }
-
+		if let savedItems = UserDefaults.standard.data(forKey: "selectedCategories") {
+			let decoder = JSONDecoder()
+			if let decodedItems = try? decoder.decode([Category].self, from: savedItems) {
+				selectedCategories = decodedItems
+				return
+			}
+		}
 		guard let startCategory = categories.categories.first else {
 			fatalError("Error in decoding categories.json file")
 		}
@@ -101,7 +98,6 @@ final class GameViewModel: ObservableObject {
 					playSound(key: explosionSound, player: &player2)
 					boomed = true
 				}
-
 				if isPaused {
 					for item in cancellables {
 						item.cancel()
@@ -111,7 +107,6 @@ final class GameViewModel: ObservableObject {
 						player2.pause()
 					}
 				}
-
 				if count >= 1.048*gameTime {
 					for item in cancellables {
 						if withBackgroundMusic {

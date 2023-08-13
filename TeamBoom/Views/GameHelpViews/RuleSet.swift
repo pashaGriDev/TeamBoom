@@ -33,26 +33,21 @@ let settingsHelp =
 """
 
 func updateStringArrayForSettings(array: [String]) -> [[String]] {
-    let updatedArray = array.map { line in
-
-        if line.starts(with: "-") {
-            var cleanString = line
-            cleanString.removeFirst()
-
-            var wordsArray = cleanString.components(separatedBy: " ")
-            let bullet = wordsArray.removeFirst()
-            let bulletPoint = wordsArray.joined(separator: " ")
-
-            return [bullet, bulletPoint]
-
-        } else if line.starts(with: "*") {
-            var bulletPoint = line
-            bulletPoint.removeFirst()
-
-            return ["*", bulletPoint]
-        }
-        return [line]
-    }
-    return updatedArray
+	let updatedArray = array.map { line in
+		if line.starts(with: "-") {
+			var cleanString = line
+			cleanString.removeFirst()
+			var wordsArray = cleanString.components(separatedBy: " ")
+			let bullet = wordsArray.removeFirst()
+			let bulletPoint = wordsArray.joined(separator: " ")
+			return [bullet, bulletPoint]
+		} else if line.starts(with: "*") {
+			var bulletPoint = line
+			bulletPoint.removeFirst()
+			return ["*", bulletPoint]
+		}
+		return [line]
+	}
+	return updatedArray
 }
 // swiftlint:enable line_length

@@ -19,8 +19,8 @@ struct CustomBackButton: View {
 		Button(action: {
 			presentationMode.wrappedValue.dismiss() // Симулировать действие "назад"
 		}) {
-            Image(systemName: "chevron.backward")
-// swiftlint:enable multiple_closures_with_trailing_closure
+			Image(systemName: "chevron.backward")
+			// swiftlint:enable multiple_closures_with_trailing_closure
 				.font(.title)
 				.foregroundColor(.violet)
 		}

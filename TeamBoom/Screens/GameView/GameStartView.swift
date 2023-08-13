@@ -31,7 +31,7 @@ struct GameStartView: View {
 				startGame()
 			}
 			.buttonStyle(GameButtonModifier())
-			.padding(.bottom, 30) // add Spacer()
+			.padding(.bottom, 30)
 		}
 	}
 }
@@ -41,13 +41,13 @@ struct GameStartView: View {
 extension GameStartView {
 	private func startGame() {
 		if gameModel.withBackgroundMusic {
-            playSound(key: gameModel.backgroundSound, player: &player)
+			playSound(key: gameModel.backgroundSound, player: &player)
 		}
-        playSound(key: gameModel.tickSound, player: &player2)
+		playSound(key: gameModel.tickSound, player: &player2)
 		gameModel.askQuestion()
 		gameModel.isPlaying = true
 		gameModel.isPaused = false
-        gameModel.isOver = false
+		gameModel.isOver = false
 		gameModel.setUpTimer()
 	}
 }

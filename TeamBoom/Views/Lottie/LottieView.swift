@@ -17,24 +17,24 @@ struct LottieView: UIViewRepresentable {
 	let contentMode: UIView.ContentMode
 	let isPaused: Bool
 	let animationView: LottieAnimationView
-    let progress: Double
+	let progress: Double
 
 	// MARK: - Init
 
 	init(
-        name: String,
-        loopMode: LottieLoopMode = .playOnce,
-        animationSpeed: CGFloat = 1,
-        contentMode: UIView.ContentMode = .scaleAspectFit,
-        isPaused: Bool, progress: Double) {
-		self.name = name
-		self.animationView = LottieAnimationView(name: name)
-		self.loopMode = loopMode
-		self.animationSpeed = animationSpeed
-		self.contentMode = contentMode
-		self.isPaused = isPaused
-        self.progress = progress
-	}
+		name: String,
+		loopMode: LottieLoopMode = .playOnce,
+		animationSpeed: CGFloat = 1,
+		contentMode: UIView.ContentMode = .scaleAspectFit,
+		isPaused: Bool, progress: Double) {
+			self.name = name
+			self.animationView = LottieAnimationView(name: name)
+			self.loopMode = loopMode
+			self.animationSpeed = animationSpeed
+			self.contentMode = contentMode
+			self.isPaused = isPaused
+			self.progress = progress
+		}
 
 	// MARK: - Methods
 

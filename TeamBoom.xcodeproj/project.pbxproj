@@ -30,6 +30,7 @@
 		A008A1D32A83801F0063E733 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A008A1D22A83801F0063E733 /* LottieView.swift */; };
 		A03C544B2A865C690086D9B8 /* GameCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C544A2A865C690086D9B8 /* GameCategoriesView.swift */; };
 		A03DE5172A8107F800C5D279 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03DE5162A8107F800C5D279 /* CategoriesView.swift */; };
+		A04F5F862A88DAD2002AFCA6 /* CustomButtonEndViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04F5F852A88DAD2002AFCA6 /* CustomButtonEndViewStyle.swift */; };
 		A05371BF2A85807A001887C7 /* MenuButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05371BE2A85807A001887C7 /* MenuButtonModifier.swift */; };
 		A05371C22A858188001887C7 /* ToolBarButtonModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05371C12A858188001887C7 /* ToolBarButtonModifer.swift */; };
 		A072DF292A83EE5B00B702EC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072DF282A83EE5B00B702EC /* SettingsView.swift */; };
@@ -83,6 +84,7 @@
 		A008A1D22A83801F0063E733 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		A03C544A2A865C690086D9B8 /* GameCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCategoriesView.swift; sourceTree = "<group>"; };
 		A03DE5162A8107F800C5D279 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		A04F5F852A88DAD2002AFCA6 /* CustomButtonEndViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonEndViewStyle.swift; sourceTree = "<group>"; };
 		A05371BE2A85807A001887C7 /* MenuButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonModifier.swift; sourceTree = "<group>"; };
 		A05371C12A858188001887C7 /* ToolBarButtonModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarButtonModifer.swift; sourceTree = "<group>"; };
 		A072DF282A83EE5B00B702EC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				AC8C71A02A8102270063F55F /* GameButtonModifier.swift */,
 				A05371C12A858188001887C7 /* ToolBarButtonModifer.swift */,
 				A05371BE2A85807A001887C7 /* MenuButtonModifier.swift */,
+				A04F5F852A88DAD2002AFCA6 /* CustomButtonEndViewStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			files = (
 				6FB4C9392A84E46F0071AD1D /* GameHelpView.swift in Sources */,
 				0D7CC8EC2A83BCAB0076950C /* Animation Buttons.swift in Sources */,
+				A04F5F862A88DAD2002AFCA6 /* CustomButtonEndViewStyle.swift in Sources */,
 				6F8F059E2A87622100733C4E /* SettingHelpView.swift in Sources */,
 				AC8C72012A819F490063F55F /* PunishModel.swift in Sources */,
 				A008A1D32A83801F0063E733 /* LottieView.swift in Sources */,

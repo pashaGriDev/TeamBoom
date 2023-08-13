@@ -13,24 +13,24 @@ struct GameHelpView: View {
 	var body: some View {
 		ZStack {
 			BackgroundGradientView()
-            VStack(alignment: .leading, spacing: 15) {
+			VStack(alignment: .leading, spacing: 15) {
 				NavigationLink(destination: GameRulesView()) {
 					Text("Правила игры")
-                        .frame(width: 274, height: 79)
+						.frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
 				NavigationLink(destination: GameCategoriesView()) {
 					Text("Категории")
-                        .frame(width: 274, height: 79)
+						.frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
 				NavigationLink(destination: GameSettingsHelpView()) {
 					Text("Настройки")
-                        .frame(width: 274, height: 79)
+						.frame(width: 274, height: 79)
 						.modifier(MenuButtonModifier())
 				}
 			}
-            .buttonStyle(ThemeAnimationStyle())
+			.buttonStyle(ThemeAnimationStyle())
 			.toolbar {
 				ToolbarItem(placement: .principal) {
 					VStack {
