@@ -20,7 +20,7 @@ struct GameSettingsHelpView: View {
     var body: some View {
         ZStack{
             BackgroundGradientView()
-            ScrollView {
+            ScrollView(showsIndicators: false) {
             VStack(alignment: .center, spacing: 15) {
                 Text("Настройки")
                     .modifier(ToolBarButtonModifer())

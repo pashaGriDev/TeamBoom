@@ -20,7 +20,7 @@ struct GameCategoriesView: View {
         ZStack {
             BackgroundGradientView()
             VStack {
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     Text("Категории")
                         .modifier(ToolBarButtonModifer())
                     Spacer()
