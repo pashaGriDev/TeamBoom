@@ -32,9 +32,9 @@ let settingsHelp =
 Выбрать звуки для фоновой музыки, тиканья бомбы и взрыва.
 """
 
-func updateStringArrayForSettings(array: [String]) -> [[String]]{
+func updateStringArrayForSettings(array: [String]) -> [[String]] {
     let updatedArray = array.map { line in
-                
+
         if line.starts(with: "-") {
             var cleanString = line
             cleanString.removeFirst()
@@ -42,13 +42,13 @@ func updateStringArrayForSettings(array: [String]) -> [[String]]{
             var wordsArray = cleanString.components(separatedBy: " ")
             let bullet = wordsArray.removeFirst()
             let bulletPoint = wordsArray.joined(separator: " ")
-            
+
             return [bullet, bulletPoint]
-            
+
         } else if line.starts(with: "*") {
             var bulletPoint = line
             bulletPoint.removeFirst()
-            
+
             return ["*", bulletPoint]
         }
         return [line]

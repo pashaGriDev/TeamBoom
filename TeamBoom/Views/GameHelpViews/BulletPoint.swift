@@ -8,28 +8,27 @@
 import SwiftUI
 
 struct BulletPoint: View {
-    
+
     var fontSize: CGFloat = 18
-    
-    
+
     var bullet: String?
-    
+
     var contents: String {
         if let text = bullet {
             return text
         } else {
             return ""
-            
+
         }
     }
     var descriptiveBulletPoint: Bool {
-        if let _ = bullet {
+        if let bullet {
             return true
         } else {
             return false
         }
     }
-    
+
     var body: some View {
         Text(contents)
             .multilineTextAlignment(.center)

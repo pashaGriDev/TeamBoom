@@ -9,11 +9,11 @@ import SwiftUI
 
 struct GameProcessView: View {
     // MARK: - States&Properties
-    
+
     @ObservedObject var gameModel: GameViewModel
-    
+
     // MARK: - UI
-    
+
     var body: some View {
         ZStack(alignment: .center) {
             LottieView(name: "animation1",
@@ -28,7 +28,7 @@ struct GameProcessView: View {
                 Text(gameModel.question)
                     .font(.title.bold())
                     .foregroundColor(Color.violet)
-                    .frame(width: 300,alignment: .bottom)
+                    .frame(width: 300, alignment: .bottom)
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 10)
@@ -75,4 +75,3 @@ struct GameProcessView_Previews: PreviewProvider {
         GameProcessView(gameModel: GameViewModel())
     }
 }
-

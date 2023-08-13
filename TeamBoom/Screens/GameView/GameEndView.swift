@@ -11,11 +11,11 @@ struct GameEndView: View {
 
     private let timeIsOverTitle = "Время вышло!"
     private let taslTitle = "Проигравший выполняет задание"
-    
+
     private var isPunishment: Bool {
         gameModel.withPunishment
     }
-    
+
 	// MARK: - States&Properties
 
     @ObservedObject var gameModel: GameViewModel
@@ -28,11 +28,11 @@ struct GameEndView: View {
                     .padding()
                     .font(.custom(CustomFonts.DelaGothicOne, size: 24))
                     .multilineTextAlignment(.center)
-                
+
 				Image("explosion")
                     .resizable()
                     .scaledToFit()
-                
+
 				if isPunishment {
 					Text(gameModel.punishment)
                         .padding()

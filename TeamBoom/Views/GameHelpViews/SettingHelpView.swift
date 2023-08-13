@@ -9,15 +9,15 @@ import SwiftUI
 
 struct SettingHelpView: View {
     var fontSize: CGFloat = 18
-    
+
     var bullet: String?
     var bulletPoint: String
-    
+
     var descriptiveBulletPoint: Bool
     var specialFormat: Bool?
-    
+
     var body: some View {
-        HStack (alignment: .top) {
+        HStack(alignment: .top) {
             if let specialFormat = specialFormat, specialFormat == true {
                 Text(bulletPoint)
                     .font(.custom(CustomFonts.DelaGothicOne, size: 30))
@@ -32,7 +32,7 @@ struct SettingHelpView: View {
             }
         }
     }
-        
+
 }
 
 struct SettingHelpView_Previews: PreviewProvider {
@@ -40,5 +40,3 @@ struct SettingHelpView_Previews: PreviewProvider {
         SettingHelpView(bulletPoint: "Testing", descriptiveBulletPoint: true)
     }
 }
-
-

@@ -26,7 +26,8 @@ struct MainView: View {
                         .scaledToFit()
                         .frame(width: 400, height: 400)
                         .scaleEffect(isBombAnimating ? 0.80 : 0.90)
-                        .animation(Animation.easeInOut(duration: 2.7).repeatForever(autoreverses: true), value: isBombAnimating)
+                        .animation(Animation.easeInOut(duration: 2.7)
+                        .repeatForever(autoreverses: true), value: isBombAnimating)
                         .onAppear {
                             withAnimation {
                                 startBombImageAnimation()
@@ -123,7 +124,7 @@ struct MainView: View {
             }
         }
     }
-    
+
     func startBombImageAnimation() {
         isBombAnimating = true
     }
