@@ -17,8 +17,7 @@ struct GameRulesView: View {
     var body: some View {
         ZStack {
             BackgroundGradientView()
-            ScrollView {
-                VStack {
+            ScrollView (showsIndicators: false){ VStack {
                     VStack(alignment: .center, spacing: 25) {
                         Text("Правила игры")
                             .modifier(ToolBarButtonModifer())
