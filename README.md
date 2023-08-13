@@ -4,7 +4,7 @@ TeamBoom - приложение для вечеринок, чтобы развл
 Подробней о правилах можно почитать в приложении.
 
 #### gif
-<img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/8c842049-bfc4-4fc8-85a7-22dbbcac50d6" width="120"/><img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/cee42d39-76fe-460b-b720-9ee88d02e20a" width="120"/><img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/1cfd9948-14ce-4dfc-87bc-f2ea2d72aafb" width="120"/><img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/1f8ab048-db3f-4964-86cb-7071469bd732" width="120"/>
+<img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/8c842049-bfc4-4fc8-85a7-22dbbcac50d6" width="140"/><img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/cee42d39-76fe-460b-b720-9ee88d02e20a" width="140"/><img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/1cfd9948-14ce-4dfc-87bc-f2ea2d72aafb" width="140"/><img src="https://github.com/pashaGriDev/TeamBoom/assets/104516847/1f8ab048-db3f-4964-86cb-7071469bd732" width="140"/>
 
 ### Основные элементы:
 - Главный экран: динамическая анимация бомбы на фоне создает уникальное оформление.
