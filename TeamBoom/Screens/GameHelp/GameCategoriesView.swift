@@ -24,7 +24,7 @@ struct GameCategoriesView: View {
                     Text("Категории")
                         .modifier(ToolBarButtonModifer())
                     Spacer()
-                    Text("В игре доступно 6 категорий и более 90 вопросов.")
+                    Text("В игре доступны категорий вопросов.")
                         .font(.custom(CustomFonts.DelaGothicOne, size: 24))
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
